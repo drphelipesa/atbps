@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia EV — PA Referência Rápida</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;background:#f5f5f0;color:#1a1a1a;padding:1rem}
+h1{font-size:18px;font-weight:500;margin-bottom:1rem;color:#1a1a1a}
+#bar{position:sticky;top:0;background:#f5f5f0;padding:8px 0 6px;z-index:10}
+#search{width:100%;padding:9px 13px;font-size:14px;border:1px solid #ccc;border-radius:8px;background:#fff;color:#1a1a1a;outline:none}
+#search:focus{border-color:#888}
+#filters{display:flex;gap:5px;flex-wrap:wrap;padding:8px 0 4px}
+.filt{padding:3px 10px;font-size:12px;border:1px solid #ccc;border-radius:20px;background:#fff;color:#555;cursor:pointer}
+.filt:hover{background:#eee}
+.filt.on{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+#count{font-size:12px;color:#888;padding:2px 0 8px}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:8px}
+.card{background:#fff;border:1px solid #e0e0d8;border-left:3px solid var(--cc);border-radius:10px;padding:11px 13px}
+.ch{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.dn{font-size:14px;font-weight:500;color:#1a1a1a;line-height:1.3}
+.cb{font-size:11px;padding:2px 7px;border-radius:20px;background:var(--cbg);color:var(--ct);white-space:nowrap;flex-shrink:0;margin-top:1px}
+.row{display:flex;gap:5px;margin-bottom:3px;font-size:12.5px}
+.lbl{color:#888;min-width:58px;flex-shrink:0;font-size:11.5px;padding-top:1px}
+.val{color:#1a1a1a;line-height:1.4}
+.mac{background:#f5f5f0;border-radius:6px;padding:6px 9px;font-size:12px;color:#555;margin-top:7px;line-height:1.5}
+.nores{text-align:center;color:#888;padding:3rem 0;font-size:14px;grid-column:1/-1}
+footer{text-align:center;font-size:11px;color:#aaa;margin-top:2rem;padding-top:1rem;border-top:1px solid #e0e0d8}
+</style>
+</head>
+<body>
+<h1>💉 Guia EV — PA Referência Rápida</h1>
+<div id="bar">
+  <input type="text" id="search" placeholder="Buscar medicamento, indicação, macete..." autocomplete="off">
+  <div id="filters"></div>
+  <div id="count"></div>
+</div>
+<div id="grid"></div>
+<footer>HMAB – PAM · Dr. Phelipe Siqueira de Almeida · CRM-DF 35311 · Uso exclusivo como referência clínica</footer>
+
+<script>
+const C={
+"Analgésico":      {c:"#EF9F27",bg:"#FAEEDA",t:"#633806"},
+"Antiemético":     {c:"#1D9E75",bg:"#E1F5EE",t:"#085041"},
+"Antiespasmódico": {c:"#D85A30",bg:"#FAECE7",t:"#4A1B0C"},
+"Corticoide":      {c:"#BA7517",bg:"#FFF8E1",t:"#412402"},
+"Broncodilatador": {c:"#378ADD",bg:"#E6F1FB",t:"#042C53"},
+"Anticonvulsivante":{c:"#7F77DD",bg:"#EEEDFE",t:"#26215C"},
+"Sedação/IOT":     {c:"#D4537E",bg:"#FBEAF0",t:"#4B1528"},
+"Antibiótico":     {c:"#639922",bg:"#EAF3DE",t:"#173404"},
+"Cardiovascular":  {c:"#E24B4A",bg:"#FCEBEB",t:"#501313"},
+"Eletrólito":      {c:"#888780",bg:"#F1EFE8",t:"#2C2C2A"},
+"Hemostático":     {c:"#A32D2D",bg:"#FCEBEB",t:"#791F1F"},
+"Protetor Gástrico":{c:"#185FA5",bg:"#E6F1FB",t:"#042C53"}
+};
+
+const M=[
+{n:"Dipirona (Metamizol)",cat:"Analgésico",amp:"500mg/mL — 2mL = 1g",dose:"1–2g EV",dil:"10mL SF → infundir lento 5–10min",ind:"Dor leve-moderada, febre",mac:"⚠️ Infundir DEVAGAR — hipotensão por liberação histamínica. Contraindicado em alérgicos a pirazolônicos. Pode repetir 1×."},
+{n:"Paracetamol EV (Perfalgan)",cat:"Analgésico",amp:"10mg/mL — frasco 100mL = 1g",dose:"1g EV",dil:"Já vem pronto → infundir em 15min",ind:"Dor/febre quando dipirona contraindicada",mac:"⚠️ Dose máx: 4g/dia. Atenção em hepatopatas. Boa opção em alérgicos à dipirona e gestantes."},
+{n:"Cetoprofeno",cat:"Analgésico",amp:"100mg/2mL",dose:"100mg EV",dil:"100mL SF → infundir em 20–30min",ind:"Dor inflamatória, cólica renal/biliar, dor óssea",mac:"⚠️ AINE — contraindicado em IR, úlcera ativa, gestante. Muito eficaz para cólica renal (associar Buscopan)."},
+{n:"Cetorolaco",cat:"Analgésico",amp:"30mg/mL (1mL)",dose:"15–30mg EV lento",dil:"Direto EV lento OU 50mL SF → 15min",ind:"Dor aguda moderada-intensa, cólica renal, pós-op",mac:"⚠️ AINE — max 5 dias. Potência comparável à morfina em cólica. Checar função renal antes."},
+{n:"Tramadol",cat:"Analgésico",amp:"50mg/mL — 2mL = 100mg",dose:"100mg EV",dil:"100–250mL SF → infundir em 30–60min",ind:"Dor moderada-intensa",mac:"⚠️ Infundir LENTO — convulsão e hipotensão se rápido! SEMPRE associar antiemético. Não combinar com ISRS (serotonina)."},
+{n:"Morfina",cat:"Analgésico",amp:"10mg/mL (1mL)",dose:"2–4mg EV titulado",dil:"Diluir para 1mg/mL em SF → infundir lento",ind:"Dor intensa, SCA, edema agudo de pulmão",mac:"⚠️ TITULAR: iniciar 2mg EV, repetir a cada 5–10min conforme resposta. Ter NALOXONA disponível. Depressão respiratória!"},
+{n:"Fentanil",cat:"Analgésico",amp:"50mcg/mL — 2mL = 100mcg",dose:"1–2mcg/kg EV (analgesia)",dil:"Diluir em SF → infundir LENTO 3–5min",ind:"Dor intensa, sedação procedimental, pré-IOT",mac:"⚠️ Muito potente — TITULAR. Rigidez torácica se infundir rápido. Ter naloxona disponível."},
+{n:"Ondansetrona",cat:"Antiemético",amp:"2mg/mL — 4mL = 8mg",dose:"4–8mg EV",dil:"50mL SF → infundir em 15min",ind:"Náusea/vômito (quimio, pós-op, gestação, geral)",mac:"⚠️ Prolonga QT — cuidado em cardiopatas e uso concomitante com outros QT-prolongadores. Intervalo mínimo 4h."},
+{n:"Metoclopramida",cat:"Antiemético",amp:"5mg/mL — 2mL = 10mg",dose:"10mg EV",dil:"50mL SF → infundir em 15min",ind:"Náusea/vômito, gastroparesia, esvaziamento gástrico",mac:"⚠️ DISTONIA EXTRAPIRAMIDAL — mais comum em jovens! Ter biperideno disponível. Não repetir se distonia ocorrer."},
+{n:"Bromoprida",cat:"Antiemético",amp:"5mg/mL — 2mL = 10mg",dose:"10mg EV",dil:"50mL SF → 15min (ou direto lento)",ind:"Náusea/vômito, gastroparesia",mac:"Similar à metoclopramida. Mesmos cuidados com distonia. Alternativa quando metoclopramida não disponível."},
+{n:"Dimenidrinato (Dramin)",cat:"Antiemético",amp:"30mg/mL — 1mL = 30mg",dose:"50–100mg EV",dil:"50mL SF → infundir em 20–30min",ind:"Vertigem, labirintite, cinetose, náusea",mac:"✅ MELHOR OPÇÃO PARA VERTIGEM/LABIRINTITE. Muito sedativo — cuidado em idosos. Anticolinérgico."},
+{n:"Prometazina (Fenergan)",cat:"Antiemético",amp:"25mg/mL — 2mL = 50mg",dose:"25–50mg EV/IM",dil:"25mg em 50mL SF → MUITO LENTO",ind:"Náusea, alergia, sedação leve",mac:"⚠️ EV LENTO — necrose tecidual grave por extravasamento! Preferir IM profundo. Sedação significativa."},
+{n:"Escopolamina N-butilbrometo (Buscopan)",cat:"Antiespasmódico",amp:"20mg/mL — 1mL = 20mg",dose:"20mg EV",dil:"Direto EV lento 1–2min OU 50mL SF em 15min",ind:"Cólica renal, biliar, intestinal, uterina",mac:"Pode repetir após 20min. Associar AINE + dipirona para analgesia completa. Efeito anticolinérgico: boca seca, retenção urinária."},
+{n:"Papaverina",cat:"Antiespasmódico",amp:"40mg/2mL",dose:"40–120mg EV",dil:"100mL SF → infundir em 30min",ind:"Espasmo de musculatura lisa (cólica renal/biliar), isquemia mesentérica",mac:"Menos disponível. Alternativa ao Buscopan. Cuidado com hepatotoxicidade em uso prolongado."},
+{n:"Dexametasona",cat:"Corticoide",amp:"4mg/mL — amp 2,5mL = 10mg",dose:"Anti-inflam: 4–10mg EV | Anafilaxia/choque: 20mg EV",dil:"Direto EV lento OU 50–100mL SF",ind:"Anafilaxia (adjuvante), asma, laringite, edema cerebral, antiemético em QT",mac:"⚠️ Na anafilaxia: NUNCA substituir adrenalina (onset mais lento — é adjuvante). Dose única não precisa desmame. Versátil!"},
+{n:"Metilprednisolona (Solumedrol)",cat:"Corticoide",amp:"125mg/2mL | 500mg | 1g",dose:"40–125mg EV (moderado) | 1g (pulsoterapia)",dil:"125mg: 100mL SF → 30min | 1g: 250mL SF → 60min",ind:"Asma grave, DPOC agudizado, anafilaxia, LES, pulsoterapia reumatológica",mac:"⚠️ NUNCA infundir rápido em dose alta — risco de arritmia! Para asma grave: 125mg é suficiente."},
+{n:"Hidrocortisona",cat:"Corticoide",amp:"100mg/2mL | 500mg pó",dose:"100–300mg EV (PA) | 200mg/dia (choque séptico refratário)",dil:"50–100mL SF → infundir em 15–30min",ind:"Insuficiência adrenal, asma grave, choque séptico refratário, anafilaxia grave",mac:"✅ No choque séptico refratário a vasopressor: hidrocortisona 200mg/dia em infusão contínua ou 50mg 6/6h. Início mais rápido que metilpred."},
+{n:"Aminofilina",cat:"Broncodilatador",amp:"24mg/mL — 10mL = 240mg",dose:"Ataque: 5mg/kg EV (max 500mg) | Manutenção: 0,5mg/kg/h",dil:"250–500mL SF ou SG5% → infundir em 30–45min (LENTO)",ind:"Broncoespasmo refratário, asma grave sem resposta a beta2",mac:"⚠️ Janela terapêutica estreita — arritmia e convulsão se rápido! Cada vez menos usada. Monitorar FC e sinais de toxicidade."},
+{n:"Adrenalina (broncodilatador/anafilaxia)",cat:"Broncodilatador",amp:"1mg/mL (1mL)",dose:"Anafilaxia: 0,3–0,5mg IM coxa | Nebulização: 3–5mg",dil:"IM: direto na face lateral da coxa | Nebulização: 3–5mg em 3mL SF",ind:"Anafilaxia (1ª ESCOLHA), broncoespasmo grave, laringoespasmo/crupe",mac:"⚠️ ANAFILAXIA: SEMPRE IM na coxa — NÃO ATRASAR! EV apenas em PCR/choque refratário. IM > SC (absorção mais rápida)."},
+{n:"Sulfato de Magnésio (bronco)",cat:"Broncodilatador",amp:"50% — 10mL = 5g",dose:"2g EV",dil:"100mL SF → infundir em 20min",ind:"Asma grave refratária a beta2 + corticoide (adjuvante)",mac:"✅ Broncodilatador subutilizado no PA! Monitorar PA e reflexo patelar durante infusão. Antídoto: Gluconato de Cálcio."},
+{n:"Terbutalina",cat:"Broncodilatador",amp:"0,5mg/mL (1mL)",dose:"0,25–0,5mg SC",dil:"SC direto — sem diluição",ind:"Broncoespasmo agudo grave, tocolítico em parto prematuro",mac:"Principalmente SC no PA. Efeito em 15min. Pode causar taquicardia significativa."},
+{n:"Diazepam",cat:"Anticonvulsivante",amp:"5mg/mL — 2mL = 10mg",dose:"5–10mg EV lento (2mg/min)",dil:"NÃO DILUIR — precipita em qualquer solução. Infundir direto em veia grossa!",ind:"Crise convulsiva (1ª linha), status epilepticus, abstinência alcoólica",mac:"⚠️ NÃO DILUIR em SF nem SG — precipita! Monitorar respiração. Pode repetir 1× após 10–15min. Apneia possível."},
+{n:"Midazolam",cat:"Anticonvulsivante",amp:"5mg/mL — 3mL = 15mg | 1mg/mL",dose:"Status: 0,1–0,2mg/kg EV | Sedação: 2,5–5mg EV",dil:"Pode ser direto ou diluído em SF",ind:"Status epilepticus (1ª ou 2ª linha), sedação procedimental, agitação",mac:"✅ Pode ser dado IM no deltóide se sem acesso EV (0,1–0,2mg/kg). Antídoto: FLUMAZENIL. Meia-vida mais curta que diazepam."},
+{n:"Fenitoína",cat:"Anticonvulsivante",amp:"50mg/mL — 5mL = 250mg",dose:"15–20mg/kg EV (ataque) — max 1.250mg",dil:"SF 250mL (NUNCA SG5% — precipita!) → max 50mg/min",ind:"Status epilepticus refratário, epilepsia focal",mac:"⚠️ INFUNDIR LENTO — arritmia e hipotensão! NUNCA em SG5%. Monitorar ECG durante infusão."},
+{n:"Fenobarbital",cat:"Anticonvulsivante",amp:"200mg/mL (1mL)",dose:"15–20mg/kg EV (ataque)",dil:"SF → infundir lento (max 100mg/min)",ind:"Status epilepticus refratário (3ª linha), crianças, epilepsia refratária",mac:"⚠️ Sedação profunda. Monitorar respiração. Usar quando diazepam + fenitoína falharam. Longa meia-vida."},
+{n:"Ácido Valproico EV (Depakene EV)",cat:"Anticonvulsivante",amp:"100mg/mL — 4mL = 400mg",dose:"15–30mg/kg EV (ataque) — até 2.500mg",dil:"SF ou SG5% → infundir em 5–10min",ind:"Status epilepticus (alternativa à fenitoína), epilepsia generalizada",mac:"✅ Menor risco cardiovascular que fenitoína. Contraindicado em hepatopatia grave e gestação (teratogênico)."},
+{n:"Cetamina (Ketamina)",cat:"Sedação/IOT",amp:"50mg/mL — 10mL = 500mg | 10mg/mL",dose:"Dissociativa: 1–2mg/kg EV | Subanestésica (analgesia): 0,3–0,5mg/kg",dil:"Diluir para 10mg/mL → infundir em 1–2min",ind:"Sedação procedimental, dor intensa, broncoespasmo, IOT em instável",mac:"✅ PRESERVA reflexos de VA e PA — ideal no PA instável! Broncodilatador! Pode causar alucinações — associar midazolam 1–2mg. Contraindicar em HAS descontrolada/PIC elevada."},
+{n:"Etomidato",cat:"Sedação/IOT",amp:"2mg/mL — 10mL = 20mg",dose:"0,3mg/kg EV (indução para IOT)",dil:"Pode ser direto",ind:"Indução para IOT — PACIENTE HEMODINAMICAMENTE INSTÁVEL",mac:"✅ MENOR impacto hemodinâmico — ESCOLHA no paciente instável! Supressão adrenal com dose única (relevante no séptico — ponderar)."},
+{n:"Propofol",cat:"Sedação/IOT",amp:"10mg/mL — frasco 20mL ou 50mL",dose:"Indução: 1–2mg/kg | Manutenção: 50–200mcg/kg/min",dil:"Pode ser direto — titular",ind:"Sedação procedimental, indução IOT (paciente estável), manutenção UTI",mac:"⚠️ Dói na infusão — usar veia calibrosa ou lidocaína EV prévia. Hipotensão frequente. Síndrome do propofol em uso > 48h."},
+{n:"Succinilcolina (Quelicin)",cat:"Sedação/IOT",amp:"100mg/5mL ou 500mg/10mL",dose:"1–1,5mg/kg EV (bloqueio despolarizante)",dil:"Pode ser direto",ind:"Bloqueador NMJ para IOT em sequência rápida (ISR) — duração ultra-curta",mac:"⚠️ Início 45–60s, duração 5–10min. CONTRAINDICADO: hipercalemia, grande queimado, trauma medular > 24h, miopatias. Ter atropina."},
+{n:"Rocurônio",cat:"Sedação/IOT",amp:"10mg/mL — 5mL = 50mg",dose:"ISR: 0,6mg/kg | CICR (alta dose): 1,2mg/kg",dil:"Pode ser direto",ind:"Bloqueador NMJ para IOT em sequência rápida — alternativa à succinilcolina",mac:"✅ 1,2mg/kg = início similar à succinilcolina, sem contraindicações renais. Antídoto EXCLUSIVO: SUGAMMADEX (3mg/kg para reversão rápida)."},
+{n:"Ceftriaxona",cat:"Antibiótico",amp:"1g pó | 2g pó",dose:"1–2g EV 1×/dia (meningite: 2g 12/12h)",dil:"Reconstituir em 10mL AD → 100mL SF ou SG5% → 30min",ind:"PNA, pneumonia, meningite, celulite, sepse comunitária",mac:"⚠️ NÃO diluir em Ringer Lactato — precipita com cálcio! Dose única diária facilita o manejo. Cobertura muito ampla para comunitário."},
+{n:"Ampicilina-Sulbactam (Unasyn)",cat:"Antibiótico",amp:"3g (amp 2g + sulb 1g)",dose:"3g EV 6/6h (grave) ou 8/8h",dil:"Reconstituir em AD → 100mL SF → 30min",ind:"Infecções mistas, abdominal, ginecológica, pele, mordeduras, celulite grave",mac:"✅ Boa cobertura para anaeróbios e enterococos. Opção em celulite/erisipela grave. Não usar em alérgicos à penicilina."},
+{n:"Piperacilina-Tazobactam (Tazocin)",cat:"Antibiótico",amp:"4,5g (pip 4g + tazo 0,5g)",dose:"4,5g EV 6/6h",dil:"100mL SF → 30min (ou 4h em infusão estendida para Pseudomonas)",ind:"Sepse grave, infecção nosocomial, Pseudomonas, peritonite",mac:"✅ Infusão estendida de 4h aumenta eficácia PK/PD contra Pseudomonas. Boa primeira escolha em sepse nosocomial."},
+{n:"Meropeném",cat:"Antibiótico",amp:"500mg pó | 1g pó",dose:"500mg–1g EV 8/8h | Grave/ESBL: 2g 8/8h",dil:"100mL SF → 30min (ou 3h em infusão estendida para ESBL)",ind:"Sepse grave, infecção nosocomial, ESBL, BGN multirresistente",mac:"⚠️ RESERVAR — usar somente em sepse grave ou falha prévia. Infusão estendida 3h para organismos com CMI elevada."},
+{n:"Vancomicina",cat:"Antibiótico",amp:"500mg pó",dose:"15–20mg/kg EV 12/12h (sepse grave: 25–30mg/kg ataque)",dil:"500mg em 250mL SF → infundir em 60min (NUNCA < 60min)",ind:"MRSA, endocardite, meningite por Gram+, infecção grave por Gram+",mac:"⚠️ Infundir em ≥ 60min — 'Red man syndrome' se rápido (não é alergia, é histamina — tratar desacelerando infusão). Monitorar função renal."},
+{n:"Clindamicina",cat:"Antibiótico",amp:"300mg/2mL | 600mg/4mL",dose:"600–900mg EV 8/8h",dil:"100mL SF ou SG5% → 30–60min",ind:"Infecções anaeróbias, pele/tecido mole, pneumonia aspirativa",mac:"⚠️ NUNCA EV DIRETO — risco de parada cardíaca! SEMPRE diluir e infundir lento. Boa alternativa para anaeróbios em alérgicos à penicilina."},
+{n:"Metronidazol",cat:"Antibiótico",amp:"Frasco pronto 500mg/100mL",dose:"500mg EV 8/8h ou 1g 12/12h",dil:"Já vem pronto → infundir em 30–60min",ind:"Anaeróbios, C. difficile grave, abscesso, peritonite, amebíase grave",mac:"⚠️ Efeito antabuse — álcool causa flush e vômitos intensos. Excelente cobertura para anaeróbios. Associar sempre à cobertura de Gram-."},
+{n:"Azitromicina EV",cat:"Antibiótico",amp:"500mg/10mL",dose:"500mg EV 1×/dia",dil:"250–500mL SF → infundir em 60min (NUNCA < 60min)",ind:"Pneumonia atípica (Mycoplasma, Legionella, Chlamydia), infecções por Gram+",mac:"⚠️ Infundir em 60min MÍNIMO — prolonga QT significativamente. Cuidado em cardiopatas e drogas QT-prolongadoras."},
+{n:"Ciprofloxacino",cat:"Antibiótico",amp:"200mg/100mL | 400mg/200mL (frasco pronto)",dose:"400mg EV 12/12h (leve) | 400mg 8/8h (grave)",dil:"Já vem pronto → infundir em 60min",ind:"IVU grave, infecções entéricas, Pseudomonas, profilaxia meningococo",mac:"⚠️ Infundir em 60min. Prolonga QT. Interação com teofilina (dobra o nível). Cobertura para Pseudomonas."},
+{n:"Gentamicina",cat:"Antibiótico",amp:"40mg/mL — 2mL = 80mg",dose:"3–5mg/kg/dia EV 1×/dia (dose única diária)",dil:"100mL SF → infundir em 30–60min",ind:"Cobertura Gram-, PNA, sinergismo com beta-lactâmico em endocardite",mac:"⚠️ Evitar em IR e idosos. Dose única diária = menos nefrotóxica e igualmente eficaz. Monitorar creatinina."},
+{n:"Noradrenalina",cat:"Cardiovascular",amp:"4mg/4mL",dose:"0,01–3mcg/kg/min EV contínuo — BOMBA",dil:"4mg em 250mL SG5% (16mcg/mL) — bomba de infusão",ind:"Choque séptico/distributivo (VASOPRESSOR DE ESCOLHA), vasoplegia",mac:"⚠️ Preferencialmente acesso central — necrose por extravasamento em veia periférica. Se periférico: monitorar constantemente o sítio."},
+{n:"Adrenalina — PCR/Choque",cat:"Cardiovascular",amp:"1mg/mL (1mL)",dose:"PCR: 1mg EV a cada 3–5min | Vasopressora: 0,01–1mcg/kg/min",dil:"PCR: direto | Vasopressora: 1mg em 250mL SG5% — bomba",ind:"PCR (FV/TVSP/AESP/assistolia), bradicardia refratária, choque refratário",mac:"⚠️ Na PCR: EV ou IO direto. Como vasopressora: bomba de infusão obrigatória — dose-dependente."},
+{n:"Furosemida",cat:"Cardiovascular",amp:"10mg/mL — 2mL = 20mg",dose:"20–80mg EV | Dobrar a dose se sem resposta em 30–60min",dil:"Direto EV lento OU 100mL SF",ind:"Edema agudo de pulmão, ICC descompensada, hipercalemia, sobrecarga hídrica",mac:"⚠️ Monitorar K+ — risco hipocalemia. Início EV em 5–15min. No EAP: 40–80mg + vasodilatador (nitroglicerina)."},
+{n:"Atropina",cat:"Cardiovascular",amp:"0,5mg/mL (1mL)",dose:"0,5–1mg EV bolus — pode repetir até 3mg total",dil:"Direto EV bolus",ind:"Bradicardia sintomática, bloqueio AV, intoxicação por organofosforado",mac:"⚠️ Dose MÍNIMA: 0,5mg — doses menores podem PIORAR bradicardia paradoxalmente! Dose vagolítica máxima total: 3mg."},
+{n:"Amiodarona",cat:"Cardiovascular",amp:"50mg/mL — 3mL = 150mg",dose:"150mg EV em 10min (ataque FA) | PCR: 300mg bolus direto",dil:"SG5% APENAS — NÃO SF (precipita!) | Frasco de vidro se possível",ind:"FA, flutter, TSV, FV/TV refratária (PCR), arritmias ventriculares",mac:"⚠️ SEMPRE em SG5% — precipita em SF. Flebite em acesso periférico. Monitorar QT. PCR: 300mg bolus direto."},
+{n:"Adenosina",cat:"Cardiovascular",amp:"3mg/mL — 2mL = 6mg",dose:"6mg EV bolus → flush 20mL SF | Repetir 12mg × 2 se necessário",dil:"NÃO diluir — bolus ULTRA-RÁPIDO (1–2s) na veia mais proximal",ind:"TSV paroxística por reentrada (taquicardia supraventricular)",mac:"✅ Meia-vida de 10s! Aplicar BOLUS ULTRA-RÁPIDO + flush imediato. Avisar paciente: sensação de 'morte iminente' por 15–30s. Monitorar ECG."},
+{n:"Hidralazina",cat:"Cardiovascular",amp:"20mg/mL (1mL)",dose:"10–20mg EV lento (5mg/min)",dil:"Pode ser direto, muito lento",ind:"Crise hipertensiva na GESTANTE (1ª escolha), encefalopatia hipertensiva",mac:"✅ PRIMEIRA ESCOLHA NA GESTANTE. Início 10–20min, pico 20–30min. Monitorar PA rigorosamente — risco hipotensão súbita."},
+{n:"Nitroprussiato de Sódio",cat:"Cardiovascular",amp:"50mg pó",dose:"0,3–10mcg/kg/min EV contínuo — BOMBA",dil:"50mg em 250mL SG5% (200mcg/mL) — PROTEGER DA LUZ (papel alumínio)",ind:"Emergência hipertensiva, dissecção aórtica, IC com PA elevada",mac:"⚠️ PROTEGER DA LUZ — fotodegradação em horas! Monitoração contínua de PA. Toxicidade por cianeto em doses altas/uso prolongado."},
+{n:"Nitroglicerina (Tridil)",cat:"Cardiovascular",amp:"5mg/mL ou 1mg/mL",dose:"5–200mcg/min EV contínuo — BOMBA",dil:"Frasco de VIDRO — adsorve no PVC! Diluir em SG5%",ind:"SCA/angina instável, edema agudo de pulmão com PA elevada, crise hipertensiva",mac:"⚠️ FRASCO DE VIDRO obrigatório. Cefaleia frequente (vasodilatação). Contraindicado com inibidores PDE5 (sildenafil, tadalafil)."},
+{n:"Tiamina (Vitamina B1)",cat:"Eletrólito",amp:"100mg/2mL",dose:"100–500mg EV",dil:"100mL SF → infundir em 30min",ind:"Wernicke, etilismo crônico, desnutrição grave",mac:"⚠️ SEMPRE DAR ANTES DO SORO GLICOSADO EM ETILISTA — SG sem tiamina pode precipitar encefalopatia de Wernicke irreversível!"},
+{n:"Sulfato de Magnésio",cat:"Eletrólito",amp:"50% — 2mL = 1g | 10mL = 5g",dose:"Eclâmpsia: 4–6g ataque | Asma: 2g | Arritmia: 1–2g | Hipomagnesemia: 2g",dil:"100mL SF → infundir em 15–20min (NUNCA rápido — parada!)",ind:"Eclâmpsia/pré-eclâmpsia (DROGA DE ESCOLHA), asma refratária, torsades de pointes, hipomagnesemia",mac:"⚠️ INFUNDIR LENTO SEMPRE. Monitorar reflexo patelar (desaparece antes toxicidade grave). Antídoto: GLUCONATO DE CÁLCIO 1g EV."},
+{n:"Gluconato de Cálcio 10%",cat:"Eletrólito",amp:"10% — 10mL = 1g (90mg Ca²⁺)",dose:"1–2g EV lento (5–10min) — pode repetir",dil:"Pode ser direto EV lento OU 100mL SF",ind:"Hipocalcemia sintomática, hipercalemia (proteção de membrana), toxicidade por bloqueador Ca²⁺, antídoto do magnésio",mac:"⚠️ Infundir LENTO — bradicardia/parada. NÃO misturar com bicarbonato (precipita). Monitorar ECG."},
+{n:"Cloreto de Potássio (KCl 19,1%)",cat:"Eletrólito",amp:"19,1% — 10mL = 25mEq",dose:"10–40mEq/h EV (NUNCA > 40mEq/h)",dil:"SEMPRE DILUIR — NUNCA DIRETO (parada cardíaca!). Max: 80mEq/L periférico | 160mEq/L central",ind:"Hipocalemia grave (K⁺ < 3,0 sintomático ou K⁺ < 2,5)",mac:"⚠️⚠️ NUNCA EV DIRETO — MORTE! Max 20mEq/h em periférico, 40mEq/h em central. Queima a veia — diluir bem e monitorar inserção."},
+{n:"Bicarbonato de Sódio 8,4%",cat:"Eletrólito",amp:"Frasco 250mL (1mEq/mL)",dose:"1–2mEq/kg EV | Cálculo: BE × Peso × 0,3 = mEq",dil:"Pode ser direto ou diluído em SG5%",ind:"Acidose metabólica grave (pH < 7,1), hipercalemia, intoxicação por antidepressivo tricíclico",mac:"⚠️ NÃO misturar com cálcio (precipita). Na intox por tricíclico: meta pH 7,45–7,55. Risco de hipernatremia e alcalose de rebote."},
+{n:"Ácido Tranexâmico (Transamin)",cat:"Hemostático",amp:"500mg/5mL | 1g/10mL",dose:"1g EV em 10min + 1g em 8h (protocolo CRASH-2)",dil:"100mL SF → infundir em 10min (1ª dose)",ind:"Hemorragia por trauma (até 3h!), HDA, epistaxe maciça, sangramento pós-parto",mac:"⚠️ CRASH-2: máximo benefício nas primeiras 3h do trauma — APÓS 3H PODE SER PREJUDICIAL (piora desfechos). Contraindicado em TEP/TVP ativa."},
+{n:"Fitomenadiona (Vitamina K1)",cat:"Hemostático",amp:"10mg/mL (1mL)",dose:"5–10mg EV lento | 2,5–5mg SC (profilaxia)",dil:"50–100mL SF → infundir em 30min (LENTO — anafilaxia!)",ind:"Reversão de varfarina/acenocumarol, coagulopatia por deficiência de Vit K",mac:"⚠️ Infundir MUITO LENTO — risco de anafilaxia EV. Efeito demora 6–12h. Se urgente: usar PFC concomitante enquanto Vit K não age."},
+{n:"Heparina Não Fracionada",cat:"Hemostático",amp:"5.000UI/mL — frasco 5mL",dose:"Profilaxia: 5.000UI SC 8/8h | Terapêutico EV: 80UI/kg bolus + 18UI/kg/h",dil:"Infusão contínua: 25.000UI em 250mL SF (100UI/mL) — bomba",ind:"TVP, TEP, SCA, profilaxia de TEV, FA (anticoagulação)",mac:"⚠️ Monitorar TTPa 6h após início (meta 60–100s = 2–3× normal). Antídoto: PROTAMINA 1mg/100UI de heparina."},
+{n:"Omeprazol EV",cat:"Protetor Gástrico",amp:"40mg pó",dose:"40mg EV 12/12h | HDA: 80mg bolus + 8mg/h (infusão contínua)",dil:"40mg em 100mL SF → 20–30min",ind:"Úlcera péptica ativa, hemorragia digestiva alta (HDA), profilaxia úlcera de estresse",mac:"✅ Na HDA: 80mg bolus + 8mg/h contínuo por 72h (protocolo). Preferir VO quando possível (bioequivalente)."},
+{n:"Pantoprazol EV",cat:"Protetor Gástrico",amp:"40mg pó",dose:"40mg EV 12/12h",dil:"40mg em 100mL SF → 15–30min",ind:"Mesma indicação do omeprazol — frequentemente mais disponível no SUS",mac:"✅ Equivalente ao omeprazol no PA. Preferir VO (mesma eficácia). Estável após reconstituição por 12h em temperatura ambiente."}
+];
+
+const allCats=["Todos",...Object.keys(C)];
+let active="Todos";
+
+function mkFilt(){
+  const el=document.getElementById("filters");
+  el.innerHTML=allCats.map(c=>`<button class="filt${c===active?" on":""}" data-c="${c}">${c}</button>`).join("");
+  el.querySelectorAll(".filt").forEach(b=>b.addEventListener("click",()=>{active=b.dataset.c;mkFilt();show(filt())}));
+}
+
+function filt(){
+  const q=document.getElementById("search").value.toLowerCase().trim();
+  return M.filter(m=>{
+    const mc=active==="Todos"||m.cat===active;
+    if(!q)return mc;
+    return mc&&(m.n+m.cat+m.dose+m.ind+m.mac+m.dil+m.amp).toLowerCase().includes(q);
+  });
+}
+
+function show(list){
+  const g=document.getElementById("grid");
+  document.getElementById("count").textContent=list.length+" medicamento"+(list.length!==1?"s":"")+" encontrado"+(list.length!==1?"s":"");
+  if(!list.length){g.innerHTML='<div class="nores">Nenhum resultado encontrado.</div>';return;}
+  g.innerHTML=list.map(m=>{
+    const s=C[m.cat]||{c:"#888",bg:"#eee",t:"#333"};
+    return`<div class="card" style="--cc:${s.c};--cbg:${s.bg};--ct:${s.t}">
+<div class="ch"><span class="dn">${m.n}</span><span class="cb">${m.cat}</span></div>
+<div class="row"><span class="lbl">Ampola</span><span class="val">${m.amp}</span></div>
+<div class="row"><span class="lbl">Dose adulto</span><span class="val">${m.dose}</span></div>
+<div class="row"><span class="lbl">Diluição</span><span class="val">${m.dil}</span></div>
+<div class="row"><span class="lbl">Indicação</span><span class="val">${m.ind}</span></div>
+<div class="mac">${m.mac}</div>
+</div>`;
+  }).join("");
+}
+
+document.getElementById("search").addEventListener("input",()=>show(filt()));
+mkFilt();show(M);
+</script>
+</body>
+</html>
