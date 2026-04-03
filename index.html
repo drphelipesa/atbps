@@ -4,39 +4,100 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guia EV — PA Referência Rápida</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1a1a1a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Guia EV">
+<link rel="apple-touch-icon" href="icon.svg">
 <style>
+:root{
+  --bg:#f5f5f0;--cardbg:#fff;--border:#e0e0d8;--text:#1a1a1a;--muted:#888;
+  --mac-bg:#f5f5f0;--mac-text:#555;--filt-bg:#fff;--filt-border:#ccc;--filt-text:#555;
+  --inp-bg:#fff;--inp-border:#ccc;--footer:#aaa;--filt-hover:#eee;
+  --wdose-bg:#f0faf4;--wdose-text:#1a6a35;--cp-hover:#f0f0f0;
+  --sol-sf-bg:#dce8ff;--sol-sf-t:#1a3a7a;--sol-sg-bg:#fff3cc;--sol-sg-t:#6b4a00;
+  --pump-bg:#f0f4ff;--pump-border:#5577cc;--pump-lbl:#1a3a7a;--pump-res:#0a2a6a;
+}
+[data-theme=dark]{
+  --bg:#181818;--cardbg:#242424;--border:#383838;--text:#e0e0e0;--muted:#777;
+  --mac-bg:#1e1e1e;--mac-text:#999;--filt-bg:#2a2a2a;--filt-border:#444;--filt-text:#aaa;
+  --inp-bg:#242424;--inp-border:#444;--footer:#555;--filt-hover:#333;
+  --wdose-bg:#1a2e22;--wdose-text:#4caf7d;--cp-hover:#333;
+  --sol-sf-bg:#1a2e4a;--sol-sf-t:#7ab0ff;--sol-sg-bg:#2e2800;--sol-sg-t:#ffd066;
+  --pump-bg:#151c2e;--pump-border:#4466aa;--pump-lbl:#7ab0ff;--pump-res:#9fc5ff;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,sans-serif;background:#f5f5f0;color:#1a1a1a;padding:1rem}
-h1{font-size:18px;font-weight:500;margin-bottom:1rem;color:#1a1a1a}
-#bar{position:sticky;top:0;background:#f5f5f0;padding:8px 0 6px;z-index:10}
-#search{width:100%;padding:9px 13px;font-size:14px;border:1px solid #ccc;border-radius:8px;background:#fff;color:#1a1a1a;outline:none}
-#search:focus{border-color:#888}
+body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);padding:1rem;transition:background .2s,color .2s}
+#header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+h1{font-size:18px;font-weight:500;color:var(--text)}
+#themeBtn{background:none;border:1px solid var(--filt-border);border-radius:8px;cursor:pointer;font-size:15px;padding:5px 9px;color:var(--text);line-height:1}
+#bar{position:sticky;top:0;background:var(--bg);padding:8px 0 6px;z-index:10}
+#search,#wt{padding:9px 13px;font-size:14px;border:1px solid var(--inp-border);border-radius:8px;background:var(--inp-bg);color:var(--text);outline:none}
+#search:focus,#wt:focus{border-color:#888}
+#wt{width:90px;padding:9px 10px}
 #filters{display:flex;gap:5px;flex-wrap:wrap;padding:8px 0 4px}
-.filt{padding:3px 10px;font-size:12px;border:1px solid #ccc;border-radius:20px;background:#fff;color:#555;cursor:pointer}
-.filt:hover{background:#eee}
-.filt.on{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
-#count{font-size:12px;color:#888;padding:2px 0 8px}
+.filt{padding:3px 10px;font-size:12px;border:1px solid var(--filt-border);border-radius:20px;background:var(--filt-bg);color:var(--filt-text);cursor:pointer}
+.filt:hover{background:var(--filt-hover)}
+.filt.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+#count{font-size:12px;color:var(--muted);padding:2px 0 8px}
 #grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:8px}
-.card{background:#fff;border:1px solid #e0e0d8;border-left:3px solid var(--cc);border-radius:10px;padding:11px 13px}
+.card{background:var(--cardbg);border:1px solid var(--border);border-left:3px solid var(--cc);border-radius:10px;padding:11px 13px}
 .ch{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
-.dn{font-size:14px;font-weight:500;color:#1a1a1a;line-height:1.3}
+.dn{font-size:14px;font-weight:500;color:var(--text);line-height:1.3}
 .cb{font-size:11px;padding:2px 7px;border-radius:20px;background:var(--cbg);color:var(--ct);white-space:nowrap;flex-shrink:0;margin-top:1px}
 .row{display:flex;gap:5px;margin-bottom:3px;font-size:12.5px}
-.lbl{color:#888;min-width:58px;flex-shrink:0;font-size:11.5px;padding-top:1px}
-.val{color:#1a1a1a;line-height:1.4}
-.mac{background:#f5f5f0;border-radius:6px;padding:6px 9px;font-size:12px;color:#555;margin-top:7px;line-height:1.5}
-.nores{text-align:center;color:#888;padding:3rem 0;font-size:14px;grid-column:1/-1}
-footer{text-align:center;font-size:11px;color:#aaa;margin-top:2rem;padding-top:1rem;border-top:1px solid #e0e0d8}
-#wt{width:90px;padding:9px 10px;font-size:14px;border:1px solid #ccc;border-radius:8px;background:#fff;color:#1a1a1a;outline:none}
-#wt:focus{border-color:#888}
-.wdose{background:#f0faf4;border-radius:6px;padding:6px 9px;font-size:12px;color:#1a6a35;margin-top:6px;line-height:1.6}
+.lbl{color:var(--muted);min-width:58px;flex-shrink:0;font-size:11.5px;padding-top:1px}
+.val{color:var(--text);line-height:1.4}
+.mac{background:var(--mac-bg);border-radius:6px;padding:6px 9px;font-size:12px;color:var(--mac-text);margin-top:7px;line-height:1.5}
+.nores{text-align:center;color:var(--muted);padding:3rem 0;font-size:14px;grid-column:1/-1}
+footer{text-align:center;font-size:11px;color:var(--footer);margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border)}
+.wdose{background:var(--wdose-bg);border-radius:6px;padding:6px 9px;font-size:12px;color:var(--wdose-text);margin-top:6px;line-height:1.6}
 .wdl{font-weight:600}
-.cp{cursor:pointer;font-size:13px;padding:1px 5px;border-radius:4px;opacity:0.45;transition:opacity 0.15s;flex-shrink:0;user-select:none}
-.cp:hover{opacity:1;background:#f0f0f0}
+.cp{cursor:pointer;font-size:13px;padding:1px 5px;border-radius:4px;opacity:0.45;transition:opacity .15s;flex-shrink:0;user-select:none}
+.cp:hover{opacity:1;background:var(--cp-hover)}
+.fav{cursor:pointer;font-size:13px;padding:1px 5px;border-radius:4px;opacity:0.35;transition:opacity .15s;flex-shrink:0;user-select:none}
+.fav:hover,.fav.on{opacity:1}
+.sol{display:inline-block;font-size:10px;font-weight:600;padding:1px 6px;border-radius:4px;margin-right:2px;letter-spacing:.2px}
+.sol-sf{background:var(--sol-sf-bg);color:var(--sol-sf-t)}
+.sol-sg{background:var(--sol-sg-bg);color:var(--sol-sg-t)}
+.sol-d{background:var(--filt-hover);color:var(--muted)}
+.pump{background:var(--pump-bg);border-left:2px solid var(--pump-border);border-radius:6px;padding:7px 9px;font-size:12px;margin-top:6px}
+.pump-lbl{font-weight:700;color:var(--pump-lbl)}
+.pump-dil{color:var(--muted);font-size:11px;margin-left:4px}
+.pump-row{margin-top:5px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-size:12px;color:var(--text)}
+.pump-inp{width:64px;padding:3px 6px;font-size:12px;border:1px solid var(--inp-border);border-radius:5px;background:var(--inp-bg);color:var(--text);outline:none;text-align:center}
+.pump-unit{color:var(--muted);font-size:11px}
+.pump-res{font-size:13px;font-weight:700;color:var(--pump-res)}
+#tabs{display:flex;gap:6px;margin-bottom:10px}
+.tab{padding:5px 14px;font-size:13px;border:1px solid var(--filt-border);border-radius:8px;background:var(--filt-bg);color:var(--filt-text);cursor:pointer}
+.tab.on{background:var(--text);color:var(--bg);border-color:var(--text)}
+#protocols{display:none}
+.pcard{background:var(--cardbg);border:1px solid var(--border);border-left:4px solid;border-radius:10px;padding:13px 15px;margin-bottom:10px}
+.pcard-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:12px}
+.pfase{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.pfase:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.pfase-hd{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;display:flex;align-items:center;gap:7px}
+.pfase-tempo{background:var(--filt-hover);padding:1px 8px;border-radius:10px;font-size:10px;font-weight:500;color:var(--muted);text-transform:none;letter-spacing:0}
+.pitem{padding:5px 0;border-bottom:1px dashed var(--border)}
+.pitem:last-child{border-bottom:none;padding-bottom:0}
+.pitem-top{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.pitem-drug{font-weight:600;font-size:13px;color:var(--text)}
+.pitem-dose{font-size:12.5px;color:var(--text)}
+.pitem-obs{font-size:11.5px;color:var(--muted);margin-top:2px}
+.pou{text-align:center;font-size:11px;font-weight:700;color:var(--muted);padding:3px 0;letter-spacing:.5px}
 </style>
 </head>
 <body>
-<h1>💉 Guia EV — PA Referência Rápida</h1>
+<div id="header">
+  <h1>💉 Guia EV — PA Referência Rápida</h1>
+  <button id="themeBtn" onclick="toggleTheme()" title="Alternar tema">🌙</button>
+</div>
+<div id="tabs">
+  <button class="tab on" data-tab="meds" onclick="setTab('meds')">💊 Medicamentos</button>
+  <button class="tab" data-tab="proto" onclick="setTab('proto')">📋 Protocolos</button>
+</div>
 <div id="bar">
   <div style="display:flex;gap:6px">
     <input type="text" id="search" placeholder="Buscar medicamento, indicação, macete..." autocomplete="off" style="flex:1;min-width:0">
@@ -46,6 +107,7 @@ footer{text-align:center;font-size:11px;color:#aaa;margin-top:2rem;padding-top:1
   <div id="count"></div>
 </div>
 <div id="grid"></div>
+<div id="protocols"></div>
 <footer> · Uso exclusivo como referência clínica</footer>
 
 <script>
@@ -137,7 +199,72 @@ const M=[
 {n:"Levetiracetam EV (Keppra)",cat:"Anticonvulsivante",amp:"100mg/mL — frasco 5mL = 500mg",dose:"1.000–3.000mg EV em 15min",dil:"100–250mL SF → infundir em 15min",ind:"Status epilepticus (alternativa à fenitoína), epilepsia focal ou generalizada",mac:"✅ VANTAGENS sobre fenitoína: sem monitoração de ECG, compatível com SG5%, sem interações relevantes, sem risco de arritmia. Boa opção em idosos, cardiopatas e gestantes.",w:[{l:"Ataque",min:20,max:60,u:"mg"}]}
 ];
 
-const allCats=["Todos",...Object.keys(C)];
+// Calculadora de bomba — drogas em infusão contínua
+const PUMP={
+  "Noradrenalina":           {dil:"4mg em 250mL SG5% → 16mcg/mL", conc:16,    unit:"mcg/kg/min", min:0.01, max:3,   step:0.01, def:0.1},
+  "Adrenalina — PCR/Choque": {dil:"1mg em 250mL SG5% → 4mcg/mL",  conc:4,     unit:"mcg/kg/min", min:0.01, max:1,   step:0.01, def:0.05},
+  "Dobutamina":              {dil:"250mg em 250mL SG5% → 1.000mcg/mL", conc:1000, unit:"mcg/kg/min", min:2.5, max:20, step:0.5,  def:5},
+  "Dopamina":                {dil:"200mg em 250mL SG5% → 800mcg/mL",  conc:800,  unit:"mcg/kg/min", min:2,   max:20,  step:0.5,  def:5},
+  "Nitroprussiato de Sódio": {dil:"50mg em 250mL SG5% → 200mcg/mL",  conc:200,  unit:"mcg/kg/min", min:0.3, max:10,  step:0.1,  def:1},
+  "Nitroglicerina (Tridil)": {dil:"50mg em 250mL SG5% → 200mcg/mL",  conc:200,  unit:"mcg/min",    min:5,   max:200, step:5,    def:20},
+  "Insulina Regular EV":     {dil:"50UI em 50mL SF → 1UI/mL",         conc:1,    unit:"UI/kg/h",    min:0.05,max:0.2, step:0.01, def:0.1},
+  "Heparina Não Fracionada": {dil:"25.000UI em 250mL SF → 100UI/mL",  conc:100,  unit:"UI/kg/h",    min:10,  max:30,  step:1,    def:18}
+};
+const _pumpDoses={};
+
+function _pumpCalc(p,dose,kg){
+  if(!dose)return"—";
+  const needsKg=p.unit.includes("/kg/");
+  if(needsKg&&!kg)return"informe o peso ↑";
+  let mlh;
+  if(p.unit==="mcg/kg/min")mlh=(dose*kg*60)/p.conc;
+  else if(p.unit==="UI/kg/h"||p.unit==="mg/kg/h")mlh=(dose*kg)/p.conc;
+  else if(p.unit==="mcg/min")mlh=(dose*60)/p.conc;
+  else mlh=dose/p.conc;
+  return mlh.toFixed(1)+" mL/h";
+}
+
+function calcPump(el,i){
+  const p=PUMP[_shown[i].n];
+  if(!p)return;
+  const dose=parseFloat(el.value)||0;
+  _pumpDoses[_shown[i].n]=dose;
+  const kg=parseFloat(document.getElementById("wt").value)||0;
+  el.parentElement.querySelector(".pump-res").textContent=_pumpCalc(p,dose,kg);
+}
+
+// Compatibilidade de diluentes — exceções ao padrão SF+SG5
+const SOL={
+  "Fenitoína":["SF"],
+  "Amiodarona":["SG5"],
+  "Nitroprussiato de Sódio":["SG5"],
+  "Nitroglicerina (Tridil)":["SG5"],
+  "Noradrenalina":["SG5"],
+  "Dobutamina":["SG5"],
+  "Dopamina":["SG5"],
+  "Diazepam":["direto"],
+  "Etomidato":["direto"],
+  "Succinilcolina (Quelicin)":["direto"],
+  "Rocurônio":["direto"],
+  "Propofol":["direto"],
+  "Atropina":["direto"],
+  "Adenosina":["direto"],
+  "Hidralazina":["direto"],
+  "Terbutalina":["direto"],
+  "Flumazenil":["direto"],
+  "Naloxona":["direto"]
+};
+
+let _favs=new Set(JSON.parse(localStorage.getItem('guia-favs')||'[]'));
+function saveFavs(){localStorage.setItem('guia-favs',JSON.stringify([..._favs]));}
+function toggleFav(i,el){
+  const name=_shown[i].n;
+  if(_favs.has(name)){_favs.delete(name);el.textContent='☆';el.classList.remove('on');}
+  else{_favs.add(name);el.textContent='⭐';el.classList.add('on');}
+  saveFavs();show(filt());
+}
+
+const allCats=["Todos","⭐",...Object.keys(C)];
 let active="Todos";
 let _shown=[];
 
@@ -149,11 +276,14 @@ function mkFilt(){
 
 function filt(){
   const q=document.getElementById("search").value.toLowerCase().trim();
-  return M.filter(m=>{
-    const mc=active==="Todos"||m.cat===active;
+  let list=M.filter(m=>{
+    const mc=active==="Todos"||(active==="⭐"?_favs.has(m.n):m.cat===active);
     if(!q)return mc;
     return mc&&(m.n+m.cat+m.dose+m.ind+m.mac+m.dil+m.amp).toLowerCase().includes(q);
   });
+  if(active==="Todos"||active==="⭐")
+    list=list.slice().sort((a,b)=>(_favs.has(b.n)?1:0)-(_favs.has(a.n)?1:0));
+  return list;
 }
 
 function show(list){
@@ -163,15 +293,21 @@ function show(list){
   document.getElementById("count").textContent=list.length+" medicamento"+(list.length!==1?"s":"")+" encontrado"+(list.length!==1?"s":"");
   if(!list.length){g.innerHTML='<div class="nores">Nenhum resultado encontrado.</div>';return;}
   g.innerHTML=list.map((m,i)=>{
-    const s=C[m.cat]||{c:"#888",bg:"#eee",t:"#333"};
+    const cat=C[m.cat]||{c:"#888",bg:"#eee",t:"#333"};
     const wblock=kg>0&&m.w?`<div class="wdose">⚖️ Para ${kg}kg${m.w.map(r=>{const lo=+(r.min*kg).toFixed(1);const hi=+(r.max*kg).toFixed(1);return`<br><span class="wdl">${r.l}:</span> ${lo===hi?lo:lo+"–"+hi} ${r.u}`;}).join("")}</div>`:"";
-    return`<div class="card" style="--cc:${s.c};--cbg:${s.bg};--ct:${s.t}">
-<div class="ch"><span class="dn">${m.n}</span><div style="display:flex;gap:5px;align-items:center"><span class="cb">${m.cat}</span><span class="cp" data-i="${i}" onclick="cp(${i})">📋</span></div></div>
+    const sols=SOL[m.n]||["SF","SG5"];
+    const solHtml=sols.map(d=>d==="direto"?`<span class="sol sol-d">direto</span>`:d==="SF"?`<span class="sol sol-sf">SF ✓</span>`:`<span class="sol sol-sg">SG5% ✓</span>`).join("");
+    const isFav=_favs.has(m.n);
+    const pump=PUMP[m.n];
+    const pumpBlock=pump?`<div class="pump"><span class="pump-lbl">⚙️ Bomba</span><span class="pump-dil">${pump.dil}</span><div class="pump-row">Dose <input type="number" class="pump-inp" value="${_pumpDoses[m.n]??pump.def}" min="${pump.min}" max="${pump.max}" step="${pump.step}" oninput="calcPump(this,${i})"> <span class="pump-unit">${pump.unit}</span> → <b class="pump-res">${_pumpCalc(pump,_pumpDoses[m.n]??pump.def,kg)}</b></div></div>`:"";
+    return`<div class="card" style="--cc:${cat.c};--cbg:${cat.bg};--ct:${cat.t}">
+<div class="ch"><span class="dn">${m.n}</span><div style="display:flex;gap:4px;align-items:center"><span class="cb">${m.cat}</span><span class="fav${isFav?" on":""}" onclick="toggleFav(${i},this)">${isFav?"⭐":"☆"}</span><span class="cp" data-i="${i}" onclick="cp(${i})">📋</span></div></div>
 <div class="row"><span class="lbl">Ampola</span><span class="val">${m.amp}</span></div>
 <div class="row"><span class="lbl">Dose adulto</span><span class="val">${m.dose}</span></div>
 <div class="row"><span class="lbl">Diluição</span><span class="val">${m.dil}</span></div>
 <div class="row"><span class="lbl">Indicação</span><span class="val">${m.ind}</span></div>
-<div class="mac">${m.mac}</div>${wblock}
+<div class="row"><span class="lbl">Diluentes</span><span class="val">${solHtml}</span></div>
+<div class="mac">${m.mac}</div>${wblock}${pumpBlock}
 </div>`;
   }).join("");
 }
@@ -188,6 +324,137 @@ function cp(i){
 
 document.getElementById("search").addEventListener("input",()=>show(filt()));
 document.getElementById("wt").addEventListener("input",()=>show(filt()));
+
+// ── PROTOCOLOS CLÍNICOS ─────────────────────────────────────────
+const PROTO=[
+{title:"🫁 ISR — Intubação em Sequência Rápida",cor:"#D4537E",passos:[
+  {fase:"Pré-medicação",tempo:"3–5 min antes",itens:[
+    {n:"Fentanil",dose:"3 mcg/kg EV lento",obs:"↓ resposta simpática à laringoscopia"},
+    {n:"Atropina",dose:"0,5 mg EV",obs:"opcional — bradicardia reflexa (pediatria / succinilcolina)"}
+  ]},
+  {fase:"Indução",tempo:"T = 0",itens:[
+    {n:"Etomidato",dose:"0,3 mg/kg EV",obs:"✅ escolha no instável hemodinâmico"},
+    {ou:true},
+    {n:"Cetamina",dose:"1–2 mg/kg EV",obs:"✅ broncoespasmo ou hipovolemia grave"},
+    {ou:true},
+    {n:"Propofol",dose:"1–2 mg/kg EV",obs:"apenas no hemodinamicamente estável"}
+  ]},
+  {fase:"Bloqueio neuromuscular",tempo:"T = 0 (simultâneo)",itens:[
+    {n:"Succinilcolina",dose:"1,5 mg/kg EV",obs:"padrão — ⚠️ contraindicada em hipercalemia, queimado, trauma medular >24h"},
+    {ou:true},
+    {n:"Rocurônio",dose:"1,2 mg/kg EV",obs:"alternativa — antídoto: Sugammadex 16 mg/kg para reversão imediata"}
+  ]}
+]},
+{title:"🫀 PCR — Ressuscitação (ACLS)",cor:"#E24B4A",passos:[
+  {fase:"Qualquer ritmo — repetir a cada 3–5 min",tempo:"",itens:[
+    {n:"Adrenalina",dose:"1 mg EV/IO bolus direto",obs:"iniciar o mais precocemente possível"}
+  ]},
+  {fase:"FV / TV sem pulso — após 3 choques",tempo:"",itens:[
+    {n:"Amiodarona",dose:"300 mg EV bolus (1ª dose)",obs:"⚠️ diluir em SG5% — em PCR pode ser direto"},
+    {n:"Amiodarona",dose:"150 mg EV bolus (2ª dose se necessário)"},
+    {ou:true},
+    {n:"Lidocaína",dose:"1–1,5 mg/kg EV bolus",obs:"alternativa se amiodarona indisponível"}
+  ]},
+  {fase:"Causas reversíveis — 5H / 5T",tempo:"investigar sempre",itens:[
+    {n:"Bicarbonato de Sódio 8,4%",dose:"1 mEq/kg EV",obs:"hipercalemia, intox. tricíclico, acidose grave (pH <7,1)"},
+    {n:"Gluconato de Cálcio 10%",dose:"1 g EV lento",obs:"hipocalcemia, hipercalemia, toxicidade por bloqueador de Ca²⁺"},
+    {n:"Sulfato de Magnésio",dose:"2 g EV rápido",obs:"torsades de pointes, hipomagnesemia"}
+  ]}
+]},
+{title:"🐝 Anafilaxia",cor:"#EF9F27",passos:[
+  {fase:"1ª linha — IMEDIATO",tempo:"primeiros 30 segundos",itens:[
+    {n:"Adrenalina",dose:"0,3–0,5 mg IM (face lateral da coxa)",obs:"⚠️ NUNCA atrasar — é a única droga que salva. EV apenas em PCR/choque refratário"},
+    {n:"SF 0,9%",dose:"500 mL–1 L EV rápido",obs:"se hipotensão ou sinais de choque"}
+  ]},
+  {fase:"Adjuvantes (após adrenalina)",tempo:"",itens:[
+    {n:"Dexametasona",dose:"10–20 mg EV",obs:"previne reação bifásica — início de ação tardio (horas)"},
+    {n:"Prometazina",dose:"25 mg EV muito lento",obs:"anti-H1 — adjuvante, não substitui adrenalina"}
+  ]},
+  {fase:"Anafilaxia refratária à adrenalina IM",tempo:"",itens:[
+    {n:"Adrenalina",dose:"0,1–1 mcg/kg/min EV — bomba",obs:"acesso central preferencial"},
+    {n:"Glucagon",dose:"1–2 mg EV bolus",obs:"em paciente em uso de betabloqueador (bloqueia resposta à adrenalina)"}
+  ]}
+]},
+{title:"⚡ Status Epilepticus",cor:"#7F77DD",passos:[
+  {fase:"0–5 min — 1ª linha",tempo:"fase 1",itens:[
+    {n:"Diazepam",dose:"10 mg EV lento (2 mg/min)",obs:"⚠️ NÃO DILUIR — precipita. Infundir direto em veia grossa"},
+    {ou:true},
+    {n:"Midazolam",dose:"0,2 mg/kg EV ou IM",obs:"✅ pode ser dado IM (0,2 mg/kg) se sem acesso venoso"}
+  ]},
+  {fase:"5–30 min — 2ª linha (refratório)",tempo:"fase 2",itens:[
+    {n:"Fenitoína",dose:"20 mg/kg EV (max 50 mg/min)",obs:"⚠️ NUNCA em SG5% — apenas SF. Monitorar ECG"},
+    {ou:true},
+    {n:"Ácido Valproico EV (Depakene EV)",dose:"30 mg/kg EV em 5–10 min",obs:"✅ alternativa sem risco cardiovascular — contraindicado na gestante"},
+    {ou:true},
+    {n:"Levetiracetam EV (Keppra)",dose:"60 mg/kg EV em 15 min (máx 3 g)",obs:"✅ sem ECG, sem interações, seguro em gestantes e cardiopatas"}
+  ]},
+  {fase:">30 min — Status refratário",tempo:"fase 3 — UTI",itens:[
+    {n:"Fenobarbital",dose:"20 mg/kg EV lento",obs:"sedação profunda — monitorar respiração, preparar IOT"},
+    {n:"Midazolam",dose:"0,1–0,2 mg/kg bolus + infusão contínua",obs:"anestesia geral — UTI com monitoração de EEG"}
+  ]}
+]},
+{title:"🦠 Sepse — Hora Zero (Hour-1 Bundle)",cor:"#639922",passos:[
+  {fase:"Diagnóstico e coletas",tempo:"primeiros 15 min",itens:[
+    {n:"Hemoculturas 2 pares",dose:"antes do antibiótico",obs:"aeróbio + anaeróbio — não atrasar antibiótico >45 min para colher"},
+    {n:"Lactato sérico",dose:"meta: <2 mmol/L",obs:"se >4: alto risco — ressuscitação volêmica agressiva"}
+  ]},
+  {fase:"Ressuscitação volêmica",tempo:"PAM <65 ou lactato >4",itens:[
+    {n:"SF 0,9%",dose:"30 mL/kg EV em 30 min",obs:"reavaliar após cada bolus — cuidado em ICC e DPOC grave"}
+  ]},
+  {fase:"Antibioticoterapia empírica",tempo:"< 1 hora do diagnóstico",itens:[
+    {n:"Piperacilina-Tazobactam (Tazocin)",dose:"4,5 g EV 6/6h",obs:"sepse comunitária grave (abdominal, pulmonar, urinária)"},
+    {ou:true},
+    {n:"Meropeném",dose:"1–2 g EV 8/8h",obs:"nosocomial / ESBL / falha prévia / neutropenia"},
+    {n:"Vancomicina",dose:"25–30 mg/kg EV (ataque)",obs:"suspeitar MRSA — associar se cateter, cirurgia recente, bacteremia Gram+"}
+  ]},
+  {fase:"Vasopressor",tempo:"PAM <65 após fluido",itens:[
+    {n:"Noradrenalina",dose:"0,1–3 mcg/kg/min — bomba",obs:"✅ vasopressor de primeira escolha no choque séptico"}
+  ]},
+  {fase:"Choque séptico refratário",tempo:"noradrenalina >0,25 mcg/kg/min",itens:[
+    {n:"Hidrocortisona",dose:"200 mg/dia EV (50 mg 6/6h ou 200 mg/24h infusão)",obs:"esteroides se refratário ao vasopressor — não esperar desmame"}
+  ]}
+]}
+];
+
+function _pItem(item){
+  if(item.ou)return'<div class="pou">— ou —</div>';
+  var obs=item.obs?'<div class="pitem-obs">'+item.obs+'</div>':'';
+  return'<div class="pitem"><div class="pitem-top"><span class="pitem-drug">'+item.n+'</span><span class="pitem-dose"> '+item.dose+'</span></div>'+obs+'</div>';
+}
+function _pFase(f){
+  var tempo=f.tempo?'<span class="pfase-tempo">'+f.tempo+'</span>':'';
+  return'<div class="pfase"><div class="pfase-hd">'+f.fase+tempo+'</div>'+f.itens.map(_pItem).join('')+'</div>';
+}
+function showProto(){
+  document.getElementById("protocols").innerHTML=PROTO.map(function(p){
+    return'<div class="pcard" style="border-left-color:'+p.cor+'"><div class="pcard-title">'+p.title+'</div>'+p.passos.map(_pFase).join('')+'</div>';
+  }).join('');
+}
+
+function setTab(tab){
+  const isMed=tab==="meds";
+  document.getElementById("bar").style.display=isMed?"":"none";
+  document.getElementById("grid").style.display=isMed?"":"none";
+  document.getElementById("protocols").style.display=isMed?"none":"block";
+  document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("on",t.dataset.tab===tab));
+  if(!isMed)showProto();
+}
+
+function toggleTheme(){
+  const dark=document.documentElement.dataset.theme==='dark';
+  document.documentElement.dataset.theme=dark?'':'dark';
+  document.getElementById('themeBtn').textContent=dark?'🌙':'☀️';
+  localStorage.setItem('guia-theme',dark?'light':'dark');
+}
+(function(){
+  const t=localStorage.getItem('guia-theme');
+  if(t==='dark'){document.documentElement.dataset.theme='dark';document.getElementById('themeBtn').textContent='☀️';}
+})();
+
+if('serviceWorker' in navigator && location.protocol !== 'file:'){
+  navigator.serviceWorker.register('./sw.js').catch(()=>{});
+}
+
 mkFilt();show(M);
 </script>
 </body>
