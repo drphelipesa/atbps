@@ -53,8 +53,8 @@ export function setTab(tab) {
   );
 
   document.getElementById('search').value = '';
-  document.getElementById('wt').value     = '';
-  state.weight = 0;
+  document.getElementById('clearBtn').style.display = 'none';
+  window.scrollTo(0, 0);
 
   if (isProto) { renderProtocols(); return; }
 
@@ -91,8 +91,20 @@ function updateView() {
 // ── Eventos ──────────────────────────────────
 
 function bindEvents() {
-  document.getElementById('search').addEventListener('input', e => {
+  const searchEl = document.getElementById('search');
+  const clearBtn = document.getElementById('clearBtn');
+
+  searchEl.addEventListener('input', e => {
     state.searchQuery = e.target.value.toLowerCase().trim();
+    clearBtn.style.display = state.searchQuery ? 'block' : 'none';
+    updateView();
+  });
+
+  clearBtn.addEventListener('click', () => {
+    searchEl.value = '';
+    state.searchQuery = '';
+    clearBtn.style.display = 'none';
+    searchEl.focus();
     updateView();
   });
 
@@ -111,9 +123,17 @@ function bindEvents() {
 // ── Service Worker ───────────────────────────
 
 function registerSW() {
-  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-    navigator.serviceWorker.register('./sw.js').catch(() => {});
-  }
+  if (!('serviceWorker' in navigator) || location.protocol === 'file:') return;
+  navigator.serviceWorker.register('./sw.js').then(reg => {
+    reg.addEventListener('updatefound', () => {
+      const newWorker = reg.installing;
+      newWorker.addEventListener('statechange', () => {
+        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+          document.getElementById('updateBanner').style.display = 'flex';
+        }
+      });
+    });
+  }).catch(() => {});
 }
 
 // ── Expõe setTab globalmente para uso no HTML ─

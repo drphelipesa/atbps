@@ -3,6 +3,7 @@
 // ─────────────────────────────────────────────
 
 import { state } from './state.js';
+import { flashCopyBtn } from './utils.js';
 
 // ── Helpers de item e fase ───────────────────
 
@@ -26,17 +27,44 @@ function buildFase(f) {
 </div>`;
 }
 
+// ── Texto plano para cópia ──────────────────
+
+function buildProtocolText(p) {
+  const lines = [p.title];
+  for (const f of p.passos) {
+    lines.push('');
+    const tempo = f.tempo ? ` (${f.tempo})` : '';
+    lines.push(`${f.fase.toUpperCase()}${tempo}`);
+    for (const item of f.itens) {
+      if (item.ou) { lines.push('— ou —'); continue; }
+      lines.push(`• ${item.n} — ${item.dose}`);
+      if (item.obs) lines.push(`  ${item.obs}`);
+    }
+  }
+  return lines.join('\n');
+}
+
 // ── Renderização principal ───────────────────
 
 export function renderProtocols() {
   const container = document.getElementById('protocols');
-  container.innerHTML = state.protocols.map(p => `
+  container.innerHTML = state.protocols.map((p, idx) => `
     <div class="pcard" style="border-left-color:${p.cor}">
-      <div class="pcard-title">${p.title}</div>
+      <div class="pcard-title">
+        ${p.title}
+        <span class="cp" onclick="window._copyProtocol(this,${idx})" title="Copiar protocolo">📋</span>
+      </div>
       ${p.passos.map(buildFase).join('')}
     </div>
   `).join('');
 }
+
+window._copyProtocol = function(el, idx) {
+  const p = state.protocols[idx];
+  if (!p) return;
+  navigator.clipboard.writeText(buildProtocolText(p)).catch(() => {});
+  flashCopyBtn(el);
+};
 
 // ── Prescrição de alta (futuro — estrutura pronta) ─
 
