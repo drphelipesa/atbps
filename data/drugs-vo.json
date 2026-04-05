@@ -1,0 +1,137 @@
+[
+  {
+    "n": "Dipirona 1g",
+    "cat": "Analgésico",
+    "apresentacao": "Comprimido 1g | Gotas 500mg/mL (frasco 20mL)",
+    "dose": "500mg–1g VO 6/6h se necessário",
+    "ind": "Dor leve-moderada, febre",
+    "mac": "Máx 4g/dia. Evitar em alérgicos a pirazolônicos.",
+    "rx": "Dipirona 1g\n1 caixa com 20 comprimidos\nTomar 1 comprimido de 6/6 horas se dor ou febre"
+  },
+  {
+    "n": "Paracetamol 750mg",
+    "cat": "Analgésico",
+    "apresentacao": "Comprimido 750mg",
+    "dose": "750mg VO 6/6h",
+    "ind": "Dor leve-moderada, febre — opção em alérgicos à dipirona e gestantes",
+    "mac": "Máx 4g/dia. Atenção em hepatopatas e etilistas crônicos.",
+    "rx": "Paracetamol 750mg\n1 caixa com 20 comprimidos\nTomar 1 comprimido de 6/6 horas se dor ou febre"
+  },
+  {
+    "n": "Ibuprofeno 600mg",
+    "cat": "Analgésico",
+    "apresentacao": "Comprimido 600mg",
+    "dose": "400–600mg VO 8/8h com alimento",
+    "ind": "Dor inflamatória, cólica, dismenorreia, febre",
+    "mac": "⚠️ AINE — tomar com alimento. Contraindicado em IR, úlcera, gestante, > 60 anos com cautela. Máx 7 dias.",
+    "rx": "Ibuprofeno 600mg\n1 caixa com 20 comprimidos\nTomar 1 comprimido de 8/8 horas após as refeições por 5 dias"
+  },
+  {
+    "n": "Ondansetrona 8mg",
+    "cat": "Antiemético",
+    "apresentacao": "Comprimido dispersível 8mg",
+    "dose": "8mg VO 8/8h",
+    "ind": "Náusea e vômito",
+    "mac": "Deixar dissolver na língua. Mesmo perfil de segurança da apresentação EV.",
+    "rx": "Ondansetrona 8mg (dispersível)\n1 blíster com 6 comprimidos\nDeixar dissolver na língua 1 comprimido a cada 8 horas se náusea ou vômito"
+  },
+  {
+    "n": "Domperidona 10mg",
+    "cat": "Antiemético",
+    "apresentacao": "Comprimido 10mg",
+    "dose": "10mg VO 3×/dia antes das refeições",
+    "ind": "Náusea, vômito, gastroparesia, refluxo",
+    "mac": "Não usar por mais de 7 dias sem reavaliação. Risco cardíaco em doses altas e idosos.",
+    "rx": "Domperidona 10mg\n1 blíster com 10 comprimidos\nTomar 1 comprimido 3 vezes ao dia antes das refeições por 3 dias"
+  },
+  {
+    "n": "Metoclopramida 10mg",
+    "cat": "Antiemético",
+    "apresentacao": "Comprimido 10mg",
+    "dose": "10mg VO 3×/dia antes das refeições",
+    "ind": "Náusea, vômito, gastroparesia",
+    "mac": "⚠️ Risco de distonia — principalmente em jovens. Não usar > 5 dias.",
+    "rx": "Metoclopramida 10mg\n1 blíster com 10 comprimidos\nTomar 1 comprimido 3 vezes ao dia antes das refeições por 3 dias"
+  },
+  {
+    "n": "Amoxicilina 500mg",
+    "cat": "Antibiótico",
+    "apresentacao": "Cápsula 500mg",
+    "dose": "500mg VO 8/8h | Infecção grave: 875mg VO 12/12h",
+    "ind": "Infecções respiratórias, otite, sinusite, IVU não complicada",
+    "mac": "Completar o curso mesmo com melhora. Tomar com ou sem alimento.",
+    "rx": "Amoxicilina 500mg\n1 caixa com 21 cápsulas\nTomar 1 cápsula de 8/8 horas por 7 dias"
+  },
+  {
+    "n": "Azitromicina 500mg",
+    "cat": "Antibiótico",
+    "apresentacao": "Comprimido 500mg",
+    "dose": "500mg VO 1×/dia por 3–5 dias",
+    "ind": "Pneumonia atípica, infecções respiratórias, pele, DST",
+    "mac": "⚠️ Prolonga QT — cuidado em cardiopatas. Tomar em jejum (1h antes ou 2h após refeição) para melhor absorção.",
+    "rx": "Azitromicina 500mg\n1 caixa com 3 comprimidos\nTomar 1 comprimido ao dia em jejum por 3 dias"
+  },
+  {
+    "n": "Cefalexina 500mg",
+    "cat": "Antibiótico",
+    "apresentacao": "Cápsula 500mg",
+    "dose": "500mg VO 6/6h",
+    "ind": "Infecções de pele/tecido mole, erisipela, celulite não grave, IVU",
+    "mac": "Tomar com ou sem alimento. Completar o curso. Alternativa em alérgicos às penicilinas.",
+    "rx": "Cefalexina 500mg\n1 caixa com 28 cápsulas\nTomar 1 cápsula de 6/6 horas por 7 dias"
+  },
+  {
+    "n": "Prednisona 20mg",
+    "cat": "Corticoide",
+    "apresentacao": "Comprimido 20mg",
+    "dose": "20–60mg/dia VO (dose única pela manhã)",
+    "ind": "Processos inflamatórios/alérgicos, asma, DPOC agudizado, reação alérgica",
+    "mac": "⚠️ Tomar pela manhã com alimento para reduzir insônia e irritação gástrica. Desmame necessário se uso > 7 dias.",
+    "rx": "Prednisona 20mg\n1 caixa com 10 comprimidos\nTomar 1 comprimido pela manhã após o café por 5 dias"
+  },
+  {
+    "n": "Dexametasona 4mg",
+    "cat": "Corticoide",
+    "apresentacao": "Comprimido 4mg",
+    "dose": "4–8mg VO 1–2×/dia",
+    "ind": "Processos inflamatórios, alergia, asma",
+    "mac": "Tomar com alimento. Potência ~6× maior que prednisona. Preferir prednisona para uso prolongado.",
+    "rx": "Dexametasona 4mg\n1 caixa com 10 comprimidos\nTomar 1 comprimido de 12/12 horas por 3 dias"
+  },
+  {
+    "n": "Omeprazol 20mg",
+    "cat": "Protetor Gástrico",
+    "apresentacao": "Cápsula 20mg",
+    "dose": "20mg VO 1×/dia em jejum",
+    "ind": "Gastroproteção com AINEs, úlcera, DRGE, pirose",
+    "mac": "Tomar 30 min antes do café da manhã. Engolir inteiro — não abrir a cápsula.",
+    "rx": "Omeprazol 20mg\n1 caixa com 28 cápsulas\nTomar 1 cápsula em jejum 30 minutos antes do café por 14 dias"
+  },
+  {
+    "n": "Escopolamina 10mg (Buscopan VO)",
+    "cat": "Antiespasmódico",
+    "apresentacao": "Drágea 10mg",
+    "dose": "10–20mg VO 3–5×/dia",
+    "ind": "Cólica renal, biliar, intestinal, uterina — continuação do tratamento EV",
+    "mac": "Efeito anticolinérgico: boca seca, retenção urinária. Tomar com água.",
+    "rx": "Escopolamina 10mg (Buscopan)\n1 caixa com 20 drágeas\nTomar 1 drágea de 6/6 horas por 3 dias se cólica"
+  },
+  {
+    "n": "Salbutamol Aerossol 100mcg",
+    "cat": "Broncodilatador",
+    "apresentacao": "Aerossol 100mcg/dose — frasco 200 doses",
+    "dose": "2 jatos (200mcg) a cada 4–6h se sintomas",
+    "ind": "Broncoespasmo agudo, asma, DPOC — broncodilatador de resgate",
+    "mac": "⚠️ Técnica correta: expirar, acionar + inspirar fundo, segurar 10s. Agitar antes de usar. Rinse a boca após se usar máscara.",
+    "rx": "Salbutamol aerossol 100mcg/dose (Aerolin)\n1 frasco\nAplicar 2 jatos a cada 4–6 horas se falta de ar ou chiado no peito\nTécnica: expirar, acionar + inspirar fundo, segurar 10 segundos"
+  },
+  {
+    "n": "Clonazepam 0,5mg",
+    "cat": "Anticonvulsivante",
+    "apresentacao": "Comprimido 0,5mg | Gotas 2,5mg/mL",
+    "dose": "0,5–2mg VO 1–3×/dia",
+    "ind": "Epilepsia, transtorno do pânico, ansiedade grave",
+    "mac": "⚠️ RECEITUÁRIO B (controlado). Risco de dependência. Não suspender abruptamente. Sedação — não dirigir.",
+    "rx": "Clonazepam 0,5mg (Rivotril) — RECEITUÁRIO B\n1 caixa com 30 comprimidos\nTomar 1 comprimido à noite por 30 dias\n(Retornar para renovar prescrição)"
+  }
+]

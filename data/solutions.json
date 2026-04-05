@@ -1,0 +1,63 @@
+{
+  "Fenitoína (Hidantal)": [
+    "SF"
+  ],
+  "Amiodarona (Cordarone)": [
+    "SG5"
+  ],
+  "Nitroprussiato de Sódio": [
+    "SG5"
+  ],
+  "Nitroglicerina (Tridil)": [
+    "SG5"
+  ],
+  "Noradrenalina": [
+    "SG5"
+  ],
+  "Dobutamina (Dobutrex)": [
+    "SG5"
+  ],
+  "Dopamina": [
+    "SG5"
+  ],
+  "Diazepam (Valium)": [
+    "direto"
+  ],
+  "Etomidato": [
+    "direto"
+  ],
+  "Succinilcolina (Quelicin)": [
+    "direto"
+  ],
+  "Rocurônio (Esmeron)": [
+    "direto"
+  ],
+  "Propofol (Diprivan)": [
+    "direto"
+  ],
+  "Atropina": [
+    "direto"
+  ],
+  "Adenosina (Adenocard)": [
+    "direto"
+  ],
+  "Hidralazina": [
+    "direto"
+  ],
+  "Terbutalina": [
+    "direto"
+  ],
+  "Flumazenil": [
+    "direto"
+  ],
+  "Naloxona (Narcan)": [
+    "direto"
+  ],
+  "Acetilcisteína EV (Fluimucil)": [
+    "SG5"
+  ],
+  "Vasopressina": [
+    "SF",
+    "SG5"
+  ]
+}

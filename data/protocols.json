@@ -1,0 +1,332 @@
+[
+  {
+    "title": "🫁 ISR — Intubação em Sequência Rápida",
+    "cor": "#D4537E",
+    "passos": [
+      {
+        "fase": "Pré-medicação",
+        "tempo": "3–5 min antes",
+        "itens": [
+          {
+            "n": "Fentanil",
+            "dose": "3 mcg/kg EV lento",
+            "obs": "↓ resposta simpática à laringoscopia"
+          },
+          {
+            "n": "Atropina",
+            "dose": "0,5 mg EV",
+            "obs": "opcional — bradicardia reflexa (pediatria / succinilcolina)"
+          }
+        ]
+      },
+      {
+        "fase": "Indução",
+        "tempo": "T = 0",
+        "itens": [
+          {
+            "n": "Etomidato",
+            "dose": "0,3 mg/kg EV",
+            "obs": "✅ escolha no instável hemodinâmico"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Cetamina",
+            "dose": "1–2 mg/kg EV",
+            "obs": "✅ broncoespasmo ou hipovolemia grave"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Propofol",
+            "dose": "1–2 mg/kg EV",
+            "obs": "apenas no hemodinamicamente estável"
+          }
+        ]
+      },
+      {
+        "fase": "Bloqueio neuromuscular",
+        "tempo": "T = 0 (simultâneo)",
+        "itens": [
+          {
+            "n": "Succinilcolina",
+            "dose": "1,5 mg/kg EV",
+            "obs": "padrão — ⚠️ contraindicada em hipercalemia, queimado, trauma medular >24h"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Rocurônio",
+            "dose": "1,2 mg/kg EV",
+            "obs": "alternativa — antídoto: Sugammadex 16 mg/kg para reversão imediata"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🫀 PCR — Ressuscitação (ACLS)",
+    "cor": "#E24B4A",
+    "passos": [
+      {
+        "fase": "Qualquer ritmo — repetir a cada 3–5 min",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Adrenalina",
+            "dose": "1 mg EV/IO bolus direto",
+            "obs": "iniciar o mais precocemente possível"
+          }
+        ]
+      },
+      {
+        "fase": "FV / TV sem pulso — após 3 choques",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Amiodarona",
+            "dose": "300 mg EV bolus (1ª dose)",
+            "obs": "⚠️ diluir em SG5% — em PCR pode ser direto"
+          },
+          {
+            "n": "Amiodarona",
+            "dose": "150 mg EV bolus (2ª dose se necessário)"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Lidocaína",
+            "dose": "1–1,5 mg/kg EV bolus",
+            "obs": "alternativa se amiodarona indisponível"
+          }
+        ]
+      },
+      {
+        "fase": "Causas reversíveis — 5H / 5T",
+        "tempo": "investigar sempre",
+        "itens": [
+          {
+            "n": "Bicarbonato de Sódio 8,4%",
+            "dose": "1 mEq/kg EV",
+            "obs": "hipercalemia, intox. tricíclico, acidose grave (pH <7,1)"
+          },
+          {
+            "n": "Gluconato de Cálcio 10%",
+            "dose": "1 g EV lento",
+            "obs": "hipocalcemia, hipercalemia, toxicidade por bloqueador de Ca²⁺"
+          },
+          {
+            "n": "Sulfato de Magnésio",
+            "dose": "2 g EV rápido",
+            "obs": "torsades de pointes, hipomagnesemia"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🐝 Anafilaxia",
+    "cor": "#EF9F27",
+    "passos": [
+      {
+        "fase": "1ª linha — IMEDIATO",
+        "tempo": "primeiros 30 segundos",
+        "itens": [
+          {
+            "n": "Adrenalina",
+            "dose": "0,3–0,5 mg IM (face lateral da coxa)",
+            "obs": "⚠️ NUNCA atrasar — é a única droga que salva. EV apenas em PCR/choque refratário"
+          },
+          {
+            "n": "SF 0,9%",
+            "dose": "500 mL–1 L EV rápido",
+            "obs": "se hipotensão ou sinais de choque"
+          }
+        ]
+      },
+      {
+        "fase": "Adjuvantes (após adrenalina)",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Dexametasona",
+            "dose": "10–20 mg EV",
+            "obs": "previne reação bifásica — início de ação tardio (horas)"
+          },
+          {
+            "n": "Prometazina",
+            "dose": "25 mg EV muito lento",
+            "obs": "anti-H1 — adjuvante, não substitui adrenalina"
+          }
+        ]
+      },
+      {
+        "fase": "Anafilaxia refratária à adrenalina IM",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Adrenalina",
+            "dose": "0,1–1 mcg/kg/min EV — bomba",
+            "obs": "acesso central preferencial"
+          },
+          {
+            "n": "Glucagon",
+            "dose": "1–2 mg EV bolus",
+            "obs": "em paciente em uso de betabloqueador (bloqueia resposta à adrenalina)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "⚡ Status Epilepticus",
+    "cor": "#7F77DD",
+    "passos": [
+      {
+        "fase": "0–5 min — 1ª linha",
+        "tempo": "fase 1",
+        "itens": [
+          {
+            "n": "Diazepam",
+            "dose": "10 mg EV lento (2 mg/min)",
+            "obs": "⚠️ NÃO DILUIR — precipita. Infundir direto em veia grossa"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Midazolam",
+            "dose": "0,2 mg/kg EV ou IM",
+            "obs": "✅ pode ser dado IM (0,2 mg/kg) se sem acesso venoso"
+          }
+        ]
+      },
+      {
+        "fase": "5–30 min — 2ª linha (refratório)",
+        "tempo": "fase 2",
+        "itens": [
+          {
+            "n": "Fenitoína",
+            "dose": "20 mg/kg EV (max 50 mg/min)",
+            "obs": "⚠️ NUNCA em SG5% — apenas SF. Monitorar ECG"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Ácido Valproico EV (Depakene EV)",
+            "dose": "30 mg/kg EV em 5–10 min",
+            "obs": "✅ alternativa sem risco cardiovascular — contraindicado na gestante"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Levetiracetam EV (Keppra)",
+            "dose": "60 mg/kg EV em 15 min (máx 3 g)",
+            "obs": "✅ sem ECG, sem interações, seguro em gestantes e cardiopatas"
+          }
+        ]
+      },
+      {
+        "fase": ">30 min — Status refratário",
+        "tempo": "fase 3 — UTI",
+        "itens": [
+          {
+            "n": "Fenobarbital",
+            "dose": "20 mg/kg EV lento",
+            "obs": "sedação profunda — monitorar respiração, preparar IOT"
+          },
+          {
+            "n": "Midazolam",
+            "dose": "0,1–0,2 mg/kg bolus + infusão contínua",
+            "obs": "anestesia geral — UTI com monitoração de EEG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🦠 Sepse — Hora Zero (Hour-1 Bundle)",
+    "cor": "#639922",
+    "passos": [
+      {
+        "fase": "Diagnóstico e coletas",
+        "tempo": "primeiros 15 min",
+        "itens": [
+          {
+            "n": "Hemoculturas 2 pares",
+            "dose": "antes do antibiótico",
+            "obs": "aeróbio + anaeróbio — não atrasar antibiótico >45 min para colher"
+          },
+          {
+            "n": "Lactato sérico",
+            "dose": "meta: <2 mmol/L",
+            "obs": "se >4: alto risco — ressuscitação volêmica agressiva"
+          }
+        ]
+      },
+      {
+        "fase": "Ressuscitação volêmica",
+        "tempo": "PAM <65 ou lactato >4",
+        "itens": [
+          {
+            "n": "SF 0,9%",
+            "dose": "30 mL/kg EV em 30 min",
+            "obs": "reavaliar após cada bolus — cuidado em ICC e DPOC grave"
+          }
+        ]
+      },
+      {
+        "fase": "Antibioticoterapia empírica",
+        "tempo": "< 1 hora do diagnóstico",
+        "itens": [
+          {
+            "n": "Piperacilina-Tazobactam (Tazocin)",
+            "dose": "4,5 g EV 6/6h",
+            "obs": "sepse comunitária grave (abdominal, pulmonar, urinária)"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Meropeném",
+            "dose": "1–2 g EV 8/8h",
+            "obs": "nosocomial / ESBL / falha prévia / neutropenia"
+          },
+          {
+            "n": "Vancomicina",
+            "dose": "25–30 mg/kg EV (ataque)",
+            "obs": "suspeitar MRSA — associar se cateter, cirurgia recente, bacteremia Gram+"
+          }
+        ]
+      },
+      {
+        "fase": "Vasopressor",
+        "tempo": "PAM <65 após fluido",
+        "itens": [
+          {
+            "n": "Noradrenalina",
+            "dose": "0,1–3 mcg/kg/min — bomba",
+            "obs": "✅ vasopressor de primeira escolha no choque séptico"
+          }
+        ]
+      },
+      {
+        "fase": "Choque séptico refratário",
+        "tempo": "noradrenalina >0,25 mcg/kg/min",
+        "itens": [
+          {
+            "n": "Hidrocortisona",
+            "dose": "200 mg/dia EV (50 mg 6/6h ou 200 mg/24h infusão)",
+            "obs": "esteroides se refratário ao vasopressor — não esperar desmame"
+          }
+        ]
+      }
+    ]
+  }
+]

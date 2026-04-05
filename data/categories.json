@@ -1,0 +1,67 @@
+{
+  "Analgésico": {
+    "c": "#EF9F27",
+    "bg": "#FAEEDA",
+    "t": "#633806"
+  },
+  "Antiemético": {
+    "c": "#1D9E75",
+    "bg": "#E1F5EE",
+    "t": "#085041"
+  },
+  "Antiespasmódico": {
+    "c": "#D85A30",
+    "bg": "#FAECE7",
+    "t": "#4A1B0C"
+  },
+  "Corticoide": {
+    "c": "#BA7517",
+    "bg": "#FFF8E1",
+    "t": "#412402"
+  },
+  "Broncodilatador": {
+    "c": "#378ADD",
+    "bg": "#E6F1FB",
+    "t": "#042C53"
+  },
+  "Anticonvulsivante": {
+    "c": "#7F77DD",
+    "bg": "#EEEDFE",
+    "t": "#26215C"
+  },
+  "Sedação/IOT": {
+    "c": "#D4537E",
+    "bg": "#FBEAF0",
+    "t": "#4B1528"
+  },
+  "Antibiótico": {
+    "c": "#639922",
+    "bg": "#EAF3DE",
+    "t": "#173404"
+  },
+  "Cardiovascular": {
+    "c": "#E24B4A",
+    "bg": "#FCEBEB",
+    "t": "#501313"
+  },
+  "Eletrólito": {
+    "c": "#888780",
+    "bg": "#F1EFE8",
+    "t": "#2C2C2A"
+  },
+  "Hemostático": {
+    "c": "#A32D2D",
+    "bg": "#FCEBEB",
+    "t": "#791F1F"
+  },
+  "Protetor Gástrico": {
+    "c": "#185FA5",
+    "bg": "#E6F1FB",
+    "t": "#042C53"
+  },
+  "Antídoto": {
+    "c": "#2E7D52",
+    "bg": "#E8F5EE",
+    "t": "#1A4D30"
+  }
+}

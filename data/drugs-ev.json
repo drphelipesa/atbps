@@ -1,0 +1,1001 @@
+[
+  {
+    "n": "Dipirona (Metamizol)",
+    "cat": "Analgésico",
+    "amp": "500mg/mL — 2mL = 1g",
+    "dose": "1–2g EV",
+    "dil": "10mL SF → infundir lento 5–10min",
+    "ind": "Dor leve-moderada, febre",
+    "mac": "⚠️ Infundir DEVAGAR — hipotensão por liberação histamínica. Contraindicado em alérgicos a pirazolônicos. Pode repetir 1×."
+  },
+  {
+    "n": "Paracetamol EV (Perfalgan)",
+    "cat": "Analgésico",
+    "amp": "10mg/mL — frasco 100mL = 1g",
+    "dose": "1g EV",
+    "dil": "Já vem pronto → infundir em 15min",
+    "ind": "Dor/febre quando dipirona contraindicada",
+    "mac": "⚠️ Dose máx: 4g/dia. Atenção em hepatopatas. Boa opção em alérgicos à dipirona e gestantes."
+  },
+  {
+    "n": "Cetoprofeno",
+    "cat": "Analgésico",
+    "amp": "100mg/2mL",
+    "dose": "100mg EV",
+    "dil": "100mL SF → infundir em 20–30min",
+    "ind": "Dor inflamatória, cólica renal/biliar, dor óssea",
+    "mac": "⚠️ AINE — contraindicado em IR, úlcera ativa, gestante. Muito eficaz para cólica renal (associar Buscopan)."
+  },
+  {
+    "n": "Cetorolaco",
+    "cat": "Analgésico",
+    "amp": "30mg/mL (1mL)",
+    "dose": "15–30mg EV lento",
+    "dil": "Direto EV lento OU 50mL SF → 15min",
+    "ind": "Dor aguda moderada-intensa, cólica renal, pós-op",
+    "mac": "⚠️ AINE — max 5 dias. Potência comparável à morfina em cólica. Checar função renal antes."
+  },
+  {
+    "n": "Tramadol",
+    "cat": "Analgésico",
+    "amp": "50mg/mL — 2mL = 100mg",
+    "dose": "100mg EV",
+    "dil": "100–250mL SF → infundir em 30–60min",
+    "ind": "Dor moderada-intensa",
+    "mac": "⚠️ Infundir LENTO — convulsão e hipotensão se rápido! SEMPRE associar antiemético. Não combinar com ISRS (serotonina)."
+  },
+  {
+    "n": "Morfina",
+    "cat": "Analgésico",
+    "amp": "10mg/mL (1mL)",
+    "dose": "2–4mg EV titulado",
+    "dil": "Diluir para 1mg/mL em SF → infundir lento",
+    "ind": "Dor intensa, SCA, edema agudo de pulmão",
+    "mac": "⚠️ TITULAR: iniciar 2mg EV, repetir a cada 5–10min conforme resposta. Ter NALOXONA disponível. Depressão respiratória!"
+  },
+  {
+    "n": "Fentanil",
+    "cat": "Analgésico",
+    "amp": "50mcg/mL — 2mL = 100mcg",
+    "dose": "1–2mcg/kg EV (analgesia)",
+    "dil": "Diluir em SF → infundir LENTO 3–5min",
+    "ind": "Dor intensa, sedação procedimental, pré-IOT",
+    "mac": "⚠️ Muito potente — TITULAR. Rigidez torácica se infundir rápido. Ter naloxona disponível.",
+    "w": [
+      {
+        "l": "Analgesia",
+        "min": 1,
+        "max": 2,
+        "u": "mcg"
+      },
+      {
+        "l": "IOT/Sedação",
+        "min": 2,
+        "max": 3,
+        "u": "mcg"
+      }
+    ]
+  },
+  {
+    "n": "Parecoxibe",
+    "cat": "Analgésico",
+    "amp": "40mg pó liofilizado (reconstituir com 2mL SF)",
+    "dose": "40mg EV/IM — máx 80mg/dia",
+    "dil": "Reconstituir com 2mL SF → pode dar direto EV lento",
+    "ind": "Dor aguda pós-operatória, cólica, dor musculoesquelética, adjuvante em dor inflamatória",
+    "mac": "⚠️ Contraindicado pós-cirurgia coronariana. Evitar em IR, IAM, AVC. Não usar com anticoagulantes sem avaliação. Latência 7–13min EV."
+  },
+  {
+    "n": "Diclofenaco Sódico",
+    "cat": "Analgésico",
+    "amp": "25mg/mL — 3mL = 75mg",
+    "dose": "75mg IM (preferencial) | 75mg EV diluído",
+    "dil": "IM: direto no glúteo | EV: 250–500mL SF → infundir em 30–60min (via lenta)",
+    "ind": "Dor musculoesquelética, cólica renal/biliar, dor pós-operatória, dismenorreia",
+    "mac": "⚠️ AINE — contraindicado em IR, úlcera ativa, gestante. Preferir via IM — EV é off-label. Não associar com outros AINEs. Dose máx: 150mg/dia."
+  },
+  {
+    "n": "Tenoxicam",
+    "cat": "Analgésico",
+    "amp": "20mg pó (reconstituir com 2mL AD)",
+    "dose": "20mg EV/IM 1×/dia",
+    "dil": "Reconstituir com 2mL AD → pode dar direto EV lento ou diluir em 50mL SF",
+    "ind": "Dor musculoesquelética aguda, artrite aguda, cólica, pós-operatório",
+    "mac": "⚠️ AINE (oxicam) — contraindicado em IR, úlcera, gestante. Meia-vida longa (72h) — 1 dose/dia suficiente. Inibe plaquetas. Dose máx: 20mg/dia."
+  },
+  {
+    "n": "Ondansetrona (Zofran)",
+    "cat": "Antiemético",
+    "amp": "2mg/mL — 4mL = 8mg",
+    "dose": "4–8mg EV",
+    "dil": "50mL SF → infundir em 15min",
+    "ind": "Náusea/vômito (quimio, pós-op, gestação, geral)",
+    "mac": "⚠️ Prolonga QT — cuidado em cardiopatas e uso concomitante com outros QT-prolongadores. Intervalo mínimo 4h."
+  },
+  {
+    "n": "Metoclopramida (Plasil)",
+    "cat": "Antiemético",
+    "amp": "5mg/mL — 2mL = 10mg",
+    "dose": "10mg EV",
+    "dil": "50mL SF → infundir em 15min",
+    "ind": "Náusea/vômito, gastroparesia, esvaziamento gástrico",
+    "mac": "⚠️ DISTONIA EXTRAPIRAMIDAL — mais comum em jovens! Ter biperideno disponível. Não repetir se distonia ocorrer."
+  },
+  {
+    "n": "Bromoprida",
+    "cat": "Antiemético",
+    "amp": "5mg/mL — 2mL = 10mg",
+    "dose": "10mg EV",
+    "dil": "50mL SF → 15min (ou direto lento)",
+    "ind": "Náusea/vômito, gastroparesia",
+    "mac": "Similar à metoclopramida. Mesmos cuidados com distonia. Alternativa quando metoclopramida não disponível."
+  },
+  {
+    "n": "Dimenidrinato (Dramin)",
+    "cat": "Antiemético",
+    "amp": "30mg/mL — 1mL = 30mg",
+    "dose": "50–100mg EV",
+    "dil": "50mL SF → infundir em 20–30min",
+    "ind": "Vertigem, labirintite, cinetose, náusea",
+    "mac": "✅ MELHOR OPÇÃO PARA VERTIGEM/LABIRINTITE. Muito sedativo — cuidado em idosos. Anticolinérgico."
+  },
+  {
+    "n": "Prometazina (Fenergan)",
+    "cat": "Antiemético",
+    "amp": "25mg/mL — 2mL = 50mg",
+    "dose": "25–50mg EV/IM",
+    "dil": "25mg em 50mL SF → MUITO LENTO",
+    "ind": "Náusea, alergia, sedação leve",
+    "mac": "⚠️ EV LENTO — necrose tecidual grave por extravasamento! Preferir IM profundo. Sedação significativa."
+  },
+  {
+    "n": "Escopolamina N-butilbrometo (Buscopan)",
+    "cat": "Antiespasmódico",
+    "amp": "20mg/mL — 1mL = 20mg",
+    "dose": "20mg EV",
+    "dil": "Direto EV lento 1–2min OU 50mL SF em 15min",
+    "ind": "Cólica renal, biliar, intestinal, uterina",
+    "mac": "Pode repetir após 20min. Associar AINE + dipirona para analgesia completa. Efeito anticolinérgico: boca seca, retenção urinária."
+  },
+  {
+    "n": "Papaverina",
+    "cat": "Antiespasmódico",
+    "amp": "40mg/2mL",
+    "dose": "40–120mg EV",
+    "dil": "100mL SF → infundir em 30min",
+    "ind": "Espasmo de musculatura lisa (cólica renal/biliar), isquemia mesentérica",
+    "mac": "Menos disponível. Alternativa ao Buscopan. Cuidado com hepatotoxicidade em uso prolongado."
+  },
+  {
+    "n": "Tiocolchicosídeo",
+    "cat": "Antiespasmódico",
+    "amp": "4mg/2mL",
+    "dose": "4mg IM 2×/dia (12/12h)",
+    "dil": "IM direto — NÃO usar EV",
+    "ind": "Contratura muscular aguda, lombalgia aguda, torcicolo, espasmo muscular paravertebral",
+    "mac": "⚠️ USO IM EXCLUSIVO — não administrar EV. Duração máx 5–7 dias. Pode causar sedação leve. Contraindicado na gestação e em epilépticos."
+  },
+  {
+    "n": "Dexametasona",
+    "cat": "Corticoide",
+    "amp": "4mg/mL — amp 2,5mL = 10mg",
+    "dose": "Anti-inflam: 4–10mg EV | Anafilaxia/choque: 20mg EV",
+    "dil": "Direto EV lento OU 50–100mL SF",
+    "ind": "Anafilaxia (adjuvante), asma, laringite, edema cerebral, antiemético em QT",
+    "mac": "⚠️ Na anafilaxia: NUNCA substituir adrenalina (onset mais lento — é adjuvante). Dose única não precisa desmame. Versátil!"
+  },
+  {
+    "n": "Metilprednisolona (Solumedrol)",
+    "cat": "Corticoide",
+    "amp": "125mg/2mL | 500mg | 1g",
+    "dose": "40–125mg EV (moderado) | 1g (pulsoterapia)",
+    "dil": "125mg: 100mL SF → 30min | 1g: 250mL SF → 60min",
+    "ind": "Asma grave, DPOC agudizado, anafilaxia, LES, pulsoterapia reumatológica",
+    "mac": "⚠️ NUNCA infundir rápido em dose alta — risco de arritmia! Para asma grave: 125mg é suficiente."
+  },
+  {
+    "n": "Betametasona Composta (Diprospan)",
+    "cat": "Corticoide",
+    "amp": "Dipropionato 5mg + Fosfato dissódico 2mg/mL (1mL)",
+    "dose": "1mL IM profundo dose única — IM EXCLUSIVO",
+    "dil": "IM direto no glúteo ou deltoide — NUNCA EV",
+    "ind": "Processos inflamatórios/alérgicos, artrite, bursite, tendinite, asma/anafilaxia (IM)",
+    "mac": "⚠️ NUNCA EV — fração depot (dipropionato) são micropartículas que causam embolia! Ação bifásica: fosfato (rápida, horas) + dipropionato (depósito, 3–4 semanas). Efeito sistêmico prolongado — não repetir < 2 semanas."
+  },
+  {
+    "n": "Hidrocortisona (Solu-Cortef)",
+    "cat": "Corticoide",
+    "amp": "100mg/2mL | 500mg pó",
+    "dose": "100–300mg EV (PA) | 200mg/dia (choque séptico refratário)",
+    "dil": "50–100mL SF → infundir em 15–30min",
+    "ind": "Insuficiência adrenal, asma grave, choque séptico refratário, anafilaxia grave",
+    "mac": "✅ No choque séptico refratário a vasopressor: hidrocortisona 200mg/dia em infusão contínua ou 50mg 6/6h. Início mais rápido que metilpred."
+  },
+  {
+    "n": "Aminofilina",
+    "cat": "Broncodilatador",
+    "amp": "24mg/mL — 10mL = 240mg",
+    "dose": "Ataque: 5mg/kg EV (max 500mg) | Manutenção: 0,5mg/kg/h",
+    "dil": "250–500mL SF ou SG5% → infundir em 30–45min (LENTO)",
+    "ind": "Broncoespasmo refratário, asma grave sem resposta a beta2",
+    "mac": "⚠️ Janela terapêutica estreita — arritmia e convulsão se rápido! Cada vez menos usada. Monitorar FC e sinais de toxicidade.",
+    "w": [
+      {
+        "l": "Ataque",
+        "min": 5,
+        "max": 5,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Adrenalina (broncodilatador/anafilaxia)",
+    "cat": "Broncodilatador",
+    "amp": "1mg/mL (1mL)",
+    "dose": "Anafilaxia: 0,3–0,5mg IM coxa | Nebulização: 3–5mg",
+    "dil": "IM: direto na face lateral da coxa | Nebulização: 3–5mg em 3mL SF",
+    "ind": "Anafilaxia (1ª ESCOLHA), broncoespasmo grave, laringoespasmo/crupe",
+    "mac": "⚠️ ANAFILAXIA: SEMPRE IM na coxa — NÃO ATRASAR! EV apenas em PCR/choque refratário. IM > SC (absorção mais rápida)."
+  },
+  {
+    "n": "Sulfato de Magnésio (bronco)",
+    "cat": "Broncodilatador",
+    "amp": "50% — 10mL = 5g",
+    "dose": "2g EV",
+    "dil": "100mL SF → infundir em 20min",
+    "ind": "Asma grave refratária a beta2 + corticoide (adjuvante)",
+    "mac": "✅ Broncodilatador subutilizado no PA! Monitorar PA e reflexo patelar durante infusão. Antídoto: Gluconato de Cálcio."
+  },
+  {
+    "n": "Terbutalina",
+    "cat": "Broncodilatador",
+    "amp": "0,5mg/mL (1mL)",
+    "dose": "0,25–0,5mg SC",
+    "dil": "SC direto — sem diluição",
+    "ind": "Broncoespasmo agudo grave, tocolítico em parto prematuro",
+    "mac": "Principalmente SC no PA. Efeito em 15min. Pode causar taquicardia significativa."
+  },
+  {
+    "n": "Diazepam (Valium)",
+    "cat": "Anticonvulsivante",
+    "amp": "5mg/mL — 2mL = 10mg",
+    "dose": "5–10mg EV lento (2mg/min)",
+    "dil": "NÃO DILUIR — precipita em qualquer solução. Infundir direto em veia grossa!",
+    "ind": "Crise convulsiva (1ª linha), status epilepticus, abstinência alcoólica",
+    "mac": "⚠️ NÃO DILUIR em SF nem SG — precipita! Monitorar respiração. Pode repetir 1× após 10–15min. Apneia possível."
+  },
+  {
+    "n": "Midazolam (Dormicum)",
+    "cat": "Anticonvulsivante",
+    "amp": "5mg/mL — 3mL = 15mg | 1mg/mL",
+    "dose": "Status: 0,1–0,2mg/kg EV | Sedação: 2,5–5mg EV",
+    "dil": "Pode ser direto ou diluído em SF",
+    "ind": "Status epilepticus (1ª ou 2ª linha), sedação procedimental, agitação",
+    "mac": "✅ Pode ser dado IM no deltóide se sem acesso EV (0,1–0,2mg/kg). Antídoto: FLUMAZENIL. Meia-vida mais curta que diazepam.",
+    "w": [
+      {
+        "l": "Status epilepticus",
+        "min": 0.1,
+        "max": 0.2,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Fenitoína (Hidantal)",
+    "cat": "Anticonvulsivante",
+    "amp": "50mg/mL — 5mL = 250mg",
+    "dose": "15–20mg/kg EV (ataque) — max 1.250mg",
+    "dil": "SF 250mL (NUNCA SG5% — precipita!) → max 50mg/min",
+    "ind": "Status epilepticus refratário, epilepsia focal",
+    "mac": "⚠️ INFUNDIR LENTO — arritmia e hipotensão! NUNCA em SG5%. Monitorar ECG durante infusão.",
+    "w": [
+      {
+        "l": "Ataque",
+        "min": 15,
+        "max": 20,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Fenobarbital",
+    "cat": "Anticonvulsivante",
+    "amp": "200mg/mL (1mL)",
+    "dose": "15–20mg/kg EV (ataque)",
+    "dil": "SF → infundir lento (max 100mg/min)",
+    "ind": "Status epilepticus refratário (3ª linha), crianças, epilepsia refratária",
+    "mac": "⚠️ Sedação profunda. Monitorar respiração. Usar quando diazepam + fenitoína falharam. Longa meia-vida.",
+    "w": [
+      {
+        "l": "Ataque",
+        "min": 15,
+        "max": 20,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Ácido Valproico EV (Depakene EV)",
+    "cat": "Anticonvulsivante",
+    "amp": "100mg/mL — 4mL = 400mg",
+    "dose": "15–30mg/kg EV (ataque) — até 2.500mg",
+    "dil": "SF ou SG5% → infundir em 5–10min",
+    "ind": "Status epilepticus (alternativa à fenitoína), epilepsia generalizada",
+    "mac": "✅ Menor risco cardiovascular que fenitoína. Contraindicado em hepatopatia grave e gestação (teratogênico).",
+    "w": [
+      {
+        "l": "Ataque",
+        "min": 15,
+        "max": 30,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Cetamina (Ketamina)",
+    "cat": "Sedação/IOT",
+    "amp": "50mg/mL — 10mL = 500mg | 10mg/mL",
+    "dose": "Dissociativa: 1–2mg/kg EV | Subanestésica (analgesia): 0,3–0,5mg/kg",
+    "dil": "Diluir para 10mg/mL → infundir em 1–2min",
+    "ind": "Sedação procedimental, dor intensa, broncoespasmo, IOT em instável",
+    "mac": "✅ PRESERVA reflexos de VA e PA — ideal no PA instável! Broncodilatador! Pode causar alucinações — associar midazolam 1–2mg. Contraindicar em HAS descontrolada/PIC elevada.",
+    "w": [
+      {
+        "l": "Dissociativa",
+        "min": 1,
+        "max": 2,
+        "u": "mg"
+      },
+      {
+        "l": "Analgesia",
+        "min": 0.3,
+        "max": 0.5,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Etomidato",
+    "cat": "Sedação/IOT",
+    "amp": "2mg/mL — 10mL = 20mg",
+    "dose": "0,3mg/kg EV (indução para IOT)",
+    "dil": "Pode ser direto",
+    "ind": "Indução para IOT — PACIENTE HEMODINAMICAMENTE INSTÁVEL",
+    "mac": "✅ MENOR impacto hemodinâmico — ESCOLHA no paciente instável! Supressão adrenal com dose única (relevante no séptico — ponderar).",
+    "w": [
+      {
+        "l": "Indução IOT",
+        "min": 0.3,
+        "max": 0.3,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Propofol (Diprivan)",
+    "cat": "Sedação/IOT",
+    "amp": "10mg/mL — frasco 20mL ou 50mL",
+    "dose": "Indução: 1–2mg/kg | Manutenção: 50–200mcg/kg/min",
+    "dil": "Pode ser direto — titular",
+    "ind": "Sedação procedimental, indução IOT (paciente estável), manutenção UTI",
+    "mac": "⚠️ Dói na infusão — usar veia calibrosa ou lidocaína EV prévia. Hipotensão frequente. Síndrome do propofol em uso > 48h.",
+    "w": [
+      {
+        "l": "Indução",
+        "min": 1,
+        "max": 2,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Succinilcolina (Quelicin)",
+    "cat": "Sedação/IOT",
+    "amp": "100mg/5mL ou 500mg/10mL",
+    "dose": "1–1,5mg/kg EV (bloqueio despolarizante)",
+    "dil": "Pode ser direto",
+    "ind": "Bloqueador NMJ para IOT em sequência rápida (ISR) — duração ultra-curta",
+    "mac": "⚠️ Início 45–60s, duração 5–10min. CONTRAINDICADO: hipercalemia, grande queimado, trauma medular > 24h, miopatias. Ter atropina.",
+    "w": [
+      {
+        "l": "ISR",
+        "min": 1,
+        "max": 1.5,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Rocurônio (Esmeron)",
+    "cat": "Sedação/IOT",
+    "amp": "10mg/mL — 5mL = 50mg",
+    "dose": "ISR: 0,6mg/kg | CICR (alta dose): 1,2mg/kg",
+    "dil": "Pode ser direto",
+    "ind": "Bloqueador NMJ para IOT em sequência rápida — alternativa à succinilcolina",
+    "mac": "✅ 1,2mg/kg = início similar à succinilcolina, sem contraindicações renais. Antídoto EXCLUSIVO: SUGAMMADEX (3mg/kg para reversão rápida).",
+    "w": [
+      {
+        "l": "ISR",
+        "min": 0.6,
+        "max": 0.6,
+        "u": "mg"
+      },
+      {
+        "l": "CICR",
+        "min": 1.2,
+        "max": 1.2,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Ceftriaxona (Rocefin)",
+    "cat": "Antibiótico",
+    "amp": "1g pó | 2g pó",
+    "dose": "1–2g EV 1×/dia (meningite: 2g 12/12h)",
+    "dil": "Reconstituir em 10mL AD → 100mL SF ou SG5% → 30min",
+    "ind": "PNA, pneumonia, meningite, celulite, sepse comunitária",
+    "mac": "⚠️ NÃO diluir em Ringer Lactato — precipita com cálcio! Dose única diária facilita o manejo. Cobertura muito ampla para comunitário."
+  },
+  {
+    "n": "Ampicilina-Sulbactam (Unasyn)",
+    "cat": "Antibiótico",
+    "amp": "3g (amp 2g + sulb 1g)",
+    "dose": "3g EV 6/6h (grave) ou 8/8h",
+    "dil": "Reconstituir em AD → 100mL SF → 30min",
+    "ind": "Infecções mistas, abdominal, ginecológica, pele, mordeduras, celulite grave",
+    "mac": "✅ Boa cobertura para anaeróbios e enterococos. Opção em celulite/erisipela grave. Não usar em alérgicos à penicilina."
+  },
+  {
+    "n": "Piperacilina-Tazobactam (Tazocin)",
+    "cat": "Antibiótico",
+    "amp": "4,5g (pip 4g + tazo 0,5g)",
+    "dose": "4,5g EV 6/6h",
+    "dil": "100mL SF → 30min (ou 4h em infusão estendida para Pseudomonas)",
+    "ind": "Sepse grave, infecção nosocomial, Pseudomonas, peritonite",
+    "mac": "✅ Infusão estendida de 4h aumenta eficácia PK/PD contra Pseudomonas. Boa primeira escolha em sepse nosocomial."
+  },
+  {
+    "n": "Meropeném",
+    "cat": "Antibiótico",
+    "amp": "500mg pó | 1g pó",
+    "dose": "500mg–1g EV 8/8h | Grave/ESBL: 2g 8/8h",
+    "dil": "100mL SF → 30min (ou 3h em infusão estendida para ESBL)",
+    "ind": "Sepse grave, infecção nosocomial, ESBL, BGN multirresistente",
+    "mac": "⚠️ RESERVAR — usar somente em sepse grave ou falha prévia. Infusão estendida 3h para organismos com CMI elevada."
+  },
+  {
+    "n": "Vancomicina (Vancocin)",
+    "cat": "Antibiótico",
+    "amp": "500mg pó",
+    "dose": "15–20mg/kg EV 12/12h (sepse grave: 25–30mg/kg ataque)",
+    "dil": "500mg em 250mL SF → infundir em 60min (NUNCA < 60min)",
+    "ind": "MRSA, endocardite, meningite por Gram+, infecção grave por Gram+",
+    "mac": "⚠️ Infundir em ≥ 60min — 'Red man syndrome' se rápido (não é alergia, é histamina — tratar desacelerando infusão). Monitorar função renal.",
+    "w": [
+      {
+        "l": "Dose habitual",
+        "min": 15,
+        "max": 20,
+        "u": "mg"
+      },
+      {
+        "l": "Sepse (ataque)",
+        "min": 25,
+        "max": 30,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Clindamicina",
+    "cat": "Antibiótico",
+    "amp": "300mg/2mL | 600mg/4mL",
+    "dose": "600–900mg EV 8/8h",
+    "dil": "100mL SF ou SG5% → 30–60min",
+    "ind": "Infecções anaeróbias, pele/tecido mole, pneumonia aspirativa",
+    "mac": "⚠️ NUNCA EV DIRETO — risco de parada cardíaca! SEMPRE diluir e infundir lento. Boa alternativa para anaeróbios em alérgicos à penicilina."
+  },
+  {
+    "n": "Metronidazol",
+    "cat": "Antibiótico",
+    "amp": "Frasco pronto 500mg/100mL",
+    "dose": "500mg EV 8/8h ou 1g 12/12h",
+    "dil": "Já vem pronto → infundir em 30–60min",
+    "ind": "Anaeróbios, C. difficile grave, abscesso, peritonite, amebíase grave",
+    "mac": "⚠️ Efeito antabuse — álcool causa flush e vômitos intensos. Excelente cobertura para anaeróbios. Associar sempre à cobertura de Gram-."
+  },
+  {
+    "n": "Azitromicina EV",
+    "cat": "Antibiótico",
+    "amp": "500mg/10mL",
+    "dose": "500mg EV 1×/dia",
+    "dil": "250–500mL SF → infundir em 60min (NUNCA < 60min)",
+    "ind": "Pneumonia atípica (Mycoplasma, Legionella, Chlamydia), infecções por Gram+",
+    "mac": "⚠️ Infundir em 60min MÍNIMO — prolonga QT significativamente. Cuidado em cardiopatas e drogas QT-prolongadoras."
+  },
+  {
+    "n": "Ciprofloxacino",
+    "cat": "Antibiótico",
+    "amp": "200mg/100mL | 400mg/200mL (frasco pronto)",
+    "dose": "400mg EV 12/12h (leve) | 400mg 8/8h (grave)",
+    "dil": "Já vem pronto → infundir em 60min",
+    "ind": "IVU grave, infecções entéricas, Pseudomonas, profilaxia meningococo",
+    "mac": "⚠️ Infundir em 60min. Prolonga QT. Interação com teofilina (dobra o nível). Cobertura para Pseudomonas."
+  },
+  {
+    "n": "Gentamicina",
+    "cat": "Antibiótico",
+    "amp": "40mg/mL — 2mL = 80mg",
+    "dose": "3–5mg/kg/dia EV 1×/dia (dose única diária)",
+    "dil": "100mL SF → infundir em 30–60min",
+    "ind": "Cobertura Gram-, PNA, sinergismo com beta-lactâmico em endocardite",
+    "mac": "⚠️ Evitar em IR e idosos. Dose única diária = menos nefrotóxica e igualmente eficaz. Monitorar creatinina.",
+    "w": [
+      {
+        "l": "Dose diária",
+        "min": 3,
+        "max": 5,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Amicacina",
+    "cat": "Antibiótico",
+    "amp": "500mg/2mL",
+    "dose": "15–20mg/kg/dia EV 1×/dia (dose única diária)",
+    "dil": "100–250mL SF → infundir em 30–60min",
+    "ind": "Sepse por Gram-, infecções urinárias graves, Pseudomonas, sinergismo com beta-lactâmico",
+    "mac": "⚠️ Nefrotóxico e ototóxico — monitorar creatinina e função auditiva. Dose única diária = menos tóxica. Evitar em IR (ajustar dose pelo ClCr). Mais potente que gentamicina contra Pseudomonas.",
+    "w": [
+      {
+        "l": "Dose diária",
+        "min": 15,
+        "max": 20,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Ceftarolina (Teflaro)",
+    "cat": "Antibiótico",
+    "amp": "600mg pó",
+    "dose": "600mg EV 12/12h",
+    "dil": "Reconstituir em AD → 250mL SF → infundir em 60min",
+    "ind": "Pneumonia bacteriana grave, infecções de pele/tecido mole — INCLUI MRSA",
+    "mac": "✅ ÚNICA cefalosporina com atividade anti-MRSA. Opção para pneumonia nosocomial ou IPSM grave por MRSA. Ajustar em IR (ClCr < 50mL/min). Boa alternativa quando vancomicina não disponível."
+  },
+  {
+    "n": "Ertapeném (Invanz)",
+    "cat": "Antibiótico",
+    "amp": "1g pó",
+    "dose": "1g EV 1×/dia",
+    "dil": "Reconstituir em 10mL AD → 250mL SF → infundir em 30min",
+    "ind": "Infecções comunitárias graves (intra-abdominal, pneumonia, PNA, pé diabético), ESBL comunitário",
+    "mac": "⚠️ NÃO cobre Pseudomonas nem Acinetobacter — usar meropeném se suspeita nosocomial. Vantagem: dose única diária — facilita transição para ambulatorial. Ajustar em IR."
+  },
+  {
+    "n": "Teicoplanina (Targocid)",
+    "cat": "Antibiótico",
+    "amp": "400mg pó",
+    "dose": "Ataque: 400mg EV 12/12h × 3 doses | Manutenção: 400mg EV 1×/dia",
+    "dil": "Reconstituir com diluente fornecido → 100mL SF → 30min",
+    "ind": "Infecções por Gram+ (MRSA, enterococo), endocardite, infecções de pele grave",
+    "mac": "✅ Alternativa à vancomicina — menos nefrotóxica, pode ser usada IM. Sem 'Red man syndrome'. Monitorar nível (vale 15–30mg/L em infecções graves). Dose de ataque obrigatória."
+  },
+  {
+    "n": "Aciclovir EV",
+    "cat": "Antibiótico",
+    "amp": "250mg pó",
+    "dose": "5mg/kg 8/8h (herpes simples) | 10mg/kg 8/8h (encefalite/varicela grave)",
+    "dil": "Reconstituir → diluir em 100mL SF → infundir em 60min (LENTO — mínimo 1h)",
+    "ind": "Encefalite herpética, herpes genital grave, varicela/zóster grave em imunocomprometido",
+    "mac": "⚠️ Infundir em ≥ 60min — nefrotóxico se rápido. HIDRATAÇÃO adequada antes da dose! Encefalite herpética: INICIAR EMPIRICAMENTE sem aguardar PCR do LCR. Ajustar em IR.",
+    "w": [
+      {
+        "l": "Herpes simples",
+        "min": 5,
+        "max": 5,
+        "u": "mg"
+      },
+      {
+        "l": "Encefalite/varicela",
+        "min": 10,
+        "max": 10,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Noradrenalina",
+    "cat": "Cardiovascular",
+    "amp": "4mg/4mL",
+    "dose": "0,01–3mcg/kg/min EV contínuo — BOMBA",
+    "dil": "4mg em 250mL SG5% (16mcg/mL) — bomba de infusão",
+    "ind": "Choque séptico/distributivo (VASOPRESSOR DE ESCOLHA), vasoplegia",
+    "mac": "⚠️ Preferencialmente acesso central — necrose por extravasamento em veia periférica. Se periférico: monitorar constantemente o sítio."
+  },
+  {
+    "n": "Adrenalina — PCR/Choque",
+    "cat": "Cardiovascular",
+    "amp": "1mg/mL (1mL)",
+    "dose": "PCR: 1mg EV a cada 3–5min | Vasopressora: 0,01–1mcg/kg/min",
+    "dil": "PCR: direto | Vasopressora: 1mg em 250mL SG5% — bomba",
+    "ind": "PCR (FV/TVSP/AESP/assistolia), bradicardia refratária, choque refratário",
+    "mac": "⚠️ Na PCR: EV ou IO direto. Como vasopressora: bomba de infusão obrigatória — dose-dependente."
+  },
+  {
+    "n": "Furosemida (Lasix)",
+    "cat": "Cardiovascular",
+    "amp": "10mg/mL — 2mL = 20mg",
+    "dose": "20–80mg EV | Dobrar a dose se sem resposta em 30–60min",
+    "dil": "Direto EV lento OU 100mL SF",
+    "ind": "Edema agudo de pulmão, ICC descompensada, hipercalemia, sobrecarga hídrica",
+    "mac": "⚠️ Monitorar K+ — risco hipocalemia. Início EV em 5–15min. No EAP: 40–80mg + vasodilatador (nitroglicerina)."
+  },
+  {
+    "n": "Atropina",
+    "cat": "Cardiovascular",
+    "amp": "0,5mg/mL (1mL)",
+    "dose": "0,5–1mg EV bolus — pode repetir até 3mg total",
+    "dil": "Direto EV bolus",
+    "ind": "Bradicardia sintomática, bloqueio AV, intoxicação por organofosforado",
+    "mac": "⚠️ Dose MÍNIMA: 0,5mg — doses menores podem PIORAR bradicardia paradoxalmente! Dose vagolítica máxima total: 3mg."
+  },
+  {
+    "n": "Amiodarona (Cordarone)",
+    "cat": "Cardiovascular",
+    "amp": "50mg/mL — 3mL = 150mg",
+    "dose": "150mg EV em 10min (ataque FA) | PCR: 300mg bolus direto",
+    "dil": "SG5% APENAS — NÃO SF (precipita!) | Frasco de vidro se possível",
+    "ind": "FA, flutter, TSV, FV/TV refratária (PCR), arritmias ventriculares",
+    "mac": "⚠️ SEMPRE em SG5% — precipita em SF. Flebite em acesso periférico. Monitorar QT. PCR: 300mg bolus direto."
+  },
+  {
+    "n": "Adenosina (Adenocard)",
+    "cat": "Cardiovascular",
+    "amp": "3mg/mL — 2mL = 6mg",
+    "dose": "6mg EV bolus → flush 20mL SF | Repetir 12mg × 2 se necessário",
+    "dil": "NÃO diluir — bolus ULTRA-RÁPIDO (1–2s) na veia mais proximal",
+    "ind": "TSV paroxística por reentrada (taquicardia supraventricular)",
+    "mac": "✅ Meia-vida de 10s! Aplicar BOLUS ULTRA-RÁPIDO + flush imediato. Avisar paciente: sensação de 'morte iminente' por 15–30s. Monitorar ECG."
+  },
+  {
+    "n": "Hidralazina",
+    "cat": "Cardiovascular",
+    "amp": "20mg/mL (1mL)",
+    "dose": "10–20mg EV lento (5mg/min)",
+    "dil": "Pode ser direto, muito lento",
+    "ind": "Crise hipertensiva na GESTANTE (1ª escolha), encefalopatia hipertensiva",
+    "mac": "✅ PRIMEIRA ESCOLHA NA GESTANTE. Início 10–20min, pico 20–30min. Monitorar PA rigorosamente — risco hipotensão súbita."
+  },
+  {
+    "n": "Nitroprussiato de Sódio",
+    "cat": "Cardiovascular",
+    "amp": "50mg pó",
+    "dose": "0,3–10mcg/kg/min EV contínuo — BOMBA",
+    "dil": "50mg em 250mL SG5% (200mcg/mL) — PROTEGER DA LUZ (papel alumínio)",
+    "ind": "Emergência hipertensiva, dissecção aórtica, IC com PA elevada",
+    "mac": "⚠️ PROTEGER DA LUZ — fotodegradação em horas! Monitoração contínua de PA. Toxicidade por cianeto em doses altas/uso prolongado."
+  },
+  {
+    "n": "Nitroglicerina (Tridil)",
+    "cat": "Cardiovascular",
+    "amp": "5mg/mL ou 1mg/mL",
+    "dose": "5–200mcg/min EV contínuo — BOMBA",
+    "dil": "Frasco de VIDRO — adsorve no PVC! Diluir em SG5%",
+    "ind": "SCA/angina instável, edema agudo de pulmão com PA elevada, crise hipertensiva",
+    "mac": "⚠️ FRASCO DE VIDRO obrigatório. Cefaleia frequente (vasodilatação). Contraindicado com inibidores PDE5 (sildenafil, tadalafil)."
+  },
+  {
+    "n": "Tiamina (Vitamina B1)",
+    "cat": "Eletrólito",
+    "amp": "100mg/2mL",
+    "dose": "100–500mg EV",
+    "dil": "100mL SF → infundir em 30min",
+    "ind": "Wernicke, etilismo crônico, desnutrição grave",
+    "mac": "⚠️ SEMPRE DAR ANTES DO SORO GLICOSADO EM ETILISTA — SG sem tiamina pode precipitar encefalopatia de Wernicke irreversível!"
+  },
+  {
+    "n": "Sulfato de Magnésio",
+    "cat": "Eletrólito",
+    "amp": "50% — 2mL = 1g | 10mL = 5g",
+    "dose": "Eclâmpsia: 4–6g ataque | Asma: 2g | Arritmia: 1–2g | Hipomagnesemia: 2g",
+    "dil": "100mL SF → infundir em 15–20min (NUNCA rápido — parada!)",
+    "ind": "Eclâmpsia/pré-eclâmpsia (DROGA DE ESCOLHA), asma refratária, torsades de pointes, hipomagnesemia",
+    "mac": "⚠️ INFUNDIR LENTO SEMPRE. Monitorar reflexo patelar (desaparece antes toxicidade grave). Antídoto: GLUCONATO DE CÁLCIO 1g EV."
+  },
+  {
+    "n": "Gluconato de Cálcio 10%",
+    "cat": "Eletrólito",
+    "amp": "10% — 10mL = 1g (90mg Ca²⁺)",
+    "dose": "1–2g EV lento (5–10min) — pode repetir",
+    "dil": "Pode ser direto EV lento OU 100mL SF",
+    "ind": "Hipocalcemia sintomática, hipercalemia (proteção de membrana), toxicidade por bloqueador Ca²⁺, antídoto do magnésio",
+    "mac": "⚠️ Infundir LENTO — bradicardia/parada. NÃO misturar com bicarbonato (precipita). Monitorar ECG."
+  },
+  {
+    "n": "Cloreto de Potássio (KCl 19,1%)",
+    "cat": "Eletrólito",
+    "amp": "19,1% — 10mL = 25mEq",
+    "dose": "10–40mEq/h EV (NUNCA > 40mEq/h)",
+    "dil": "SEMPRE DILUIR — NUNCA DIRETO (parada cardíaca!). Max: 80mEq/L periférico | 160mEq/L central",
+    "ind": "Hipocalemia grave (K⁺ < 3,0 sintomático ou K⁺ < 2,5)",
+    "mac": "⚠️⚠️ NUNCA EV DIRETO — MORTE! Max 20mEq/h em periférico, 40mEq/h em central. Queima a veia — diluir bem e monitorar inserção."
+  },
+  {
+    "n": "Bicarbonato de Sódio 8,4%",
+    "cat": "Eletrólito",
+    "amp": "Frasco 250mL (1mEq/mL)",
+    "dose": "1–2mEq/kg EV | Cálculo: BE × Peso × 0,3 = mEq",
+    "dil": "Pode ser direto ou diluído em SG5%",
+    "ind": "Acidose metabólica grave (pH < 7,1), hipercalemia, intoxicação por antidepressivo tricíclico",
+    "mac": "⚠️ NÃO misturar com cálcio (precipita). Na intox por tricíclico: meta pH 7,45–7,55. Risco de hipernatremia e alcalose de rebote."
+  },
+  {
+    "n": "Ácido Tranexâmico (Transamin)",
+    "cat": "Hemostático",
+    "amp": "500mg/5mL | 1g/10mL",
+    "dose": "1g EV em 10min + 1g em 8h (protocolo CRASH-2)",
+    "dil": "100mL SF → infundir em 10min (1ª dose)",
+    "ind": "Hemorragia por trauma (até 3h!), HDA, epistaxe maciça, sangramento pós-parto",
+    "mac": "⚠️ CRASH-2: máximo benefício nas primeiras 3h do trauma — APÓS 3H PODE SER PREJUDICIAL (piora desfechos). Contraindicado em TEP/TVP ativa."
+  },
+  {
+    "n": "Fitomenadiona (Vitamina K1)",
+    "cat": "Hemostático",
+    "amp": "10mg/mL (1mL)",
+    "dose": "5–10mg EV lento | 2,5–5mg SC (profilaxia)",
+    "dil": "50–100mL SF → infundir em 30min (LENTO — anafilaxia!)",
+    "ind": "Reversão de varfarina/acenocumarol, coagulopatia por deficiência de Vit K",
+    "mac": "⚠️ Infundir MUITO LENTO — risco de anafilaxia EV. Efeito demora 6–12h. Se urgente: usar PFC concomitante enquanto Vit K não age."
+  },
+  {
+    "n": "Heparina Não Fracionada",
+    "cat": "Hemostático",
+    "amp": "5.000UI/mL — frasco 5mL",
+    "dose": "Profilaxia: 5.000UI SC 8/8h | Terapêutico EV: 80UI/kg bolus + 18UI/kg/h",
+    "dil": "Infusão contínua: 25.000UI em 250mL SF (100UI/mL) — bomba",
+    "ind": "TVP, TEP, SCA, profilaxia de TEV, FA (anticoagulação)",
+    "mac": "⚠️ Monitorar TTPa 6h após início (meta 60–100s = 2–3× normal). Antídoto: PROTAMINA 1mg/100UI de heparina.",
+    "w": [
+      {
+        "l": "Bolus (ataque)",
+        "min": 80,
+        "max": 80,
+        "u": "UI"
+      },
+      {
+        "l": "Manutenção/h",
+        "min": 18,
+        "max": 18,
+        "u": "UI"
+      }
+    ]
+  },
+  {
+    "n": "Omeprazol EV",
+    "cat": "Protetor Gástrico",
+    "amp": "40mg pó",
+    "dose": "40mg EV 12/12h | HDA: 80mg bolus + 8mg/h (infusão contínua)",
+    "dil": "40mg em 100mL SF → 20–30min",
+    "ind": "Úlcera péptica ativa, hemorragia digestiva alta (HDA), profilaxia úlcera de estresse",
+    "mac": "✅ Na HDA: 80mg bolus + 8mg/h contínuo por 72h (protocolo). Preferir VO quando possível (bioequivalente)."
+  },
+  {
+    "n": "Pantoprazol EV",
+    "cat": "Protetor Gástrico",
+    "amp": "40mg pó",
+    "dose": "40mg EV 12/12h",
+    "dil": "40mg em 100mL SF → 15–30min",
+    "ind": "Mesma indicação do omeprazol — frequentemente mais disponível no SUS",
+    "mac": "✅ Equivalente ao omeprazol no PA. Preferir VO (mesma eficácia). Estável após reconstituição por 12h em temperatura ambiente."
+  },
+  {
+    "n": "Naloxona (Narcan)",
+    "cat": "Antídoto",
+    "amp": "0,4mg/mL (1mL)",
+    "dose": "0,4–2mg EV bolus",
+    "dil": "Direto EV bolus — repetir a cada 2–3min conforme resposta",
+    "ind": "Reversão de intoxicação por opiáceos (morfina, fentanil, tramadol, heroína)",
+    "mac": "⚠️ Meia-vida CURTA (30–90min) — ressedação possível! Monitorar mín 4h. Se opiáceo de longa duração: repetir ou iniciar infusão contínua. Titular: iniciar 0,1–0,4mg e aumentar conforme resposta."
+  },
+  {
+    "n": "Flumazenil",
+    "cat": "Antídoto",
+    "amp": "0,1mg/mL — frasco 5mL = 0,5mg",
+    "dose": "0,2mg EV → repetir 0,1mg/min — máx 1mg",
+    "dil": "Direto EV lento (0,2mg em 15s)",
+    "ind": "Reversão de sedação/intoxicação por benzodiazepínicos",
+    "mac": "⚠️ Meia-vida CURTA (1h) — ressedação provável com BZD de longa duração! CONTRAINDICADO em dependência crônica de BZD — precipita convulsão/abstinência. Monitorar rigorosamente."
+  },
+  {
+    "n": "Biperideno EV",
+    "cat": "Antídoto",
+    "amp": "5mg/mL (1mL)",
+    "dose": "5mg EV lento — repetir a cada 30min — máx 20mg",
+    "dil": "Direto EV LENTO (ou 50mL SF em 15min)",
+    "ind": "Distonia aguda extrapiramidal por metoclopramida, haloperidol, prometazina",
+    "mac": "✅ ESCOLHA para distonia aguda! Efeito em 10–20min. Ter disponível SEMPRE que usar metoclopramida em jovens. Alternativa: difenidramina EV."
+  },
+  {
+    "n": "Haloperidol EV (Haldol)",
+    "cat": "Sedação/IOT",
+    "amp": "5mg/mL (1mL)",
+    "dose": "2,5–5mg EV lento — repetir a cada 30–60min — máx 20mg/dia",
+    "dil": "Direto EV LENTO (1–3min) OU 50mL SF em 10–15min",
+    "ind": "Agitação psicomotora, delirium, psicose aguda, sedação em paciente intubado",
+    "mac": "⚠️ Prolonga QT — monitorar ECG. Risco de síndrome extrapiramidal em doses altas. EVITAR em Parkinson e abstinência alcoólica. Risco de síndrome neuroléptica maligna."
+  },
+  {
+    "n": "Insulina Regular EV",
+    "cat": "Eletrólito",
+    "amp": "100UI/mL — frasco 10mL",
+    "dose": "CAD: 0,1UI/kg/h | Hipercalemia: 10UI bolus + SG50% 50mL",
+    "dil": "CAD: 50UI em 50mL SF (1UI/mL) — bomba | Hipercalemia: bolus direto",
+    "ind": "Cetoacidose diabética (CAD), hipercalemia com alteração de ECG",
+    "mac": "⚠️ CAD: checar K+ antes — corrigir hipocalemia antes de iniciar insulina! Hipercalemia: onset 20–30min, duração 2–6h. Monitorar glicemia a cada 1–2h.",
+    "w": [
+      {
+        "l": "CAD (infusão/h)",
+        "min": 0.1,
+        "max": 0.1,
+        "u": "UI"
+      }
+    ]
+  },
+  {
+    "n": "Dobutamina (Dobutrex)",
+    "cat": "Cardiovascular",
+    "amp": "12,5mg/mL — 20mL = 250mg",
+    "dose": "2,5–20mcg/kg/min EV contínuo — BOMBA",
+    "dil": "250mg em 250mL SG5% (1mg/mL) — bomba de infusão",
+    "ind": "Choque cardiogênico, ICC aguda com hipoperfusão, disfunção sistólica grave",
+    "mac": "⚠️ Inotrópico positivo — aumenta DC sem grande vasoconstrição. Pode causar taquicardia e arritmias. Monitorar FC e ECG. Não usar em obstrução de VE (MCOH, estenose aórtica grave).",
+    "w": [
+      {
+        "l": "Dose",
+        "min": 2.5,
+        "max": 20,
+        "u": "mcg/min"
+      }
+    ]
+  },
+  {
+    "n": "Dopamina",
+    "cat": "Cardiovascular",
+    "amp": "5mg/mL — 10mL = 50mg",
+    "dose": "2–20mcg/kg/min EV contínuo — BOMBA (dose-dependente)",
+    "dil": "200mg em 250mL SG5% (800mcg/mL) — bomba",
+    "ind": "Vasopressor alternativo, choque com bradicardia, apoio hemodinâmico",
+    "mac": "⚠️ Dose-dependente: 2–5mcg/kg/min (dopaminérgico), 5–10 (beta/inotrópico), >10 (alfa/vasopressor). Maior risco de arritmia vs noradrenalina. Preferir noradrenalina no choque séptico.",
+    "w": [
+      {
+        "l": "Dose",
+        "min": 2,
+        "max": 20,
+        "u": "mcg/min"
+      }
+    ]
+  },
+  {
+    "n": "Levetiracetam EV (Keppra)",
+    "cat": "Anticonvulsivante",
+    "amp": "100mg/mL — frasco 5mL = 500mg",
+    "dose": "1.000–3.000mg EV em 15min",
+    "dil": "100–250mL SF → infundir em 15min",
+    "ind": "Status epilepticus (alternativa à fenitoína), epilepsia focal ou generalizada",
+    "mac": "✅ VANTAGENS sobre fenitoína: sem monitoração de ECG, compatível com SG5%, sem interações relevantes, sem risco de arritmia. Boa opção em idosos, cardiopatas e gestantes.",
+    "w": [
+      {
+        "l": "Ataque",
+        "min": 20,
+        "max": 60,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Vasopressina",
+    "cat": "Cardiovascular",
+    "amp": "20U/mL (1mL)",
+    "dose": "0,03–0,04 U/min EV contínuo — DOSE FIXA (não titular acima)",
+    "dil": "20U em 100mL SF (0,2U/mL) — bomba de infusão",
+    "ind": "Choque séptico refratário (adjuvante à noradrenalina), PCR — alternativa à adrenalina",
+    "mac": "✅ No choque séptico: ADICIONAR à noradrenalina (não substituir) quando dose ≥ 0,25mcg/kg/min. Dose fixa 0,03U/min — não aumentar (isquemia). PCR: 40U bolus único (substitui 1ª ou 2ª dose de adrenalina)."
+  },
+  {
+    "n": "Clonidina EV",
+    "cat": "Cardiovascular",
+    "amp": "0,15mg/mL (1mL) = 150mcg",
+    "dose": "150mcg EV lento em 10–15min | 150mcg IM direto",
+    "dil": "150mcg em 50–100mL SF → infundir em 10–15min",
+    "ind": "Crise hipertensiva (adjuvante), síndrome de abstinência (álcool/opiáceo), pré-medicação anestésica",
+    "mac": "⚠️ Hipotensão e bradicardia — monitorar PA durante infusão. Não interromper abruptamente em uso crônico (rebote hipertensivo). Sedação significativa. Útil em crises de abstinência."
+  },
+  {
+    "n": "Acetilcisteína EV (Fluimucil)",
+    "cat": "Antídoto",
+    "amp": "100mg/4mL",
+    "dose": "Protocolo 21h: 150mg/kg em 1h → 50mg/kg em 4h → 100mg/kg em 16h",
+    "dil": "1ª bolsa (150mg/kg): 200mL SG5% em 60min | 2ª bolsa (50mg/kg): 500mL SG5% em 4h | 3ª bolsa (100mg/kg): 1L SG5% em 16h",
+    "ind": "Intoxicação por paracetamol (acetaminofeno) — ANTÍDOTO ESPECÍFICO",
+    "mac": "⚠️ INICIAR o mais precocemente possível — idealmente nas primeiras 8–10h. Usar nomograma de Rumack-Matthew para indicar. Reação anafilactoide na 1ª bolsa é frequente (não é alergia — desacelerar infusão). Eficaz mesmo após 24h em casos graves.",
+    "w": [
+      {
+        "l": "Ataque — 1ª bolsa (1h)",
+        "min": 150,
+        "max": 150,
+        "u": "mg"
+      },
+      {
+        "l": "2ª bolsa (4h)",
+        "min": 50,
+        "max": 50,
+        "u": "mg"
+      },
+      {
+        "l": "3ª bolsa (16h)",
+        "min": 100,
+        "max": 100,
+        "u": "mg"
+      }
+    ]
+  },
+  {
+    "n": "Ácido Ascórbico (Vitamina C) EV",
+    "cat": "Eletrólito",
+    "amp": "500mg/5mL",
+    "dose": "1,5g 6/6h EV (protocolo sepse) | 500mg–1g 1×/dia (reposição de déficit)",
+    "dil": "100mL SF → infundir em 30–60min",
+    "ind": "Déficit grave de vitamina C, sepse grave (protocolo HAT adjuvante), escorbuto",
+    "mac": "Protocolo HAT (sepse): Vit C 1,5g 6/6h + hidrocortisona + tiamina — evidências controversas mas sem danos em dose usual. Urina alaranjada intensa é normal. Seguro em doses baixas."
+  },
+  {
+    "n": "Complexo B EV (Cianocobalamina+Tiamina+Piridoxina)",
+    "cat": "Eletrólito",
+    "amp": "Cianocobalamina + Tiamina + Piridoxina — amp 2mL",
+    "dose": "1 amp EV lento ou IM 1×/dia",
+    "dil": "EV: diluir em 50mL SF → infundir em 15–20min (lento) | IM: direto",
+    "ind": "Deficiência de vitaminas B, neuropatia periférica, etilismo, desnutrição, polineuropatia",
+    "mac": "✅ Tiamina: SEMPRE antes do SG em etilistas — SG sem tiamina precipita Wernicke! EV LENTO — cianocobalamina pode causar reação. Urina amarelada pela piridoxina é normal."
+  },
+  {
+    "n": "Carboximaltose Férrica (Ferinject)",
+    "cat": "Eletrólito",
+    "amp": "50mg/mL — frasco 2mL (100mg) | 10mL (500mg)",
+    "dose": "500–1.000mg EV em dose única (conforme cálculo de déficit de ferro)",
+    "dil": "500mg: 100mL SF → 15min | 1.000mg: 250mL SF → 15min",
+    "ind": "Anemia ferropriva grave, intolerância ao ferro VO, má-absorção, doença inflamatória intestinal",
+    "mac": "✅ Alta dose em dose única — mais prático que outras formulações. Pode causar hipofosfatemia transitória. Monitorar PA durante infusão. NÃO misturar com outros medicamentos. Reações anafilactoides são raras."
+  },
+  {
+    "n": "Hidróxido de Ferro III (Noripurum)",
+    "cat": "Eletrólito",
+    "amp": "Frasco 5mL = 100mg ferro",
+    "dose": "100–200mg EV por sessão (2–3×/semana conforme protocolo)",
+    "dil": "100mg: 100mL SF → infundir em 15–30min | Pode ser direto EV lento",
+    "ind": "Anemia ferropriva EV, insuficiência renal crônica, intolerância ao ferro VO",
+    "mac": "⚠️ Primeiros 15min: infundir lento (teste de reação). Ter adrenalina e corticoide disponíveis. Não misturar na mesma linha com outros medicamentos. Dose total calculada pelo déficit de ferro (fórmula Ganzoni)."
+  },
+  {
+    "n": "Fosfato de Potássio EV",
+    "cat": "Eletrólito",
+    "amp": "2mEq/mL de potássio (também fornece ~1,5mmol/mL de fósforo)",
+    "dose": "Hipofosfatemia moderada: 0,16–0,24mmol/kg | Grave (< 1mg/dL): 0,32–0,64mmol/kg",
+    "dil": "SEMPRE DILUIR em 250–500mL SF → infundir em 4–6h",
+    "ind": "Hipofosfatemia grave ou sintomática, hipocalemia com hipofosfatemia associada",
+    "mac": "⚠️ NUNCA EV DIRETO — parada cardíaca. Monitorar ECG, Ca²⁺ e fósforo durante infusão. Contraindicado em hipercalemia. Não misturar com cálcio (precipita). Máx: 40mEq/h em acesso central."
+  },
+  {
+    "n": "Protamina",
+    "cat": "Hemostático",
+    "amp": "100UI/mL (1mL)",
+    "dose": "1mg por 100UI de heparina administrada na última hora — máx 50mg por dose",
+    "dil": "50mL SF → infundir em 10min (LENTO)",
+    "ind": "Reversão de heparina não fracionada, sangramento por overdose de heparina",
+    "mac": "⚠️ Infundir LENTO — hipotensão e bradicardia se rápido. Reações alérgicas em usuários de insulina NPH (contém protamina) e alérgicos a peixes. Monitorar TTPa após dose. ATENÇÃO: dose excessiva PIORA coagulação (efeito anticoagulante próprio)."
+  }
+]
