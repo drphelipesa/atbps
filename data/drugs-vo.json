@@ -232,5 +232,203 @@
     "ind": "Prótese valvar mecânica (INR alvo 2,5–3,5), FA quando NOAC contraindicado, TVP/TEP crônico",
     "mac": "⚠️ MONITORAÇÃO DE INR OBRIGATÓRIA — retornar em 5–7 dias. Múltiplas interações: vitamina K (vegetais verdes), antibióticos, AINEs, álcool. Antídoto: Vitamina K + plasma fresco. Preferir NOACs exceto em prótese valvar mecânica.",
     "rx": "Varfarina 5mg\n1 caixa com 30 comprimidos\nTomar conforme orientação individualizada\nControle de INR obrigatório — retornar em 5 dias"
+  },
+  {
+    "n": "Tramadol 50mg",
+    "cat": "Analgésico",
+    "apresentacao": "Cápsula 50mg | Gotas 100mg/mL",
+    "dose": "50–100mg VO 6/6h ou 8/8h (máx 400mg/dia)",
+    "ind": "Dor moderada a intensa — quando AINEs são insuficientes ou contraindicados",
+    "mac": "⚠️ RECEITUÁRIO B. Náuseas frequentes — associar antiemético. Risco de convulsão em doses altas. Não combinar com ISRS (síndrome serotonérgica). Não dirigir.",
+    "rx": "Tramadol 50mg — RECEITUÁRIO B\n1 caixa com 20 cápsulas\nTomar 1 cápsula de 8/8 horas se dor intensa\n(Não usar álcool)"
+  },
+  {
+    "n": "Nimesulida 100mg",
+    "cat": "Analgésico",
+    "apresentacao": "Comprimido 100mg | Granulado 100mg/sachê",
+    "dose": "100mg VO 12/12h com alimento (máx 15 dias)",
+    "ind": "Dor inflamatória aguda, dismenorreia, dor musculoesquelética",
+    "mac": "⚠️ AINE — contraindicado em hepatopatas (hepatotoxicidade), IR, gestante, úlcera ativa. Máx 15 dias. Tomar com alimento. Evitar em idosos.",
+    "rx": "Nimesulida 100mg\n1 caixa com 12 comprimidos\nTomar 1 comprimido de 12/12 horas após as refeições por 5 dias"
+  },
+  {
+    "n": "Naproxeno 500mg",
+    "cat": "Analgésico",
+    "apresentacao": "Comprimido 250mg | 500mg",
+    "dose": "250–500mg VO 12/12h com alimento",
+    "ind": "Dor inflamatória, artrite, cólica, dismenorreia, gota aguda",
+    "mac": "⚠️ AINE — meia-vida longa (12h), 2 tomadas ao dia. Contraindicado em IR, úlcera ativa, gestante. Tomar com alimento. Menos risco cardiovascular que outros AINEs.",
+    "rx": "Naproxeno 500mg\n1 caixa com 20 comprimidos\nTomar 1 comprimido de 12/12 horas após as refeições por 5 dias"
+  },
+  {
+    "n": "Codeína 30mg + Paracetamol 500mg (Tylex)",
+    "cat": "Analgésico",
+    "apresentacao": "Cápsula: Codeína 30mg + Paracetamol 500mg",
+    "dose": "1–2 cápsulas VO 4/4h ou 6/6h (máx 8 cápsulas/dia = 240mg codeína)",
+    "ind": "Dor moderada a intensa — pós-operatório, trauma, cólica renal",
+    "mac": "⚠️ RECEITUÁRIO B. Atenção à dose total de paracetamol (máx 4g/dia). Constipação frequente — orientar hidratação. Sedação — não dirigir. Metabolizadores ultrarrápidos CYP2D6: risco de toxicidade.",
+    "rx": "Codeína 30mg + Paracetamol 500mg (Tylex) — RECEITUÁRIO B\n1 caixa com 20 cápsulas\nTomar 1 cápsula de 6/6 horas se dor\n(Não usar álcool. Não ultrapassar 8 cápsulas/dia)"
+  },
+  {
+    "n": "Colchicina 0,5mg",
+    "cat": "Analgésico",
+    "apresentacao": "Comprimido 0,5mg",
+    "dose": "Gota aguda: 1mg ao início → 0,5mg após 1h → 0,5mg 12/12h até resolução (máx 3–4 dias)",
+    "ind": "Gota aguda, pericardite aguda/recorrente",
+    "mac": "⚠️ Diarreia intensa = sinal de dose máxima — reduzir. Contraindicado em IR grave (ClCr <30) e doença hepática grave. Interação grave com claritromicina e ciclosporina (toxicidade fatal). NÃO usar esquema antigo de alta dose.",
+    "rx": "Colchicina 0,5mg\n1 caixa com 20 comprimidos\nTomar 2 comprimidos (1mg) agora, depois 1 comprimido após 1 hora\nEm seguida: 1 comprimido de 12/12 horas por 3 dias"
+  },
+  {
+    "n": "Amitriptilina 25mg",
+    "cat": "Analgésico",
+    "apresentacao": "Comprimido 25mg",
+    "dose": "10–25mg VO 1×/dia à noite (dor neuropática) — doses antidepressivas são maiores",
+    "ind": "Dor neuropática (neuropatia diabética, pós-herpética), profilaxia de cefaleia tensional e enxaqueca, fibromialgia",
+    "mac": "⚠️ Efeitos anticolinérgicos: boca seca, constipação, retenção urinária, visão turva. Sedação — tomar à noite. Contraindicado em IAM recente, glaucoma de ângulo fechado, HPB. Não suspender abruptamente.",
+    "rx": "Amitriptilina 25mg\n1 caixa com 20 comprimidos\nTomar 1 comprimido à noite ao deitar\n(Retornar em 30 dias para reavaliação)"
+  },
+  {
+    "n": "Ciprofloxacino 500mg",
+    "cat": "Antibiótico",
+    "apresentacao": "Comprimido 500mg",
+    "dose": "IVU simples: 500mg 12/12h × 3–7 dias | IVU complicada/pielonefrite: 500mg 12/12h × 10–14 dias",
+    "ind": "IVU complicada, pielonefrite, infecções GI (gastroenterite bacteriana, febre tifoide), infecções de pele",
+    "mac": "⚠️ Prolonga QT — cuidado em cardiopatas. Risco de tendinite/ruptura de tendão (especialmente em idosos e em uso de corticoide). Contraindicado na gestante. NÃO tomar com laticínios, antiácidos com Al/Mg ou suplementos de Fe/Zn (quelação — absorção cai 50%).",
+    "rx": "Ciprofloxacino 500mg\n1 caixa com 14 comprimidos\nTomar 1 comprimido de 12/12 horas por 7 dias\n(Tomar com água, longe de laticínios e antiácidos)"
+  },
+  {
+    "n": "Nitrofurantoína 100mg",
+    "cat": "Antibiótico",
+    "apresentacao": "Cápsula 100mg (macrocristalina)",
+    "dose": "100mg VO 12/12h × 5–7 dias (com alimento)",
+    "ind": "IVU baixa não complicada (cistite) — NÃO usar para pielonefrite",
+    "mac": "⚠️ APENAS para cistite — não alcança nível tecidual renal adequado. Tomar com alimento (reduz náuseas e aumenta absorção). Contraindicado em IR (ClCr <30) e no termo da gestação (>36 semanas). Urina pode ficar amarelo-alaranjada — normal.",
+    "rx": "Nitrofurantoína 100mg\n1 caixa com 10 cápsulas\nTomar 1 cápsula de 12/12 horas por 5 dias, sempre com alimento"
+  },
+  {
+    "n": "Metronidazol 400mg",
+    "cat": "Antibiótico",
+    "apresentacao": "Comprimido 250mg | 400mg",
+    "dose": "400mg VO 8/8h (infecções anaeróbias) | Vaginose: 400mg 12/12h × 7 dias | Giardíase: 250mg 8/8h × 5–7 dias",
+    "ind": "Infecções anaeróbias, vaginose bacteriana, tricomoníase, giardíase, abscesso dentário",
+    "mac": "⚠️ REAÇÃO ANTABUSE com álcool (náusea, vômito, rubor, taquicardia) — evitar álcool durante o tratamento e por 48h após. Gosto metálico na boca — normal, informar o paciente.",
+    "rx": "Metronidazol 400mg\n1 caixa com 21 comprimidos\nTomar 1 comprimido de 8/8 horas por 7 dias\n(PROIBIDO consumir álcool durante o tratamento)"
+  },
+  {
+    "n": "Amoxicilina + Clavulanato 875/125mg",
+    "cat": "Antibiótico",
+    "apresentacao": "Comprimido 875mg + 125mg (Clavulin, Amoxicilina BD)",
+    "dose": "875/125mg VO 12/12h × 7–10 dias (com alimento)",
+    "ind": "Sinusite bacteriana, mordidas humanas/animais, infecções mistas de pele, IVU complicada, pneumonia aspirativa leve",
+    "mac": "⚠️ Tomar com alimento (reduz diarreia). Diarreia mais frequente que amoxicilina pura. Contraindicado em histórico de icterícia colestática por esta combinação. Verificar alergia à penicilina.",
+    "rx": "Amoxicilina + Clavulanato 875/125mg\n1 caixa com 14 comprimidos\nTomar 1 comprimido de 12/12 horas por 7 dias, sempre com alimento"
+  },
+  {
+    "n": "Doxiciclina 100mg",
+    "cat": "Antibiótico",
+    "apresentacao": "Cápsula 100mg",
+    "dose": "100mg VO 12/12h (ataque: 200mg no 1º dia)",
+    "ind": "DST (clamídia, sífilis, uretrite), pneumonia atípica, riquetsiose, doença de Lyme, acne grave",
+    "mac": "⚠️ Não deitar por 30 min após ingestão — risco de esofagite grave. Tomar com copo cheio de água. Fotossensibilidade — usar protetor solar. Contraindicada na gestante e criança <8 anos. NÃO tomar com laticínios, antiácidos ou ferro (quelação).",
+    "rx": "Doxiciclina 100mg\n1 caixa com 14 cápsulas\nTomar 2 cápsulas no 1º dia, depois 1 cápsula de 12/12 horas\n(Não deitar após tomar. Usar protetor solar)"
+  },
+  {
+    "n": "Sulfametoxazol + Trimetoprima 800/160mg (Bactrim F)",
+    "cat": "Antibiótico",
+    "apresentacao": "Comprimido 800mg + 160mg (Bactrim F)",
+    "dose": "1 comprimido VO 12/12h | IVU simples: 3 dias | IVU complicada: 7–14 dias",
+    "ind": "IVU (boa cobertura para E. coli resistente), infecções respiratórias, toxoplasmose, pneumocistose",
+    "mac": "⚠️ Monitorar função renal e K⁺ — risco de hipercalemia (especialmente com IECA/BRA/poupadores de K⁺). Fotossensibilidade. Reação cruzada com sulfa (sulfonilureias, tiazídicos). Contraindicado em IR grave e gestante no termo.",
+    "rx": "Sulfametoxazol 800mg + Trimetoprima 160mg (Bactrim F)\n1 caixa com 20 comprimidos\nTomar 1 comprimido de 12/12 horas por 7 dias"
+  },
+  {
+    "n": "Fluconazol 150mg",
+    "cat": "Antifúngico",
+    "apresentacao": "Cápsula 150mg",
+    "dose": "Candidíase vaginal: 150mg dose única | Candidíase oral: 100–200mg/dia × 7–14 dias",
+    "ind": "Candidíase vaginal, candidíase oral/esofágica, tinea (segunda linha)",
+    "mac": "⚠️ Dose única para candidíase vaginal. Pode repetir após 72h se sintomas persistirem. Interações importantes: aumenta INR (varfarina), eleva nível de estatinas, benzodiazepínicos e ciclosporina. Evitar na gestante (1º trimestre).",
+    "rx": "Fluconazol 150mg\n1 cápsula\nTomar 1 cápsula dose única\n(Pode repetir em 72h se necessário)"
+  },
+  {
+    "n": "Enalapril 10mg",
+    "cat": "Cardiovascular",
+    "apresentacao": "Comprimido 5mg | 10mg | 20mg",
+    "dose": "5–40mg VO 1–2×/dia (iniciar com 5mg)",
+    "ind": "Hipertensão arterial, IC com FE reduzida, nefropatia diabética",
+    "mac": "⚠️ CONTRAINDICADO na gestação (fetotóxico). Tosse seca em 10–20% — trocar para losartana (BRA). Monitorar K⁺ e creatinina. Primeira dose: hipotensão — iniciar com 5mg. Não associar com BRA (losartana).",
+    "rx": "Enalapril 10mg\n1 caixa com 30 comprimidos\nTomar 1 comprimido por dia\n(Retornar em 30 dias para controle de PA)"
+  },
+  {
+    "n": "Furosemida 40mg",
+    "cat": "Cardiovascular",
+    "apresentacao": "Comprimido 40mg",
+    "dose": "20–80mg VO 1–2×/dia pela manhã",
+    "ind": "Insuficiência cardíaca descompensada (manutenção), edema, hipertensão resistente",
+    "mac": "⚠️ Tomar PELA MANHÃ (evitar noctúria). Monitorar K⁺ — hipocalemia frequente (associar espironolactona ou repor K⁺). Monitorar PA e creatinina. Evitar em anúria e IR grave.",
+    "rx": "Furosemida 40mg\n1 caixa com 30 comprimidos\nTomar 1 comprimido pela manhã"
+  },
+  {
+    "n": "Espironolactona 25mg",
+    "cat": "Cardiovascular",
+    "apresentacao": "Comprimido 25mg | 50mg | 100mg",
+    "dose": "25–100mg VO 1×/dia",
+    "ind": "IC com FE reduzida (reduz mortalidade), ascite hepática, hiperaldosteronismo, hipertensão resistente",
+    "mac": "⚠️ Monitorar K⁺ — hipercalemia (risco elevado com IECA/BRA e em IR). Ginecomastia e irregularidade menstrual dose-dependentes. Contraindicada em hipercalemia e IR grave.",
+    "rx": "Espironolactona 25mg\n1 caixa com 30 comprimidos\nTomar 1 comprimido por dia"
+  },
+  {
+    "n": "Digoxina 0,25mg",
+    "cat": "Cardiovascular",
+    "apresentacao": "Comprimido 0,25mg",
+    "dose": "0,125–0,25mg VO 1×/dia (ajustar em idosos e IR: 0,125mg)",
+    "ind": "FA com FE reduzida (controle de FC), IC sistólica refratária",
+    "mac": "⚠️ ÍNDICE TERAPÊUTICO ESTREITO — nível sérico alvo: 0,5–0,9 ng/mL. Sinais de toxicidade: náusea, vômito, visão amarela/verde, bradicardia, arritmias. Hipocalemia potencializa toxicidade. Reduzir dose em IR e idosos.",
+    "rx": "Digoxina 0,25mg\n1 caixa com 30 comprimidos\nTomar 1 comprimido por dia\n(Dosagem ajustada pelo médico — não alterar sem orientação)"
+  },
+  {
+    "n": "AAS 100mg",
+    "cat": "Antiagregante",
+    "apresentacao": "Comprimido 100mg (entérico)",
+    "dose": "100mg VO 1×/dia",
+    "ind": "Prevenção secundária de IAM e AVC, SCA, pós-stent coronariano, DAP",
+    "mac": "⚠️ Tomar com alimento para reduzir irritação gástrica. Associar protetor gástrico (omeprazol) em pacientes de risco (>65a, antecedente de úlcera, uso de anticoagulante). NÃO interromper após SCA ou stent sem orientação do cardiologista.",
+    "rx": "AAS 100mg\n1 caixa com 30 comprimidos\nTomar 1 comprimido por dia após o almoço\n(Não interromper sem orientação médica)"
+  },
+  {
+    "n": "Clopidogrel 75mg",
+    "cat": "Antiagregante",
+    "apresentacao": "Comprimido 75mg",
+    "dose": "75mg VO 1×/dia (manutenção) | Ataque: 300–600mg (hospitalar)",
+    "ind": "SCA (dupla antiagregação com AAS), pós-stent coronariano, AVC/AIT isquêmico, DAP",
+    "mac": "⚠️ DUPLA ANTIAGREGAÇÃO (AAS + clopidogrel): risco aumentado de sangramento. NÃO interromper após stent sem cardiologista — risco de trombose de stent fatal. Preferir PANTOPRAZOL se necessitar protetor gástrico — omeprazol/esomeprazol reduzem efeito.",
+    "rx": "Clopidogrel 75mg\n1 caixa com 30 comprimidos\nTomar 1 comprimido por dia\n(NÃO interromper sem orientação do cardiologista)"
+  },
+  {
+    "n": "Montelucaste 10mg",
+    "cat": "Broncodilatador",
+    "apresentacao": "Comprimido 10mg",
+    "dose": "10mg VO 1×/dia à noite",
+    "ind": "Asma leve-moderada (manutenção), rinite alérgica, broncoespasmo induzido por exercício",
+    "mac": "⚠️ NÃO é broncodilatador de resgate — não usar em crise aguda. Tomar à noite. Raro: alterações de humor e comportamento (pesadelos, ansiedade, pensamentos suicidas) — orientar paciente e familiares.",
+    "rx": "Montelucaste 10mg\n1 caixa com 30 comprimidos\nTomar 1 comprimido à noite"
+  },
+  {
+    "n": "Pantoprazol 40mg",
+    "cat": "Protetor Gástrico",
+    "apresentacao": "Comprimido 40mg (gastrorresistente)",
+    "dose": "40mg VO 1×/dia em jejum (30min antes do café)",
+    "ind": "DRGE, úlcera, gastroproteção com AINEs/antiagregantes/anticoagulantes, H. pylori (esquema combinado)",
+    "mac": "⚠️ Preferir ao omeprazol em pacientes usando clopidogrel — menos interação com CYP2C19. Engolir inteiro. Uso prolongado: risco de hipomagnesemia e deficiência de B12.",
+    "rx": "Pantoprazol 40mg\n1 caixa com 28 comprimidos\nTomar 1 comprimido em jejum, 30 minutos antes do café da manhã"
+  },
+  {
+    "n": "Carbamazepina 200mg",
+    "cat": "Anticonvulsivante",
+    "apresentacao": "Comprimido 200mg | Comprimido retard 400mg",
+    "dose": "200–1200mg/dia VO em 2–3 tomadas (iniciar 200mg 12/12h, aumentar gradualmente)",
+    "ind": "Epilepsia focal, neuralgia do trigêmeo (1ª escolha), transtorno bipolar",
+    "mac": "⚠️ RECEITUÁRIO B2. Forte indutor enzimático — reduz eficácia de anticoagulantes, ACO, antibióticos e outros AEDs. Risco de hiponatremia. Em asiáticos: testar HLA-B*1502 (risco de Stevens-Johnson). Monitorar nível sérico.",
+    "rx": "Carbamazepina 200mg — RECEITUÁRIO B2\n1 caixa com 20 comprimidos\nTomar 1 comprimido de 12/12 horas\n(Não interromper sem orientação médica — retornar em 30 dias)"
   }
 ]
