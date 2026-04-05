@@ -328,5 +328,582 @@
         ]
       }
     ]
+  },
+  {
+    "title": "❤️ SCA — Síndrome Coronariana Aguda",
+    "cor": "#E24B4A",
+    "passos": [
+      {
+        "fase": "MONA — primeiros 10 min",
+        "tempo": "antes do ECG de 12 derivações",
+        "itens": [
+          {
+            "n": "AAS",
+            "dose": "200–300 mg VO mastigado",
+            "obs": "dose de ataque — independente do uso prévio"
+          },
+          {
+            "n": "Morfina",
+            "dose": "2–4 mg EV lento (titular)",
+            "obs": "se dor intensa refratária a nitratos — cuidado: pode mascarar sintomas"
+          },
+          {
+            "n": "Oxigênio",
+            "dose": "2–4 L/min se SpO₂ <94%",
+            "obs": "NÃO ofertar rotineiramente se SpO₂ ≥94%"
+          },
+          {
+            "n": "Nitrato sublingual",
+            "dose": "5 mg SL — repetir a cada 5 min (máx 3×)",
+            "obs": "⚠️ contraindicado se PAS <90 mmHg, IAM de VD ou uso de sildenafil <24h"
+          }
+        ]
+      },
+      {
+        "fase": "IAM com supra — reperfusão",
+        "tempo": "ECG com supra ≥1mm em ≥2 derivações contíguas",
+        "itens": [
+          {
+            "n": "Clopidogrel",
+            "dose": "300–600 mg VO (ataque)",
+            "obs": "dupla antiagregação com AAS — iniciar antes da angioplastia"
+          },
+          {
+            "n": "Heparina não fracionada",
+            "dose": "60–70 UI/kg EV bolus (máx 5.000 UI) + 12–15 UI/kg/h",
+            "obs": "se ICP primária planejada"
+          },
+          {
+            "n": "Angioplastia primária (ICP)",
+            "dose": "META: tempo porta-balão <90 min",
+            "obs": "✅ primeira escolha — acionar hemodinâmica imediatamente"
+          }
+        ]
+      },
+      {
+        "fase": "IAM sem supra / angina instável",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Clopidogrel",
+            "dose": "300 mg VO (ataque) → 75 mg/dia",
+            "obs": "antiagregação dupla por 12 meses pós-stent"
+          },
+          {
+            "n": "Enoxaparina",
+            "dose": "1 mg/kg SC 12/12h",
+            "obs": "anticoagulação — ajustar dose em IR (0,75 mg/kg se ClCr 15–29)"
+          },
+          {
+            "n": "Betabloqueador",
+            "dose": "Metoprolol 25–50 mg VO se estável hemodinâmico",
+            "obs": "reduz isquemia — contraindicado em broncoespasmo, BAV, choque"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🧠 AVC Isquêmico — Janela Trombolítica",
+    "cor": "#7F77DD",
+    "passos": [
+      {
+        "fase": "Avaliação inicial — primeiros 10 min",
+        "tempo": "tempo é neurônio",
+        "itens": [
+          {
+            "n": "Glicemia capilar",
+            "dose": "obrigatória — excluir hipoglicemia",
+            "obs": "hipoglicemia mimetiza AVC — corrigir antes de qualquer conduta"
+          },
+          {
+            "n": "TC de crânio sem contraste",
+            "dose": "META: <25 min da chegada",
+            "obs": "excluir hemorragia — único critério obrigatório antes do rtPA"
+          },
+          {
+            "n": "PA alvo pré-trombólise",
+            "dose": "PAS <185 / PAD <110 mmHg",
+            "obs": "se acima: Labetalol 10–20 mg EV ou Nitroprussiato — acionar neurologista"
+          }
+        ]
+      },
+      {
+        "fase": "Trombólise — Alteplase (rtPA)",
+        "tempo": "janela: até 4,5h do início dos sintomas",
+        "itens": [
+          {
+            "n": "Alteplase (Actilyse)",
+            "dose": "0,9 mg/kg EV (máx 90 mg) — 10% em bolus + 90% em 60 min",
+            "obs": "✅ janela até 4,5h — acionar neurologista ANTES de administrar"
+          }
+        ]
+      },
+      {
+        "fase": "Contraindicações absolutas ao rtPA",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "⛔ Hemorragia na TC",
+            "dose": "qualquer sangramento intracraniano",
+            "obs": ""
+          },
+          {
+            "n": "⛔ AVC ou TCE grave <3 meses",
+            "dose": "",
+            "obs": ""
+          },
+          {
+            "n": "⛔ Cirurgia de grande porte <14 dias",
+            "dose": "",
+            "obs": ""
+          },
+          {
+            "n": "⛔ Anticoagulação plena ativa",
+            "dose": "INR >1,7 ou uso de NOAC <48h",
+            "obs": ""
+          },
+          {
+            "n": "⛔ Glicemia <50 ou >400 mg/dL",
+            "dose": "corrigir e reavaliar",
+            "obs": ""
+          }
+        ]
+      },
+      {
+        "fase": "Monitoração pós-rtPA",
+        "tempo": "24h",
+        "itens": [
+          {
+            "n": "PA alvo pós-trombólise",
+            "dose": "<180/105 mmHg nas primeiras 24h",
+            "obs": "PA mais alta aumenta risco de transformação hemorrágica"
+          },
+          {
+            "n": "AAS / anticoagulante",
+            "dose": "aguardar 24h após rtPA",
+            "obs": "TC controle em 24h antes de iniciar antiagregação"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "💊 Cetoacidose Diabética (CAD)",
+    "cor": "#EF9F27",
+    "passos": [
+      {
+        "fase": "Diagnóstico",
+        "tempo": "tríade: hiperglicemia + acidose + cetonúria",
+        "itens": [
+          {
+            "n": "Critérios diagnósticos",
+            "dose": "Glicemia >250 mg/dL + pH <7,3 + Bicarbonato <18 + Cetonúria/cetonemia",
+            "obs": "pH <7,0 = CAD grave — UTI"
+          },
+          {
+            "n": "Calcular ânion gap",
+            "dose": "AG = Na⁺ – (Cl⁻ + HCO₃⁻) — normal: 8–12",
+            "obs": "AG elevado confirma acidose metabólica — investigar causa"
+          }
+        ]
+      },
+      {
+        "fase": "Hidratação — 1ª hora",
+        "tempo": "prioritária — antes da insulina",
+        "itens": [
+          {
+            "n": "SF 0,9%",
+            "dose": "1 L EV na 1ª hora (15–20 mL/kg)",
+            "obs": "⚠️ INICIAR HIDRATAÇÃO ANTES DA INSULINA — reduz K⁺ adicional"
+          }
+        ]
+      },
+      {
+        "fase": "Reposição de potássio — OBRIGATÓRIA",
+        "tempo": "antes de iniciar insulina",
+        "itens": [
+          {
+            "n": "K⁺ <3,5 mEq/L",
+            "dose": "ADIAR insulina — repor 20–40 mEq/h até K⁺ ≥3,5",
+            "obs": "⚠️ insulina sem K⁺ → hipocalemia fatal"
+          },
+          {
+            "n": "K⁺ 3,5–5,0 mEq/L",
+            "dose": "KCl 20–30 mEq em cada litro de soro",
+            "obs": "manter K⁺ entre 4–5 mEq/L durante insulinoterapia"
+          },
+          {
+            "n": "K⁺ >5,0 mEq/L",
+            "dose": "iniciar insulina sem reposição de K⁺",
+            "obs": "monitorar K⁺ a cada 2h"
+          }
+        ]
+      },
+      {
+        "fase": "Insulinoterapia EV",
+        "tempo": "após K⁺ ≥3,5 mEq/L",
+        "itens": [
+          {
+            "n": "Insulina Regular",
+            "dose": "0,1 UI/kg bolus EV → 0,1 UI/kg/h infusão contínua",
+            "obs": "meta: reduzir glicemia 50–75 mg/dL/h — não mais rápido"
+          },
+          {
+            "n": "Transição para SG5%",
+            "dose": "glicemia <250 mg/dL → trocar SF por SG5%",
+            "obs": "manter insulina até fechar o ânion gap (pH >7,3 e HCO₃ >18)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🩸 Crise Hipertensiva",
+    "cor": "#E24B4A",
+    "passos": [
+      {
+        "fase": "Classificação obrigatória",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Urgência hipertensiva",
+            "dose": "PA >180/120 SEM lesão de órgão-alvo",
+            "obs": "✅ reduzir PA em 24–48h — pode ser VO ambulatorial"
+          },
+          {
+            "n": "Emergência hipertensiva",
+            "dose": "PA elevada COM lesão de órgão-alvo (AVE, EAP, IAM, dissecção)",
+            "obs": "⚠️ reduzir PA em minutos a horas — internar, EV obrigatório"
+          }
+        ]
+      },
+      {
+        "fase": "Urgência hipertensiva — VO",
+        "tempo": "redução em 24–48h",
+        "itens": [
+          {
+            "n": "Captopril",
+            "dose": "25 mg SL ou VO",
+            "obs": "início 15–30 min — opção mais usada no PA brasileiro"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Clonidina",
+            "dose": "0,1–0,2 mg VO",
+            "obs": "boa opção em hipertensos com FC elevada"
+          }
+        ]
+      },
+      {
+        "fase": "Emergência — por órgão-alvo",
+        "tempo": "EV obrigatório — UTI/semi-intensiva",
+        "itens": [
+          {
+            "n": "EAP / IC aguda",
+            "dose": "Nitroprussiato 0,25–10 mcg/kg/min + furosemida EV",
+            "obs": "vasodilatação rápida — monitorar PA continuamente"
+          },
+          {
+            "n": "AVE hemorrágico",
+            "dose": "Labetalol 20 mg EV ou Nicardipina EV — meta PAS 140–160",
+            "obs": "⚠️ redução gradual — não baixar PA abruptamente no AVC"
+          },
+          {
+            "n": "Dissecção de aorta",
+            "dose": "Esmolol 500 mcg/kg bolus + infusão — meta FC <60 e PAS <120",
+            "obs": "⚠️ betabloqueador ANTES do vasodilatador — evitar taquicardia reflexa"
+          },
+          {
+            "n": "SCA / IAM",
+            "dose": "Nitrato EV + betabloqueador EV (se estável)",
+            "obs": "ver protocolo SCA"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "💧 Edema Agudo de Pulmão (EAP)",
+    "cor": "#378ADD",
+    "passos": [
+      {
+        "fase": "LMNOP — simultâneo",
+        "tempo": "primeiros 5 minutos",
+        "itens": [
+          {
+            "n": "L — Lasix (Furosemida)",
+            "dose": "40–80 mg EV bolus (dobrar dose se em uso crônico)",
+            "obs": "efeito venodilator imediato — antes do efeito diurético"
+          },
+          {
+            "n": "M — Morfina",
+            "dose": "2–4 mg EV lento",
+            "obs": "ansiolítico e venodilator — cuidado: pode deprimir respiração"
+          },
+          {
+            "n": "N — Nitrato",
+            "dose": "Isossorbida 5 mg SL a cada 5 min (3×) → nitroglicerina EV",
+            "obs": "vasodilatação venosa — contraindicado se PAS <90 mmHg"
+          },
+          {
+            "n": "O — Oxigênio",
+            "dose": "SpO₂ alvo ≥94% — VNI (CPAP/BiPAP) é superior ao O₂ simples",
+            "obs": "✅ VNI reduz intubação — iniciar precocemente se disponível"
+          },
+          {
+            "n": "P — Posição",
+            "dose": "sentado com pernas para baixo (posição de Fowler alta)",
+            "obs": "reduz pré-carga imediatamente — simples e eficaz"
+          }
+        ]
+      },
+      {
+        "fase": "EAP hipertensivo (mais comum)",
+        "tempo": "PAS geralmente >160 mmHg",
+        "itens": [
+          {
+            "n": "Nitroprussiato de Sódio",
+            "dose": "0,25–10 mcg/kg/min EV — bomba",
+            "obs": "se refratário aos nitratos sublinguais — reduz pós-carga rapidamente"
+          }
+        ]
+      },
+      {
+        "fase": "EAP com hipotensão (cardiogênico)",
+        "tempo": "PAS <90 mmHg",
+        "itens": [
+          {
+            "n": "Dobutamina",
+            "dose": "2,5–20 mcg/kg/min EV — bomba",
+            "obs": "inotrópico — aumenta DC sem aumentar RVP"
+          },
+          {
+            "n": "Noradrenalina",
+            "dose": "0,1–1 mcg/kg/min EV — se hipotensão grave",
+            "obs": "para manter PAM ≥65 enquanto otimiza inotropia"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🌬️ Crise Asmática",
+    "cor": "#1D9E75",
+    "passos": [
+      {
+        "fase": "Classificação de gravidade",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Leve-moderada",
+            "dose": "fala em frases, SpO₂ >92%, FR <25, ausência de uso de musculatura acessória",
+            "obs": "tratamento ambulatorial com nebulização"
+          },
+          {
+            "n": "Grave",
+            "dose": "fala em palavras, SpO₂ <92%, FR >30, uso de musculatura acessória, pulso paradoxal",
+            "obs": "⚠️ internar — risco de IOT"
+          },
+          {
+            "n": "Quase fatal (iminência de parada)",
+            "dose": "exausto, cianose, confusão, silêncio respiratório, bradicardia",
+            "obs": "⚠️ IOT IMEDIATA — chamar equipe, preparar ISR"
+          }
+        ]
+      },
+      {
+        "fase": "1ª linha — broncodilatadores",
+        "tempo": "iniciar imediatamente",
+        "itens": [
+          {
+            "n": "Salbutamol (Aerolin)",
+            "dose": "2,5 mg nebulização a cada 20 min (3×) ou 400–800 mcg inalatório",
+            "obs": "✅ broncodilatador de curta ação — pilar do tratamento"
+          },
+          {
+            "n": "Ipratrópio (Atrovent)",
+            "dose": "0,5 mg nebulização junto com salbutamol",
+            "obs": "associar nas primeiras horas — reduz hospitalização na crise grave"
+          }
+        ]
+      },
+      {
+        "fase": "Corticoide sistêmico",
+        "tempo": "iniciar em até 1h",
+        "itens": [
+          {
+            "n": "Metilprednisolona",
+            "dose": "40–80 mg EV (ou hidrocortisona 200 mg EV)",
+            "obs": "efeito em 4–6h — não atrasar por achar que é só leve"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Prednisona",
+            "dose": "40–60 mg VO (equivalente se deambulando)",
+            "obs": "VO é tão eficaz quanto EV em crise moderada"
+          }
+        ]
+      },
+      {
+        "fase": "Crise grave refratária",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Sulfato de Magnésio",
+            "dose": "2 g EV em 20 min",
+            "obs": "✅ broncodilatador subutilizado — seguro e eficaz na crise grave"
+          },
+          {
+            "n": "Adrenalina",
+            "dose": "0,3 mg IM (face lateral da coxa)",
+            "obs": "se broncoespasmo grave com piora rápida — não esperar"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🩸 Fibrilação Atrial (FA)",
+    "cor": "#D4537E",
+    "passos": [
+      {
+        "fase": "Avaliação inicial",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "FA <48h de início (ou anticoagulada ≥3 semanas)",
+            "dose": "cardioversão possível — elétrica ou farmacológica",
+            "obs": "✅ sem necessidade de ecocardiograma se <48h"
+          },
+          {
+            "n": "FA >48h ou duração desconhecida",
+            "dose": "NÃO cardiovertir sem anticoagulação ≥3 semanas ou ecocardiograma transesofágico",
+            "obs": "⚠️ risco de tromboembolia — anticoagular e controlar FC"
+          }
+        ]
+      },
+      {
+        "fase": "Controle de frequência",
+        "tempo": "meta: FC <110 bpm em repouso",
+        "itens": [
+          {
+            "n": "Metoprolol",
+            "dose": "2,5–5 mg EV lento (repetir a cada 5 min — máx 15 mg)",
+            "obs": "✅ primeira escolha — contraindicado em broncoespasmo grave e ICC descompensada"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Diltiazem",
+            "dose": "0,25 mg/kg EV em 2 min → 5–15 mg/h infusão",
+            "obs": "alternativa ao betabloqueador — contraindicado em ICC com FE reduzida"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Digoxina",
+            "dose": "0,25–0,5 mg EV lento",
+            "obs": "preferir em ICC descompensada — início de ação lento (horas)"
+          }
+        ]
+      },
+      {
+        "fase": "Cardioversão farmacológica — FA <48h",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Amiodarona",
+            "dose": "150 mg EV em 10 min → 1 mg/min por 6h → 0,5 mg/min por 18h",
+            "obs": "✅ opção de escolha no Brasil — especialmente com ICC ou instabilidade leve"
+          }
+        ]
+      },
+      {
+        "fase": "Cardioversão elétrica (CVE)",
+        "tempo": "instabilidade hemodinâmica ou refratária",
+        "itens": [
+          {
+            "n": "Sedação prévia",
+            "dose": "Midazolam 0,05 mg/kg + Fentanil 1 mcg/kg EV",
+            "obs": "sedação adequada — não cardiovertir sem sedação"
+          },
+          {
+            "n": "Cardioversão sincronizada",
+            "dose": "100–200 J bifásico (iniciar com 120–150 J)",
+            "obs": "⚠️ SINCRONIZADO — evitar FV induzida"
+          }
+        ]
+      },
+      {
+        "fase": "Anticoagulação pós-reversão",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "CHADS-VASc ≥2 (homens) ou ≥3 (mulheres)",
+            "dose": "anticoagulação permanente indicada",
+            "obs": "preferir NOACs (rivaroxabana / apixabana) — iniciar na alta"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🍬 Hipoglicemia Grave",
+    "cor": "#EF9F27",
+    "passos": [
+      {
+        "fase": "Paciente consciente e capaz de deglutir",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Glicose oral",
+            "dose": "15–20 g de carboidrato rápido (suco, mel, sachê de glucose)",
+            "obs": "regra 15-15: 15g de carboidrato → checar glicemia em 15 min"
+          }
+        ]
+      },
+      {
+        "fase": "Paciente inconsciente ou sem acesso oral",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Glicose 50% (Glicose hipertônica)",
+            "dose": "20–40 mL EV bolus (10–20 g de glicose)",
+            "obs": "⚠️ veia calibrosa — vesicante, causa necrose em extravasamento"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Glucagon",
+            "dose": "1 mg IM ou SC",
+            "obs": "se sem acesso venoso — início em 10–15 min — ineficaz em desnutridos e etilistas"
+          }
+        ]
+      },
+      {
+        "fase": "Após reversão",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "SG10% ou SG5%",
+            "dose": "infusão contínua EV — manter glicemia 100–180 mg/dL",
+            "obs": "⚠️ monitorar glicemia 1/1h — risco de nova hipoglicemia (especialmente com sulfonilureias)"
+          },
+          {
+            "n": "Investigar causa",
+            "dose": "sulfonilureias, insulinoterapia excessiva, etilismo, sepse",
+            "obs": "sulfonilureia: internar pelo menos 24h — risco de hipoglicemia prolongada"
+          }
+        ]
+      }
+    ]
   }
 ]

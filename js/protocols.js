@@ -49,15 +49,24 @@ function buildProtocolText(p) {
 export function renderProtocols() {
   const container = document.getElementById('protocols');
   container.innerHTML = state.protocols.map((p, idx) => `
-    <div class="pcard" style="border-left-color:${p.cor}">
-      <div class="pcard-title">
-        ${p.title}
-        <span class="cp" onclick="window._copyProtocol(this,${idx})" title="Copiar protocolo">📋</span>
+    <div class="pcard" id="pcard-${idx}" style="border-left-color:${p.cor}">
+      <div class="pcard-hd" onclick="window._toggleProto(${idx})">
+        <span class="pcard-title">${p.title}</span>
+        <div class="pcard-actions">
+          <span class="cp" onclick="event.stopPropagation();window._copyProtocol(this,${idx})" title="Copiar protocolo">📋</span>
+          <span class="pchev">▾</span>
+        </div>
       </div>
-      ${p.passos.map(buildFase).join('')}
+      <div class="pcard-body">
+        ${p.passos.map(buildFase).join('')}
+      </div>
     </div>
   `).join('');
 }
+
+window._toggleProto = function(idx) {
+  document.getElementById(`pcard-${idx}`).classList.toggle('open');
+};
 
 window._copyProtocol = function(el, idx) {
   const p = state.protocols[idx];

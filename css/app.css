@@ -61,7 +61,13 @@ footer{text-align:center;font-size:11px;color:var(--footer);margin-top:2rem;padd
 .tab.on{background:var(--text);color:var(--bg);border-color:var(--text)}
 #protocols{display:none}
 .pcard{background:var(--cardbg);border:1px solid var(--border);border-left:4px solid;border-radius:10px;padding:13px 15px;margin-bottom:10px}
-.pcard-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:12px}
+.pcard-hd{display:flex;justify-content:space-between;align-items:center;cursor:pointer;user-select:none;gap:8px}
+.pcard-title{font-size:15px;font-weight:600;color:var(--text);flex:1}
+.pcard-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.pchev{font-size:13px;color:var(--muted);transition:transform .25s;line-height:1}
+.pcard.open .pchev{transform:rotate(180deg)}
+.pcard-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.pcard.open .pcard-body{max-height:5000px;padding-top:12px}
 .pfase{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--border)}
 .pfase:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
 .pfase-hd{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;display:flex;align-items:center;gap:7px}
