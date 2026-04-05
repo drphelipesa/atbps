@@ -63,5 +63,15 @@
     "c": "#2E7D52",
     "bg": "#E8F5EE",
     "t": "#1A4D30"
+  },
+  "Anti-histamínico": {
+    "c": "#8B5CF6",
+    "bg": "#F3EFFE",
+    "t": "#3B1F7A"
+  },
+  "Anticoagulante": {
+    "c": "#B91C1C",
+    "bg": "#FEE2E2",
+    "t": "#7F1D1D"
   }
 }

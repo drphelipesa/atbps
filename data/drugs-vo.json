@@ -133,5 +133,104 @@
     "ind": "Epilepsia, transtorno do pânico, ansiedade grave",
     "mac": "⚠️ RECEITUÁRIO B (controlado). Risco de dependência. Não suspender abruptamente. Sedação — não dirigir.",
     "rx": "Clonazepam 0,5mg (Rivotril) — RECEITUÁRIO B\n1 caixa com 30 comprimidos\nTomar 1 comprimido à noite por 30 dias\n(Retornar para renovar prescrição)"
+  },
+  {
+    "n": "Loratadina 10mg",
+    "cat": "Anti-histamínico",
+    "apresentacao": "Comprimido 10mg | Xarope 1mg/mL",
+    "dose": "10mg VO 1×/dia",
+    "ind": "Urticária, rinite alérgica, reação alérgica cutânea",
+    "mac": "Não sedante — preferir em pacientes que dirigem. Pode tomar com ou sem alimento. Início de ação: 1–3h.",
+    "rx": "Loratadina 10mg\n1 caixa com 12 comprimidos\nTomar 1 comprimido por dia por 7 dias"
+  },
+  {
+    "n": "Cetirizina 10mg",
+    "cat": "Anti-histamínico",
+    "apresentacao": "Comprimido 10mg | Solução oral 1mg/mL",
+    "dose": "10mg VO 1×/dia (preferencialmente à noite)",
+    "ind": "Urticária, rinite alérgica, dermatite atópica, prurido intenso",
+    "mac": "Leve sedação — preferir à noite. Mais potente que loratadina para prurido intenso. Pode tomar com ou sem alimento.",
+    "rx": "Cetirizina 10mg\n1 caixa com 20 comprimidos\nTomar 1 comprimido à noite por 7 dias"
+  },
+  {
+    "n": "Dexclorfeniramina 2mg (Polaramine)",
+    "cat": "Anti-histamínico",
+    "apresentacao": "Comprimido 2mg | Xarope 0,4mg/mL",
+    "dose": "2mg VO 6/6h | Retard 6mg VO 12/12h",
+    "ind": "Urticária aguda intensa, prurido, reação alérgica — quando efeito rápido é necessário",
+    "mac": "⚠️ SEDANTE — não dirigir. 1ª geração: início mais rápido e potente para crises agudas. Efeito anticolinérgico: boca seca, retenção urinária. Cuidado em idosos e HPB.",
+    "rx": "Dexclorfeniramina 2mg (Polaramine)\n1 caixa com 20 comprimidos\nTomar 1 comprimido de 6/6 horas por 3 dias"
+  },
+  {
+    "n": "Losartana 50mg",
+    "cat": "Cardiovascular",
+    "apresentacao": "Comprimido 25mg | 50mg",
+    "dose": "25–100mg VO 1×/dia",
+    "ind": "Hipertensão arterial, nefropatia diabética, IC com disfunção sistólica",
+    "mac": "⚠️ CONTRAINDICADO na gestação (fetotóxico). Monitorar K⁺ e creatinina — risco de hipercalemia com poupadores de K⁺. Não associar com IECA (dobro de efeitos adversos sem benefício adicional).",
+    "rx": "Losartana 50mg\n1 caixa com 30 comprimidos\nTomar 1 comprimido por dia\n(Retornar em 30 dias para controle de PA)"
+  },
+  {
+    "n": "Anlodipino 5mg",
+    "cat": "Cardiovascular",
+    "apresentacao": "Comprimido 5mg | 10mg",
+    "dose": "5–10mg VO 1×/dia",
+    "ind": "Hipertensão arterial, angina estável, fenômeno de Raynaud",
+    "mac": "Pode causar edema periférico (tornozelos) — efeito de classe, não é ICC. Início de ação lento: efeito máximo em 7–14 dias. Pode tomar com ou sem alimento.",
+    "rx": "Anlodipino 5mg\n1 caixa com 30 comprimidos\nTomar 1 comprimido por dia\n(Retornar em 30 dias para controle de PA)"
+  },
+  {
+    "n": "Metoprolol succinato 25mg",
+    "cat": "Cardiovascular",
+    "apresentacao": "Comprimido retard 25mg | 50mg | 100mg",
+    "dose": "25–200mg VO 1×/dia (liberação prolongada)",
+    "ind": "Hipertensão, IC estável (FE reduzida), angina, controle de FC na FA",
+    "mac": "⚠️ Não suspender abruptamente — pode precipitar angina ou IAM em cardiopatas. Contraindicado em broncoespasmo grave e BAV 2º/3º grau. Engolir inteiro — não partir ou mastigar.",
+    "rx": "Metoprolol succinato 25mg (Selozok)\n1 caixa com 30 comprimidos\nTomar 1 comprimido pela manhã\n(Não suspender sem orientação médica)"
+  },
+  {
+    "n": "Atenolol 25mg",
+    "cat": "Cardiovascular",
+    "apresentacao": "Comprimido 25mg | 50mg | 100mg",
+    "dose": "25–100mg VO 1×/dia",
+    "ind": "Hipertensão arterial, angina, controle de frequência na FA, taquicardia sinusal sintomática",
+    "mac": "⚠️ Não suspender abruptamente. Mais hidrofílico que metoprolol — menos efeitos no SNC (menos pesadelos/insônia). Contraindicado em asma, DPOC grave, BAV 2º/3º grau.",
+    "rx": "Atenolol 25mg\n1 caixa com 30 comprimidos\nTomar 1 comprimido por dia\n(Não suspender sem orientação médica)"
+  },
+  {
+    "n": "Hidroclorotiazida 25mg",
+    "cat": "Cardiovascular",
+    "apresentacao": "Comprimido 25mg",
+    "dose": "12,5–25mg VO 1×/dia pela manhã",
+    "ind": "Hipertensão arterial (geralmente em combinação), edema leve",
+    "mac": "⚠️ Tomar PELA MANHÃ — efeito diurético evita noctúria. Monitorar K⁺ (hipocalemia), ácido úrico (pode precipitar gota) e glicemia. Evitar em IR grave (ClCr < 30mL/min).",
+    "rx": "Hidroclorotiazida 25mg\n1 caixa com 30 comprimidos\nTomar 1 comprimido pela manhã"
+  },
+  {
+    "n": "Rivaroxabana 20mg (Xarelto)",
+    "cat": "Anticoagulante",
+    "apresentacao": "Comprimido 10mg | 15mg | 20mg",
+    "dose": "FA: 20mg 1×/dia com jantar | TEP/TVP agudo: 15mg 2×/dia × 21 dias → 20mg 1×/dia",
+    "ind": "Fibrilação atrial (prevenção de AVE), TEP, TVP — tratamento e profilaxia",
+    "mac": "⚠️ Tomar SEMPRE com a refeição principal — aumenta absorção em 39%. Sem necessidade de controle de INR. Contraindicado em IR grave (ClCr < 15mL/min) e prótese valvar mecânica. Antídoto: Andexanet alfa.",
+    "rx": "Rivaroxabana 20mg (Xarelto)\n1 caixa com 30 comprimidos\nTomar 1 comprimido junto com o jantar, 1 vez ao dia\n(Não suspender sem orientação médica)"
+  },
+  {
+    "n": "Apixabana 5mg (Eliquis)",
+    "cat": "Anticoagulante",
+    "apresentacao": "Comprimido 2,5mg | 5mg",
+    "dose": "FA: 5mg 2×/dia (2,5mg 2×/dia se ≥2 critérios*) | TEP/TVP: 10mg 2×/dia × 7 dias → 5mg 2×/dia",
+    "ind": "Fibrilação atrial (prevenção de AVE), TEP, TVP",
+    "mac": "⚠️ *Dose reduzida (2,5mg) se ≥2 critérios: idade ≥80a, peso ≤60kg ou creatinina ≥1,5mg/dL. Pode tomar com ou sem alimento. Menor risco de sangramento GI que rivaroxabana. Antídoto: Andexanet alfa.",
+    "rx": "Apixabana 5mg (Eliquis)\n1 caixa com 60 comprimidos\nTomar 1 comprimido de 12/12 horas\n(Não suspender sem orientação médica)"
+  },
+  {
+    "n": "Varfarina 5mg",
+    "cat": "Anticoagulante",
+    "apresentacao": "Comprimido 1mg | 5mg",
+    "dose": "Dose inicial: 2,5–5mg VO 1×/dia — AJUSTAR conforme INR (alvo 2,0–3,0)",
+    "ind": "Prótese valvar mecânica (INR alvo 2,5–3,5), FA quando NOAC contraindicado, TVP/TEP crônico",
+    "mac": "⚠️ MONITORAÇÃO DE INR OBRIGATÓRIA — retornar em 5–7 dias. Múltiplas interações: vitamina K (vegetais verdes), antibióticos, AINEs, álcool. Antídoto: Vitamina K + plasma fresco. Preferir NOACs exceto em prótese valvar mecânica.",
+    "rx": "Varfarina 5mg\n1 caixa com 30 comprimidos\nTomar conforme orientação individualizada\nControle de INR obrigatório — retornar em 5 dias"
   }
 ]
