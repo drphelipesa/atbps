@@ -65,7 +65,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Via Aérea"
   },
   {
     "title": "🫀 PCR — Ressuscitação (ACLS)",
@@ -126,7 +127,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Cardiovascular"
   },
   {
     "title": "🐝 Anafilaxia",
@@ -180,7 +182,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Alérgico/Tóxico"
   },
   {
     "title": "⚡ Status Epilepticus",
@@ -248,7 +251,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Neurológico"
   },
   {
     "title": "🦠 Sepse — Hora Zero (Hour-1 Bundle)",
@@ -327,7 +331,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Metabólico"
   },
   {
     "title": "❤️ SCA — Síndrome Coronariana Aguda",
@@ -401,7 +406,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Cardiovascular"
   },
   {
     "title": "🧠 AVC Isquêmico — Janela Trombolítica",
@@ -486,7 +492,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Neurológico"
   },
   {
     "title": "💊 Cetoacidose Diabética (CAD)",
@@ -556,7 +563,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Metabólico"
   },
   {
     "title": "🩸 Crise Hipertensiva",
@@ -623,7 +631,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Cardiovascular"
   },
   {
     "title": "💧 Edema Agudo de Pulmão (EAP)",
@@ -687,7 +696,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Cardiovascular"
   },
   {
     "title": "🌬️ Crise Asmática",
@@ -765,7 +775,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Via Aérea"
   },
   {
     "title": "🩸 Fibrilação Atrial (FA)",
@@ -852,7 +863,8 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Cardiovascular"
   },
   {
     "title": "🍬 Hipoglicemia Grave",
@@ -904,6 +916,7 @@
           }
         ]
       }
-    ]
+    ],
+    "grupo": "Metabólico"
   }
 ]

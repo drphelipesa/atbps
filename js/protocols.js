@@ -44,16 +44,47 @@ function buildProtocolText(p) {
   return lines.join('\n');
 }
 
+// ── Filtro de grupo ──────────────────────────
+
+const GROUP_EMOJI = {
+  'Cardiovascular':  '🔴',
+  'Neurológico':     '🟣',
+  'Via Aérea':       '🔵',
+  'Metabólico':      '🟢',
+  'Alérgico/Tóxico': '🟡',
+};
+
+let activeGroup = 'Todos';
+
+function titleText(title) {
+  return title.replace(/^[^\p{L}]+/u, '').trim();
+}
+
 // ── Renderização principal ───────────────────
 
 export function renderProtocols() {
   const container = document.getElementById('protocols');
-  container.innerHTML = state.protocols.map((p, idx) => `
-    <div class="pcard" id="pcard-${idx}" style="border-left-color:${p.cor}">
-      <div class="pcard-hd" onclick="window._toggleProto(${idx})">
+
+  const groups = ['Todos', ...Object.keys(GROUP_EMOJI)];
+
+  const visible = state.protocols
+    .map((p, i) => ({ p, i }))
+    .filter(({ p }) => activeGroup === 'Todos' || p.grupo === activeGroup)
+    .sort((a, b) => titleText(a.p.title).localeCompare(titleText(b.p.title), 'pt'));
+
+  const filtersHtml = `<div id="proto-filters">
+    ${groups.map(g => {
+      const label = g === 'Todos' ? 'Todos' : `${GROUP_EMOJI[g]} ${g}`;
+      return `<button class="filt${g === activeGroup ? ' on' : ''}" onclick="window._setProtoGroup('${g}')">${label}</button>`;
+    }).join('')}
+  </div>`;
+
+  const cardsHtml = visible.map(({ p, i }) => `
+    <div class="pcard" id="pcard-${i}" style="border-left-color:${p.cor}">
+      <div class="pcard-hd" onclick="window._toggleProto(${i})">
         <span class="pcard-title">${p.title}</span>
         <div class="pcard-actions">
-          <span class="cp" onclick="event.stopPropagation();window._copyProtocol(this,${idx})" title="Copiar protocolo">📋</span>
+          <span class="cp" onclick="event.stopPropagation();window._copyProtocol(this,${i})" title="Copiar protocolo">📋</span>
           <span class="pchev">▾</span>
         </div>
       </div>
@@ -62,7 +93,14 @@ export function renderProtocols() {
       </div>
     </div>
   `).join('');
+
+  container.innerHTML = filtersHtml + cardsHtml;
 }
+
+window._setProtoGroup = function(group) {
+  activeGroup = group;
+  renderProtocols();
+};
 
 window._toggleProto = function(idx) {
   document.getElementById(`pcard-${idx}`).classList.toggle('open');

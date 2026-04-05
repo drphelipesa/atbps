@@ -67,7 +67,7 @@ export function setTab(tab) {
 export function buildFilters() {
   const currentList = state.activeTab === 'vo' ? state.drugsVO : state.drugsEV;
   const usedCats = new Set(currentList.map(d => d.cat));
-  const cats = ['Todos', '⭐', ...Object.keys(state.categories).filter(c => usedCats.has(c))];
+  const cats = ['Todos', '⭐', ...Object.keys(state.categories).filter(c => usedCats.has(c)).sort((a, b) => a.localeCompare(b, 'pt'))];
   const el = document.getElementById('filters');
   el.innerHTML = cats.map(c =>
     `<button class="filt${c === state.activeFilter ? ' on' : ''}" data-c="${c}">${c}</button>`
