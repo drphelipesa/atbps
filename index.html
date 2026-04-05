@@ -24,6 +24,7 @@
   <button class="tab on" data-tab="ev">💉 EV</button>
   <button class="tab"    data-tab="vo">💊 VO</button>
   <button class="tab"    data-tab="proto">📋 Protocolos</button>
+  <button class="tab"    data-tab="calc">🧮 Calc</button>
 </div>
 
 <div id="bar">
@@ -40,8 +41,29 @@
 
 <div id="grid"></div>
 <div id="protocols" style="display:none"></div>
+<div id="calculators" style="display:none"></div>
 
 <footer>· Uso exclusivo como referência clínica</footer>
+
+<!-- Carrinho FAB -->
+<button id="cartFAB" onclick="window._openCart()" title="Prescrição" style="display:none">
+  🛒<span id="cartCount">0</span>
+</button>
+
+<!-- Modal carrinho -->
+<div id="cartModal">
+  <div class="cart-modal-box">
+    <div class="cart-modal-hd">
+      <span class="cart-modal-title">🛒 Prescrição de Alta VO</span>
+      <button class="cart-modal-close" onclick="window._closeCart()">×</button>
+    </div>
+    <div id="cartList"></div>
+    <div class="cart-modal-ftr">
+      <button class="cart-copy-btn" onclick="window._copyCart(this)">📋 Copiar tudo</button>
+      <button class="cart-clear-btn" onclick="window._clearCart()">🗑 Limpar</button>
+    </div>
+  </div>
+</div>
 
 <div id="updateBanner">
   <span>Nova versão disponível</span>

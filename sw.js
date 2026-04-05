@@ -1,4 +1,4 @@
-const CACHE = 'guia-ev-v2';
+const CACHE = 'guia-ev-v3';
 
 const FILES = [
   './index.html',
@@ -13,6 +13,8 @@ const FILES = [
   './js/pump.js',
   './js/protocols.js',
   './js/utils.js',
+  './js/calculators.js',
+  './js/cart.js',
   './data/categories.json',
   './data/drugs-ev.json',
   './data/drugs-vo.json',

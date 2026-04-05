@@ -5,6 +5,7 @@
 import { state } from './state.js';
 import { buildWeightDoseBlock, buildSolBadges, copyEVDrug, copyVORx, flashCopyBtn, toggleFav } from './utils.js';
 import { buildPumpBlock, handlePumpInput } from './pump.js';
+import { addToCart, removeFromCart, isInCart } from './cart.js';
 
 // ── Filtro ───────────────────────────────────
 
@@ -61,7 +62,8 @@ function buildEVCard(m, i) {
 
 function buildVOCard(m, i) {
   const cat = state.categories[m.cat] || { c: '#888', bg: '#eee', t: '#333' };
-  const isFav = state.favs.has(m.n);
+  const isFav   = state.favs.has(m.n);
+  const inCart  = isInCart(m.n);
   return `<div class="card" style="--cc:${cat.c};--cbg:${cat.bg};--ct:${cat.t}">
   <div class="ch">
     <span class="dn">${m.n}</span>
@@ -71,6 +73,7 @@ function buildVOCard(m, i) {
         ${isFav ? '⭐' : '☆'}
       </span>
       <span class="cp" data-idx="${i}" data-type="vo" onclick="window._copyDrug(this,'vo',${i})" title="Copiar receita">📋</span>
+      <span class="cart-add${inCart ? ' in-cart' : ''}" data-name="${_esc(m.n)}" data-idx="${i}" onclick="window._cartToggle(${i})" title="Adicionar à prescrição">${inCart ? '✓ Rx' : '+ Rx'}</span>
     </div>
   </div>
   <div class="row"><span class="lbl">Apresentação</span><span class="val">${m.apresentacao}</span></div>
@@ -125,3 +128,16 @@ window._toggleFav = function(el, type) {
 };
 
 window._handlePumpInput = handlePumpInput;
+
+window._cartToggle = function(i) {
+  const drug = state.shownVO[i];
+  if (!drug) return;
+  const btn = document.querySelector(`.cart-add[data-idx="${i}"]`);
+  if (isInCart(drug.n)) {
+    removeFromCart(drug.n);
+    if (btn) { btn.classList.remove('in-cart'); btn.textContent = '+ Rx'; }
+  } else {
+    addToCart(drug);
+    if (btn) { btn.classList.add('in-cart'); btn.textContent = '✓ Rx'; }
+  }
+};

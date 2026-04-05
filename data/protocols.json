@@ -918,5 +918,432 @@
       }
     ],
     "grupo": "Metabólico"
+  },
+  {
+    "title": "🫁 TEP — Tromboembolismo Pulmonar",
+    "cor": "#E24B4A",
+    "grupo": "Cardiovascular",
+    "passos": [
+      {
+        "fase": "Suspeita diagnóstica",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Apresentação clínica",
+            "dose": "dispneia súbita, dor pleurítica, taquicardia, hipoxemia sem causa aparente",
+            "obs": "solicitar: ECG, RX tórax, gasometria, D-dímero, troponina, BNP"
+          },
+          {
+            "n": "ECG",
+            "dose": "S1Q3T3 é inespecífico — mais útil: taquicardia sinusal + BRD novo",
+            "obs": "ECG normal não exclui TEP"
+          }
+        ]
+      },
+      {
+        "fase": "Estratificação (Wells + D-dímero)",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Wells TEP",
+            "dose": "usar calculadora na aba 🧮 Calc",
+            "obs": "< 2 pts: D-dímero pode excluir | ≥ 2 pts: angiotomografia de tórax"
+          },
+          {
+            "n": "D-dímero",
+            "dose": "negativo exclui TEP se probabilidade baixa",
+            "obs": "⚠️ positivo não confirma — eleva-se em infecção, cirurgia, gestação, idade (usar ajuste por idade: >50a → D-dímero < idade × 10)"
+          },
+          {
+            "n": "TEP de alto risco",
+            "dose": "PAS < 90 mmHg ou choque ou PCR",
+            "obs": "⚠️ risco de vida — ver fase abaixo"
+          }
+        ]
+      },
+      {
+        "fase": "TEP alto risco — instável",
+        "tempo": "hipotensão ou PCR",
+        "itens": [
+          {
+            "n": "Alteplase (rtPA)",
+            "dose": "100 mg EV em 2h (ou 0,6 mg/kg em 15 min se PCR)",
+            "obs": "✅ trombólise sistêmica — acionar UTI imediatamente"
+          },
+          {
+            "n": "Heparina não fracionada",
+            "dose": "80 UI/kg bolus → 18 UI/kg/h — iniciar ANTES do rtPA",
+            "obs": "suspender durante infusão do rtPA, reiniciar 1h após"
+          }
+        ]
+      },
+      {
+        "fase": "TEP baixo/médio risco — estável",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Rivaroxabana",
+            "dose": "15 mg 2×/dia × 21 dias → 20 mg 1×/dia",
+            "obs": "✅ 1ª escolha — sem necessidade de heparina prévia"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Apixabana",
+            "dose": "10 mg 2×/dia × 7 dias → 5 mg 2×/dia",
+            "obs": "✅ alternativa — igualmente sem heparina prévia"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Enoxaparina + Varfarina",
+            "dose": "Enoxaparina 1 mg/kg SC 12/12h até INR >2 por 2 dias",
+            "obs": "se NOACs contraindicados (IR grave, prótese valvar)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "🩸 Hemorragia Digestiva Alta (HDA)",
+    "cor": "#A32D2D",
+    "grupo": "Digestivo",
+    "passos": [
+      {
+        "fase": "Ressuscitação inicial",
+        "tempo": "primeiros 30 min",
+        "itens": [
+          {
+            "n": "Acesso venoso calibroso (2×)",
+            "dose": "SF 0,9% 500 mL–1 L se instável hemodinâmico",
+            "obs": "meta PAM ≥65 — estratégia restritiva reduz ressangramento em varizes"
+          },
+          {
+            "n": "Transfusão de hemácias",
+            "dose": "meta Hb ≥7 g/dL (≥8 em cardiopatas e coronariopatas)",
+            "obs": "Hb não reflete perda aguda imediatamente — guiar pela clínica"
+          },
+          {
+            "n": "Reverter anticoagulação",
+            "dose": "vitamina K + plasma fresco se varfarina | andexanet alfa se NOAC",
+            "obs": "acionar hematologia se necessário"
+          }
+        ]
+      },
+      {
+        "fase": "Inibidor de bomba de prótons",
+        "tempo": "iniciar imediatamente — antes da endoscopia",
+        "itens": [
+          {
+            "n": "Pantoprazol ou Omeprazol",
+            "dose": "80 mg EV bolus → 8 mg/h infusão contínua × 72h",
+            "obs": "✅ reduz ressangramento em úlcera péptica — iniciar mesmo sem diagnóstico confirmado"
+          }
+        ]
+      },
+      {
+        "fase": "HDA por hipertensão portal (varizes)",
+        "tempo": "estigmas de hepatopatia ou suspeita",
+        "itens": [
+          {
+            "n": "Terlipressina",
+            "dose": "1–2 mg EV 4/4h por 48–72h",
+            "obs": "✅ vasoconstritor esplâncnico — reduz pressão portal e mortalidade"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Octreotida",
+            "dose": "50 mcg bolus EV → 50 mcg/h infusão contínua × 48–72h",
+            "obs": "alternativa à terlipressina — disponível na maioria dos serviços"
+          },
+          {
+            "n": "Ceftriaxona",
+            "dose": "1 g EV 1×/dia × 7 dias",
+            "obs": "✅ profilaxia de infecção bacteriana em cirrótico — reduz mortalidade independentemente"
+          }
+        ]
+      },
+      {
+        "fase": "Preparo para endoscopia",
+        "tempo": "< 24h (< 12h no instável)",
+        "itens": [
+          {
+            "n": "Eritromicina",
+            "dose": "250 mg EV em 30 min — 30–90 min antes da endoscopia",
+            "obs": "pró-cinético — esvazia estômago e melhora visibilidade endoscópica"
+          },
+          {
+            "n": "IOT profilática",
+            "dose": "considerar antes da endoscopia",
+            "obs": "⚠️ sangramento ativo + rebaixamento do nível de consciência = alto risco de broncoaspiração"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "💨 DPOC Agudizado",
+    "cor": "#378ADD",
+    "grupo": "Via Aérea",
+    "passos": [
+      {
+        "fase": "Avaliação de gravidade",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Leve-moderado",
+            "dose": "piora da dispneia, ↑ volume/purulência do escarro, SpO₂ ≥88%",
+            "obs": "tratamento ambulatorial possível se sem sinais de gravidade"
+          },
+          {
+            "n": "Grave",
+            "dose": "FR >30/min, SpO₂ <88%, uso de musculatura acessória, rebaixamento do nível de consciência",
+            "obs": "⚠️ internar — risco de necessitar VNI ou IOT"
+          },
+          {
+            "n": "Gasometria arterial",
+            "dose": "pH <7,35 + pCO₂ >45 mmHg = acidose respiratória — indicação de VNI",
+            "obs": ""
+          }
+        ]
+      },
+      {
+        "fase": "Broncodilatadores",
+        "tempo": "iniciar imediatamente",
+        "itens": [
+          {
+            "n": "Salbutamol (Aerolin)",
+            "dose": "2,5 mg nebulização a cada 20 min (3×) ou 400 mcg inalatório",
+            "obs": "broncodilatador de curta ação — pilar do tratamento"
+          },
+          {
+            "n": "Ipratrópio (Atrovent)",
+            "dose": "0,5 mg nebulização junto com salbutamol",
+            "obs": "anticolinérgico — efeito aditivo com beta-2 agonista"
+          }
+        ]
+      },
+      {
+        "fase": "Corticoide sistêmico",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Metilprednisolona",
+            "dose": "40 mg EV 1×/dia × 5 dias",
+            "obs": "reduz falha de tratamento e tempo de internação"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Prednisona",
+            "dose": "40 mg VO 1×/dia × 5 dias",
+            "obs": "equivalente ao EV se o paciente tolerar VO — preferir VO se possível"
+          }
+        ]
+      },
+      {
+        "fase": "Antibiótico",
+        "tempo": "indicado se escarro purulento + piora clínica",
+        "itens": [
+          {
+            "n": "Amoxicilina + Clavulanato",
+            "dose": "875/125 mg VO 12/12h × 5–7 dias",
+            "obs": "exacerbação leve-moderada"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Azitromicina",
+            "dose": "500 mg VO 1×/dia × 3–5 dias",
+            "obs": "alternativa — cobre atípicos"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Ciprofloxacino",
+            "dose": "500 mg VO 12/12h × 7 dias",
+            "obs": "se risco de Pseudomonas: DPOC grave, hospitalização recente, antibioticoterapia prévia"
+          }
+        ]
+      },
+      {
+        "fase": "VNI (BiPAP)",
+        "tempo": "pH <7,35 + pCO₂ >45 + FR >25",
+        "itens": [
+          {
+            "n": "BiPAP",
+            "dose": "IPAP 12–20 cmH₂O | EPAP 4–6 cmH₂O — titular por SpO₂ e pH",
+            "obs": "✅ reduz intubação e mortalidade na acidose respiratória — iniciar precocemente"
+          },
+          {
+            "n": "Alvo de SpO₂",
+            "dose": "88–92% — NÃO titular para 100%",
+            "obs": "⚠️ O₂ excessivo no hipercapnista suprime drive respiratório e piora CO₂"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "💓 Bradiarritmia Sintomática",
+    "cor": "#E24B4A",
+    "grupo": "Cardiovascular",
+    "passos": [
+      {
+        "fase": "Avaliação inicial",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Sintomas de hipoperfusão",
+            "dose": "síncope, pré-síncope, hipotensão, angina, dispneia, rebaixamento do nível de consciência",
+            "obs": "bradicardia assintomática raramente necessita intervenção imediata"
+          },
+          {
+            "n": "Causas reversíveis",
+            "dose": "hipóxia, hipercalemia, hipotermia, IAM inferior (BAV), betabloqueador/digital em excesso",
+            "obs": "tratar a causa — ECG 12 derivações obrigatório"
+          }
+        ]
+      },
+      {
+        "fase": "1ª linha — Atropina",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Atropina",
+            "dose": "0,5 mg EV — repetir a cada 3–5 min (máx 3 mg = 6 doses)",
+            "obs": "⚠️ INEFICAZ no BAV de 2º grau Mobitz II e BAV total com escape ventricular — ir direto ao MP"
+          }
+        ]
+      },
+      {
+        "fase": "2ª linha — Marca-passo transcutâneo",
+        "tempo": "atropina ineficaz ou BAV avançado",
+        "itens": [
+          {
+            "n": "Sedoanalgesia antes do MP",
+            "dose": "Midazolam 1–2 mg EV + Fentanil 50 mcg EV",
+            "obs": "⚠️ MP transcutâneo é DOLOROSO — sedar adequadamente antes de iniciar"
+          },
+          {
+            "n": "Marca-passo transcutâneo",
+            "dose": "FC 60–80 bpm, mA até captura elétrica (geralmente 60–80 mA)",
+            "obs": "confirmar captura elétrica E mecânica (palpar pulso após cada espícula)"
+          }
+        ]
+      },
+      {
+        "fase": "3ª linha — Drogas cronotrópicas",
+        "tempo": "MP indisponível ou como ponte",
+        "itens": [
+          {
+            "n": "Dopamina",
+            "dose": "2–10 mcg/kg/min EV — bomba",
+            "obs": "efeito cronotrópico e inotrópico — opção se MP indisponível"
+          },
+          {
+            "ou": true
+          },
+          {
+            "n": "Adrenalina",
+            "dose": "2–10 mcg/min EV — bomba",
+            "obs": "se bradicardia com hipotensão grave refratária — resgate"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "⚡ Choque — Abordagem Diferencial",
+    "cor": "#D4537E",
+    "grupo": "Cardiovascular",
+    "passos": [
+      {
+        "fase": "Reconhecimento",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "Critérios diagnósticos",
+            "dose": "PAS <90 mmHg (ou queda >40 mmHg) + sinais de hipoperfusão",
+            "obs": "hipoperfusão: confusão, oligúria (<0,5 mL/kg/h), pele fria/moteada, lactato >2 mmol/L"
+          },
+          {
+            "n": "Monitorização inicial",
+            "dose": "2 acessos calibrosos, O₂, ECG, gasometria + lactato, glicemia",
+            "obs": "lactato seriado é o melhor marcador de ressuscitação — meta: clearance >10% em 2h"
+          }
+        ]
+      },
+      {
+        "fase": "Classificação dos 4 tipos",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "🔴 Hipovolêmico",
+            "dose": "hemorragia, desidratação, queimadura, vômito/diarreia intensos",
+            "obs": "pele fria, veias colabadas, JVP baixa — reposição volêmica agressiva"
+          },
+          {
+            "n": "🔴 Distributivo (séptico/anafilático)",
+            "dose": "vasodilatação periférica — sepse, anafilaxia, crise addisoniana",
+            "obs": "pele quente, pulso cheio — antibiótico + vasopressor (noradrenalina)"
+          },
+          {
+            "n": "🔴 Cardiogênico",
+            "dose": "IAM, arritmia grave, miocardite, IC descompensada",
+            "obs": "JVP elevada, B3, crepitações — inotrópico (dobutamina) ± vasopressor — evitar volume"
+          },
+          {
+            "n": "🔴 Obstrutivo",
+            "dose": "TEP maciço, tamponamento cardíaco, pneumotórax hipertensivo",
+            "obs": "⚠️ tratar a causa imediatamente — drenagem / pericardiocentese / trombólise — volume PIORA"
+          }
+        ]
+      },
+      {
+        "fase": "Abordagem inicial comum",
+        "tempo": "",
+        "itens": [
+          {
+            "n": "SF 0,9%",
+            "dose": "250–500 mL EV em 15 min — avaliar resposta",
+            "obs": "⚠️ NÃO infundir volume no choque cardiogênico e obstrutivo sem diagnóstico definido"
+          },
+          {
+            "n": "Posição",
+            "dose": "Trendelenburg reverso (pernas elevadas) se hipovolêmico",
+            "obs": "efeito transitório — útil enquanto prepara acesso venoso e fluidos"
+          }
+        ]
+      },
+      {
+        "fase": "Vasopressor / Inotrópico",
+        "tempo": "PAM <65 após volume adequado",
+        "itens": [
+          {
+            "n": "Noradrenalina",
+            "dose": "0,1–3 mcg/kg/min EV — bomba",
+            "obs": "✅ 1ª escolha no distributivo/séptico — acesso central preferencial"
+          },
+          {
+            "n": "Dobutamina",
+            "dose": "2,5–20 mcg/kg/min EV — bomba",
+            "obs": "✅ 1ª escolha no cardiogênico — aumenta DC e reduz pós-carga"
+          },
+          {
+            "n": "Adrenalina",
+            "dose": "0,1–1 mcg/kg/min EV — bomba",
+            "obs": "anafilaxia refratária ou choque refratário como resgate"
+          }
+        ]
+      }
+    ]
   }
 ]

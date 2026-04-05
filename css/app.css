@@ -89,3 +89,59 @@ footer{text-align:center;font-size:11px;color:var(--footer);margin-top:2rem;padd
 /* ── Banner de atualização ──────────────────── */
 #updateBanner{display:none;position:fixed;bottom:0;left:0;right:0;background:#1a6edd;color:#fff;padding:10px 16px;align-items:center;justify-content:space-between;z-index:100;font-size:13px}
 #updateBanner button{background:#fff;color:#1a6edd;border:none;border-radius:6px;padding:5px 14px;font-size:12px;cursor:pointer;font-weight:600}
+/* ── Calculadoras ───────────────────────────── */
+#calculators{padding-bottom:4rem}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:8px}
+.calc-card{background:var(--cardbg);border:1px solid var(--border);border-left:3px solid;border-radius:10px;padding:11px 13px}
+.calc-hd{margin-bottom:10px}
+.calc-title{font-size:14px;font-weight:600;color:var(--text);display:block}
+.calc-desc{font-size:11px;color:var(--muted);display:block;margin-top:2px}
+.calc-items{display:flex;flex-direction:column;gap:2px;margin-bottom:10px}
+.calc-item{display:flex;align-items:center;gap:8px;cursor:pointer;padding:5px 7px;border-radius:6px;font-size:12.5px;color:var(--text)}
+.calc-item:hover{background:var(--filt-hover)}
+.calc-item input[type=checkbox]{accent-color:#1a6edd;width:15px;height:15px;flex-shrink:0;cursor:pointer}
+.calc-pts{font-size:11px;font-weight:700;color:var(--muted);min-width:24px;text-align:right;flex-shrink:0}
+.calc-footer{border-top:1px solid var(--border);padding-top:8px;margin-top:4px}
+.calc-score-lbl{font-size:11.5px;color:var(--muted);display:block;margin-bottom:5px}
+.calc-result{font-size:12.5px;font-weight:600;padding:6px 10px;border-radius:6px;background:var(--filt-hover);color:var(--muted)}
+.calc-result.calc-ok{background:#f0faf4;color:#1a6a35}
+.calc-result.calc-warn{background:#fff8e6;color:#7a4f00}
+.calc-result.calc-alert{background:#fef2f2;color:#991b1b}
+[data-theme=dark] .calc-result.calc-ok{background:#1a2e22;color:#4caf7d}
+[data-theme=dark] .calc-result.calc-warn{background:#2e2800;color:#ffd066}
+[data-theme=dark] .calc-result.calc-alert{background:#2e1a1a;color:#f87171}
+.calc-numeric{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.calc-field{display:flex;flex-direction:column;gap:3px}
+.calc-field-lbl{font-size:11px;color:var(--muted)}
+.calc-inp{padding:6px 8px;font-size:13px;border:1px solid var(--inp-border);border-radius:6px;background:var(--inp-bg);color:var(--text);outline:none;width:100%}
+.calc-inp:focus{border-color:#888}
+.calc-sex{display:flex;gap:10px;font-size:12.5px;color:var(--text);padding-top:4px}
+.calc-sex label{display:flex;align-items:center;gap:4px;cursor:pointer}
+/* ── Checklist de protocolo ─────────────────── */
+.pcheck{cursor:pointer;font-size:14px;flex-shrink:0;opacity:0.4;transition:opacity .15s;user-select:none;line-height:1;margin-right:2px}
+.pcheck:hover{opacity:1}
+.pitem.done .pcheck{opacity:1;color:#22c55e}
+.pitem.done .pitem-drug,.pitem.done .pitem-dose{text-decoration:line-through;opacity:0.45}
+/* ── Carrinho de prescrição ─────────────────── */
+#cartFAB{position:fixed;bottom:20px;right:16px;width:52px;height:52px;border-radius:50%;background:#1a6edd;color:#fff;border:none;cursor:pointer;align-items:center;justify-content:center;font-size:18px;box-shadow:0 3px 12px rgba(0,0,0,.35);z-index:50;flex-direction:column;gap:1px}
+#cartCount{font-size:10px;font-weight:700;line-height:1}
+#cartModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;align-items:flex-end;justify-content:center}
+.cart-modal-box{background:var(--cardbg);border-radius:16px 16px 0 0;width:100%;max-width:540px;max-height:80vh;display:flex;flex-direction:column;padding:16px}
+.cart-modal-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.cart-modal-title{font-size:15px;font-weight:600;color:var(--text)}
+.cart-modal-close{background:none;border:none;font-size:22px;cursor:pointer;color:var(--muted);padding:0 4px;line-height:1}
+#cartList{overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:8px;margin-bottom:4px}
+.cart-item{display:flex;align-items:flex-start;background:var(--mac-bg);border-radius:8px;padding:8px 10px;gap:8px}
+.cart-item-name{font-size:13px;font-weight:600;color:var(--text);margin-bottom:3px}
+.cart-item-rx{font-size:11.5px;color:var(--muted);font-family:monospace;line-height:1.5}
+.cart-rm{background:none;border:none;cursor:pointer;color:var(--muted);font-size:15px;padding:2px 4px;flex-shrink:0}
+.cart-rm:hover{color:var(--text)}
+.cart-empty{text-align:center;color:var(--muted);padding:2rem 0;font-size:13px}
+.cart-modal-ftr{display:flex;gap:8px;margin-top:10px;padding-top:10px;border-top:1px solid var(--border)}
+.cart-modal-ftr button{flex:1;padding:9px;font-size:13px;border-radius:8px;cursor:pointer;font-weight:600;border:1px solid var(--filt-border)}
+.cart-copy-btn{background:#1a6edd;color:#fff;border-color:#1a6edd!important}
+.cart-clear-btn{background:var(--filt-bg);color:var(--filt-text)}
+.cart-add{cursor:pointer;font-size:11px;padding:2px 7px;border-radius:4px;border:1px solid var(--filt-border);background:var(--filt-bg);color:var(--filt-text);flex-shrink:0;user-select:none;transition:background .15s,color .15s}
+.cart-add.in-cart{background:#1a6edd;color:#fff;border-color:#1a6edd}
+.cart-add:hover{background:var(--filt-hover)}
+.cart-add.in-cart:hover{background:#1558b0}

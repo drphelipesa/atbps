@@ -8,6 +8,7 @@ import { initTheme, toggleTheme, loadFavs } from './utils.js';
 import { loadPumpDoses }             from './pump.js';
 import { filterDrugs, renderGrid }   from './drugs.js';
 import { renderProtocols }           from './protocols.js';
+import { renderCalculators }         from './calculators.js';
 import { CACHE_NAME }                from './config.js';
 
 // ── Inicialização ────────────────────────────
@@ -41,12 +42,13 @@ export function setTab(tab) {
   state.searchQuery  = '';
 
   const isProto = tab === 'proto';
-  const isVO    = tab === 'vo';
-  const isEV    = tab === 'ev';
+  const isCalc  = tab === 'calc';
+  const isDrug  = tab === 'ev' || tab === 'vo';
 
-  document.getElementById('bar').style.display      = isProto ? 'none' : '';
-  document.getElementById('grid').style.display     = isProto ? 'none' : '';
-  document.getElementById('protocols').style.display = isProto ? 'block' : 'none';
+  document.getElementById('bar').style.display         = isDrug  ? '' : 'none';
+  document.getElementById('grid').style.display        = isDrug  ? '' : 'none';
+  document.getElementById('protocols').style.display   = isProto ? 'block' : 'none';
+  document.getElementById('calculators').style.display = isCalc  ? 'block' : 'none';
 
   document.querySelectorAll('.tab').forEach(t =>
     t.classList.toggle('on', t.dataset.tab === tab)
@@ -57,6 +59,7 @@ export function setTab(tab) {
   window.scrollTo(0, 0);
 
   if (isProto) { renderProtocols(); return; }
+  if (isCalc)  { renderCalculators(); return; }
 
   buildFilters();
   updateView();

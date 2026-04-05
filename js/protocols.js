@@ -7,11 +7,14 @@ import { flashCopyBtn } from './utils.js';
 
 // ── Helpers de item e fase ───────────────────
 
-function buildItem(item) {
+function buildItem(item, protoIdx, faseIdx, itemIdx) {
   if (item.ou) return '<div class="pou">— ou —</div>';
+  const key = `${protoIdx}-${faseIdx}-${itemIdx}`;
+  const done = completedItems.has(key);
   const obs = item.obs ? `<div class="pitem-obs">${item.obs}</div>` : '';
-  return `<div class="pitem">
+  return `<div class="pitem${done ? ' done' : ''}" data-key="${key}">
   <div class="pitem-top">
+    <span class="pcheck" onclick="event.stopPropagation();window._checkItem('${key}')">${done ? '☑' : '☐'}</span>
     <span class="pitem-drug">${item.n}</span>
     <span class="pitem-dose"> ${item.dose}</span>
   </div>
@@ -19,11 +22,11 @@ function buildItem(item) {
 </div>`;
 }
 
-function buildFase(f) {
+function buildFase(f, protoIdx, faseIdx) {
   const tempo = f.tempo ? `<span class="pfase-tempo">${f.tempo}</span>` : '';
   return `<div class="pfase">
   <div class="pfase-hd">${f.fase}${tempo}</div>
-  ${f.itens.map(buildItem).join('')}
+  ${f.itens.map((item, ii) => buildItem(item, protoIdx, faseIdx, ii)).join('')}
 </div>`;
 }
 
@@ -52,9 +55,11 @@ const GROUP_EMOJI = {
   'Via Aérea':       '🔵',
   'Metabólico':      '🟢',
   'Alérgico/Tóxico': '🟡',
+  'Digestivo':       '🟠',
 };
 
 let activeGroup = 'Todos';
+const completedItems = new Set();
 
 function titleText(title) {
   return title.replace(/^[^\p{L}]+/u, '').trim();
@@ -89,7 +94,7 @@ export function renderProtocols() {
         </div>
       </div>
       <div class="pcard-body">
-        ${p.passos.map(buildFase).join('')}
+        ${p.passos.map((f, fi) => buildFase(f, i, fi)).join('')}
       </div>
     </div>
   `).join('');
@@ -104,6 +109,20 @@ window._setProtoGroup = function(group) {
 
 window._toggleProto = function(idx) {
   document.getElementById(`pcard-${idx}`).classList.toggle('open');
+};
+
+window._checkItem = function(key) {
+  const itemEl = document.querySelector(`.pitem[data-key="${key}"]`);
+  if (!itemEl) return;
+  if (completedItems.has(key)) {
+    completedItems.delete(key);
+    itemEl.classList.remove('done');
+    itemEl.querySelector('.pcheck').textContent = '☐';
+  } else {
+    completedItems.add(key);
+    itemEl.classList.add('done');
+    itemEl.querySelector('.pcheck').textContent = '☑';
+  }
 };
 
 window._copyProtocol = function(el, idx) {
